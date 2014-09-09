@@ -4,8 +4,9 @@
   <title>Unix Toolbox</title>
   <link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AOBfLwBbX14AWxgYABg8RwC/g14AGBgYAL9OJAB8KhgAfHFeAOCDUgC/g0cAGCo7AOCDXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcJCw4ODg4ODgUHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcLCgcHBwcHBwcHBwcHBwcHBwgOBQcHBwcHBwcHBwcHBwcHBAwNBwcHBwcHBwcHBwcHBwcJCwMHBwcHBwcHBwcHBwcCBg0HBwcHBwcHBwcHBwkLAwcHBwcHBwcHBwcHBwcMDQcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" />
   <meta name="autor" content="Colin Barschel c@cb.vu" />
+  <meta name="translator" content="Gabriel da Silveira Costa tocadotux@gmail.com" />
   <meta name="copyright" content="Copyright (c) 2007-2012 Colin Barschel. Alguns direitos reservados sob a licença Creative Commons [Attribution - Share Alike]" />
-  <meta name="description" content="Uma coleção de comandos Unix/Linux/BSD e tarefas que são uteis para o trabalho de TI ou para usuários avançados, a compact and practical reference." />
+  <meta name="description" content="Uma coleção de comandos Unix/Linux/BSD e tarefas que são uteis para o trabalho de TI ou para usuários avançados, uma referência compact e prática." />
   <meta name="abstract" content="Unix Toolbox Uma referencia prática e compacta para sysadmins e usuários avançados." />
   <meta name="subject" content="Unix Toolbox revisão 14.4" />
   <meta name="keywords" content="Unix Toolbox, ferramentas Unix, Unix, FreeBSD, Linux, lista de comandos, sysadmin, guia práctico, referncia avançada, tarefas comuns Linux, syntax reminder, howtos, tunels ssh, rsync, certificasos ssl" />
@@ -3339,7 +3340,7 @@ O Makefile mínimo para o programa multi-source é exibido abaixo. As lihas com 
 <!-- <div class="pb" /> -->
 
 <div class="footerlast">
-This document: "Unix Toolbox revisão 14.4" é licesiada sob a <a rel="nofollow" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Licence [Attribution - Share Alike]</a>. © <a href="mailto:c_at_cb.vu">Colin Barschel</a> 2007-2012. Alguns direitos reservados.
+This document: "Unix Toolbox revisão 14.4" está licesiada sob a <a rel="nofollow" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Licence [Attribution - Share Alike]</a>. © <a href="mailto:c_at_cb.vu">Colin Barschel</a> 2007-2012. Alguns direitos reservados. Traduzido por Gabriel da Silveira Costa.
 </div>
 
 </body>
