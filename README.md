@@ -1,4 +1,4 @@
-Caixa de Ferramentas do Unix versão 0.0.1 (alpha)
+Caixa de Ferramentas do Unix versão 0.1 (alpha)
 =============================
 
 Uma coleção de comandos Unix/Linux(de diferentes distribuições)/BSD/MacOSX/Solaris e de tarefas que são uteis para o trabalho do profissional de TI ou para usuários avançados. Uma referência compacta e prática derivada do trabalho "Unix Toolbox", escrito por Colin Barschel.
