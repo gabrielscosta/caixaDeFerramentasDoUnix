@@ -404,17 +404,15 @@ window.onload = initCSS();
 
 /*]]>*/
 </script>
-
 </head>
 <body>
-
 <div class="title">Unix Toolbox</div>
 <div class="abstract">
-Esse domcumento é uma coleção de comandos Unix/Linux/BSD e de tarefas que são uteis para trabalho em TI ou usuários avançados. Esse é um guia prático com explicações concisas, embora o leitor deve saber o que está fazendo.<br /><br />
+Esse documento é uma coleção de comandos Unix/Linux/BSD e de tarefas que são uteis para trabalho em TI ou usuários avançados. Esse é um guia prático com explicações concisas, embora o leitor deve saber o que está fazendo.<br /><br />
 </div>
 <div class="footerfirst">
 Unix Toolbox revisão 14.4<br />
-A ultima versão desse documento pode ser encontrado em <a href="http://cb.vu/unixtoolbox.xhtml">http://cb.vu/unixtoolbox.xhtml</a>. Substitua .xhtml no link com <a href="http://cb.vu/unixtoolbox.pdf">.pdf</a> para a versão PDF e com <a href="http://cb.vu/unixtoolbox.book.pdf">.book.pdf</a> para a versão folheto. Em uma impressora duplex o folheto criará um pequeno livro pronto para encadernar. <span class="web">Essa página XHTML pode ser convertida para um bom documento PDF com uma aplicação complacente CSS3 (veja o <a class="xref" href="./Unix Toolbox_files/Unix Toolbox.xhtml">script exemplo</a>).</span> Veja também a <a href="http://cb.vu/unixtoolbox">página sobre</a>.<br />
+A ultima versão desse documento pode ser encontrado em <a href="http://cb.vu/unixtoolbox.xhtml">http://cb.vu/unixtoolbox.xhtml</a>. Substitua .xhtml no link com <a href="http://cb.vu/unixtoolbox.pdf">.pdf</a> para a versão PDF e com <a href="http://cb.vu/unixtoolbox.book.pdf">.book.pdf</a> para a versão folheto. Em uma impressora duplex o folheto criará um pequeno livro pronto para encadernar. <span class="web">Essa página XHTML pode ser convertida para um bom documento PDF com uma aplicação complacente CSS3 (veja o <a class="xref" href="https://github.com/tocadotux/caixaDeFerramentasDoUnix/blob/master/Caixa%20de%20ferramentas%20do%20Unix%20(alfa).xhml">script exemplo</a>).</span> Veja também a <a href="http://cb.vu/unixtoolbox">página sobre</a>.<br />
 Reportes de erros e comentários são muito bem vindos - <a href="mailto:c\at\cb.vu">c@cb.vu</a> Colin Barschel.
 <p class="copyright">© <a href="mailto:c_at_cb.vu">Colin Barschel</a> 2007-2012. <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Alguns direitos reservados sob a licença</a>.
 </p>
@@ -545,8 +543,8 @@ Os comandos a seguir são uteis para descobrir o que está acontecendo no sistem
 # pw useradd colin -c "Colin Barschel" -g admin -m -s /bin/tcsh 
 # pw userdel colin; pw groupdel admin
 </pre>
-Senhas criptografadas ficam armazenadas em /etc/shadow no Linux e Solaris e /etc/master.passwd no FreeBSD. Se o master.passwd for modificado manualmente (dizê-lo para remover uma senha), rode o <code># pwd_mkdb -p master.passwd</code> para reconstruir a base de dados.<br /><br />
-Para impedir logis temporariamente no sistema (para todos os usuários, menos para o root) utilize o nologin. A mensagem em nologin será exibida (pode não funcionar com as chaves pré-compartilhadas do ssh).
+Senhas criptografadas ficam armazenadas em /etc/shadow no Linux e Solaris e /etc/master.passwd no FreeBSD. Se o master.passwd for modificado manualmente (dizê-lo para remover uma senha), execute o <code># pwd_mkdb -p master.passwd</code> para reconstruir a base de dados.<br /><br />
+Para impedir logins temporariamente no sistema (para todos os usuários, menos para o root) utilize o nologin. A mensagem em nologin será exibida (pode não funcionar com as chaves pré-compartilhadas do ssh).
 <pre># echo "Desculpe, sem login no momento" &gt; /etc/nologin       <span class="cmt"># (Linux)</span>
 # echo "Desculpe, sem login no momento" &gt; /var/run/nologin   <span class="cmt"># (FreeBSD)</span>
 </pre>
