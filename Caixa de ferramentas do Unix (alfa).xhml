@@ -466,8 +466,8 @@ Reportes de erros e comentários são muito bem vindos - <a href="mailto:c\at\cb
 </div> <!-- end menu -->
 <div class="pb" />
  <!-- <div class="main"> Every chapter is inside a div block for easy XML parsing -->
-<div id="sysinfo"><h1><a>System</a></h1>
-<p class="xrefp"><a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#hardwareinfo">Hardware</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#loadstats">Estatísticas</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#users">Usuários</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#limits">Limites</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#runlevels">Runlevels</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#resetpasswd">senha de root</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#compilekernel">Compilar o kernel</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#grub">concertar o grub</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#sysmisc">Misc</a></p>
+<div id="sysinfo"><h1><a>Sistema</a></h1>
+<p class="xrefp"><a class="xrefp" href="#hardwareinfo">Hardware</a> | <a class="xrefp" href="#loadstats">Estatísticas</a> | <a class="xrefp" href="#users">Usuários</a> | <a class="xrefp" href="#limits">Limites</a> | <a class="xrefp" href="#runlevels">Runlevels</a> | <a class="xrefp" href="#resetpasswd">Senha de root</a> | <a class="xrefp" href="#compilekernel">Compilar o kernel</a> | <a class="xrefp" href="#grub">Concertar o grub</a> | <a class="xrefp" href="#sysmisc">Outros</a></p>
 Rodando o kernel e informações do sistema
 <pre># uname -a                           <span class="cmt"># Obter versão do kernel (e versão do BSD também)</span>
 # lsb_release -a                     <span class="cmt"># Informação completa de lançamento de qualquer distribuição LSB</span>
@@ -512,7 +512,7 @@ Hardware detectado pelo kernel
 # atacontrol list                    <span class="cmt"># Exibir dispositivos ATA</span>
 # camcontrol devlist -v              <span class="cmt"># Exibir dispositivos SCSI</span>
 </pre>
-<h2 id="loadstats">Carga, estatísticas and menssagens</h2>
+<h2 id="loadstats">Carga, estatísticas and mensagens</h2>
 Os comandos a seguir são uteis para descobrir o que está acontecendo no sistema.
 <pre># top                                <span class="cmt"># exibe e atualiza o top dos processos do cpu</span>
 # mpstat 1                           <span class="cmt"># exibe estatísticas relacionadas ao processador</span>
