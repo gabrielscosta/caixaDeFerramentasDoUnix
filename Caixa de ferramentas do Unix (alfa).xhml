@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg-flat.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xml:lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg-flat.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xml:lang="pt-br">
 <head>                            
-  <title>Unix Toolbox</title>
+  <title>Caixa de Ferramentas do Unix</title>
   <link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AOBfLwBbX14AWxgYABg8RwC/g14AGBgYAL9OJAB8KhgAfHFeAOCDUgC/g0cAGCo7AOCDXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcJCw4ODg4ODgUHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcLCgcHBwcHBwcHBwcHBwcHBwgOBQcHBwcHBwcHBwcHBwcHBAwNBwcHBwcHBwcHBwcHBwcJCwMHBwcHBwcHBwcHBwcCBg0HBwcHBwcHBwcHBwkLAwcHBwcHBwcHBwcHBwcMDQcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" />
   <meta name="autor" content="Colin Barschel c@cb.vu" />
   <meta name="translator" content="Gabriel da Silveira Costa tocadotux@gmail.com" />
@@ -276,76 +277,76 @@ a.xref:after {
 </style>
 <style type="text/css" title="default">
 @media screen, handheld, print {
-/* Colors only */
-html {
-    background-color: white;
-    color: black;
-}
-h1 {
-    background-color: #000040;
-    color: white;
-}
-h3, h4, div.title, h2, a:link, a:visited, .cmt {
-    background-color: transparent;
-    color: #000040;
-}
-pre {
-    background-color: #F6F6FC;
-}
-pre, code { 
-    color: #003300;
-}
-a:hover, .pp {
-    color: #D55500;
-}
-a:active {
-    color: green;
-}
-.keyword {
-    color:#0000FF;
-}
+    /* Colors only */
+    html {
+        background-color: white;
+        color: black;
+    }
+    h1 {
+        background-color: #000040;
+        color: white;
+    }
+    h3, h4, div.title, h2, a:link, a:visited, .cmt {
+        background-color: transparent;
+        color: #000040;
+    }
+    pre {
+        background-color: #F6F6FC;
+    }
+    pre, code { 
+        color: #003300;
+    }
+    a:hover, .pp {
+        color: #D55500;
+    }
+    a:active {
+        color: green;
+    }
+    .keyword {
+        color:#0000FF;
+    }
 }
 @media print {
-/* print only colors */
-pre, code { 
-    color: #000;
-}
-a:link, a:visited, .cmt {
-    background-color: transparent;
-    color: #000060;
-}
+    /* print only colors */
+    pre, code { 
+        color: #000;
+    }
+    a:link, a:visited, .cmt {
+        background-color: transparent;
+        color: #000060;
+    }
 }
 </style>
 <style type="text/css" title="inverse">
 @media screen, handheld {
-/* Colors only */
-html {
-    background-color: black;
-    color: Gainsboro;
-}
-h1 {
-    background-color: #ffffcd;
-    color: black;
-}
-h3, h4, div.title, h2, a:link, a:visited, .cmt {
-    background-color: transparent;
-    color: #ffffcd;
-}
-pre {
-    background-color: #090903;
-}
-pre, code { 
-    color: #ffc3ff;
-}
-a:hover, .pp {
-    color: #2aaaff;
-}
-a:active {
-    color: orange;
-}
-.keyword {
-    color:#ff0000;
-}
+    /* Colors only */
+    html {
+        background-color: black;
+        color: Gainsboro;
+    }
+    h1 {
+        background-color: #ffffcd;
+        color: black;
+    }
+    h3, h4, div.title, h2, a:link, a:visited, .cmt {
+        background-color: transparent;
+        color: #ffffcd;
+    }
+    pre {
+        background-color: #090903;
+    }
+    pre, code { 
+        color: #ffc3ff;
+    }
+    a:hover, .pp {
+        color: #2aaaff;
+    }
+    a:active {
+        color: orange;
+    }
+    .keyword {
+        color:#ff0000;
+    }
 }
 </style>
 
