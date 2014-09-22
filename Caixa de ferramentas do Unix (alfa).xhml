@@ -1963,7 +1963,7 @@ Curto lembrete nas opções mais utilizadas:
 O exemplo utiliza 'Your Name' e 'Alice' já que as chaves são referidas pelo email ou nome completo ou nome parcial. Por exemplo eu posso utilizar 'Colin' ou 'c@cb.vu' para a minha have [Colin Barschel (cb.vu) &lt;c@cb.vu&gt;].
 <h3>Criptografa somente para uso pessoal</h3>
 Não necesita exportar/importar qualquer chave para isso. Você já possui ambas.
-<pre># gpg -e -r 'Your Name' file                  <span class="cmt"># Criptografa com a sua chvae pública</span>
+<pre># gpg -e -r 'Your Name' file                  <span class="cmt"># Criptografa com a sua chave pública</span>
 # gpg -o file -d file.gpg                     <span class="cmt"># Descriptografa. Utiliza -o ou vai para a saída</span>
 </pre>
 <h3>Criptografar - Descriptografar com chaves</h3>
