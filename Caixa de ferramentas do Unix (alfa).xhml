@@ -420,11 +420,11 @@ Reportes de erros e comentários são muito bem vindos - <a href="mailto:c\at\cb
 <!-- A tabela de conteúdo é exibida como um menu fixado verticalmente à direita quando visualizado em um navegador. Quando impresso TOC é exibido na página incial como uma tabela clássica de conteúdo como números -->
 <div class="menu">
 <ol class="toc">
-  <li><a href="http://cb.vu/unixtoolbox.xhtml#sysinfo">Sistema</a></li>
-  <li><a href="http://cb.vu/unixtoolbox.xhtml#processes">Processos</a></li>
-  <li><a href="http://cb.vu/unixtoolbox.xhtml#filesystem">Sistema de Arquivos</a></li>
-  <li><a href="http://cb.vu/unixtoolbox.xhtml#network">Rede</a></li>
-  <li><a href="http://cb.vu/unixtoolbox.xhtml#ssh">SSH SCP</a></li>
+  <li><a href="#sysinfo">Sistema</a></li>
+  <li><a href="#processes">Processos</a></li>
+  <li><a href="#filesystem">Sistema de Arquivos</a></li>
+  <li><a href="#network">Rede</a></li>
+  <li><a href="#ssh">SSH SCP</a></li>
   <li><a href="http://cb.vu/unixtoolbox.xhtml#vpn">VPN com SSH</a></li>
   <li><a href="http://cb.vu/unixtoolbox.xhtml#rsync">RSYNC</a></li>
   <li><a href="http://cb.vu/unixtoolbox.xhtml#sudo">SUDO</a></li>
