@@ -11,6 +11,7 @@
   <meta name="abstract" content="Unix Toolbox Uma referencia prática e compacta para sysadmins e usuários avançados." />
   <meta name="subject" content="Unix Toolbox revisão 14.4" />
   <meta name="keywords" content="Unix Toolbox, ferramentas Unix, Unix, FreeBSD, Linux, lista de comandos, sysadmin, guia práctico, referncia avançada, tarefas comuns Linux, syntax reminder, howtos, tunels ssh, rsync, certificasos ssl" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <style type="text/css">
 /* basic CSS common to all media */
 html {
