@@ -788,7 +788,7 @@ Altere a prioridade de um processo em execução com o <code>renice</code>. <b>N
 <pre># renice -5 586                      <span class="cmt"># prioridade mais forte</span>
 586: old priority 0, new priority -5
 </pre>
-Inicie o processo com uma prioridade definida com <code>nice</code>. Positivo é"nice" ou fraco, negativo é prioridade de agendamento forte. certifique-se de que você sabe se <code>/usr/bin/nice</code> ou o shell built-in é utilizado (verifique com o <code># which nice</code>).
+Inicie o processo com uma prioridade definida com <code>nice</code>. Positivo é "nice" ou fraco, negativo é prioridade de agendamento forte. certifique-se de que você sabe se <code>/usr/bin/nice</code> ou o shell built-in é utilizado (verifique com o <code># which nice</code>).
 <pre># nice -n -5 top                     <span class="cmt"># prioridade mais forte (/usr/bin/nice)</span>
 # nice -n 5 top                      <span class="cmt"># Prioridade mais fraca(/usr/bin/nice)</span>
 # nice +5 top                        <span class="cmt"># tcsh builtin nice (o mesmo que acima!)</span>
