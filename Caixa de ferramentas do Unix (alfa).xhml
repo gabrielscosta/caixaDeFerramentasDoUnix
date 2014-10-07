@@ -7,10 +7,10 @@
   <meta name="autor" content="Colin Barschel c@cb.vu" />
   <meta name="translator" content="Gabriel da Silveira Costa tocadotux@gmail.com" />
   <meta name="copyright" content="Copyright (c) 2007-2012 Colin Barschel. Alguns direitos reservados sob a licença Creative Commons [Attribution - Share Alike]" />
-  <meta name="description" content="Uma coleção de comandos Unix/Linux/BSD e tarefas que são uteis para o trabalho de TI ou para usuários avançados, uma referência compact e prática." />
-  <meta name="abstract" content="Unix Toolbox Uma referencia prática e compacta para sysadmins e usuários avançados." />
+  <meta name="description" content="Uma coleção de comandos Unix/Linux/BSD e tarefas que são uteis para o trabalho de TI ou para usuários avançados, uma referência compacta e prática." />
+  <meta name="abstract" content="Unix Toolbox -  Uma referencia prática e compacta para administradores de sistemas e usuários avançados." />
   <meta name="subject" content="Unix Toolbox revisão 14.4" />
-  <meta name="keywords" content="Unix Toolbox, ferramentas Unix, Unix, FreeBSD, Linux, lista de comandos, sysadmin, guia práctico, referncia avançada, tarefas comuns Linux, syntax reminder, howtos, tunels ssh, rsync, certificasos ssl" />
+  <meta name="keywords" content="Unix Toolbox, ferramentas Unix, Unix, FreeBSD, Linux, lista de comandos, administração de sistema, guia prático, referência avançada, tarefas comuns Linux, syntax reminder, howtos, tunels ssh, rsync, certificasos ssl" />
   <style type="text/css">
 /* basic CSS common to all media */
 html {
@@ -418,7 +418,7 @@ Reportes de erros e comentários são muito bem vindos - <a href="mailto:c\at\cb
 <p class="copyright">© <a href="mailto:c_at_cb.vu">Colin Barschel</a> 2007-2012. <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Alguns direitos reservados sob a licença</a>.
 </p>
 </div> 
-<!-- A tabela de conteúdo é exibida como um menu fixado verticalmente à direita quando visualizado em um navegador. Quando impresso TOC é exibido na página incial como uma tabela clássica de conteúdo como números -->
+<!-- A tabela de conteúdo é exibida como um menu fixado verticalmente à direita quando visualizado em um navegador. Quando impresso TOC é exibido na página inicial como uma tabela clássica de conteúdo como números -->
 <div class="menu">
 <ol class="toc">
   <li><a href="#sysinfo">Sistema</a></li>
@@ -442,7 +442,7 @@ Reportes de erros e comentários são muito bem vindos - <a href="mailto:c\at\cb
   <li><a href="#quota">Quota de Disco</a></li>
   <li><a href="#shells">Shells</a></li>
   <li><a href="#scripting">Scripting</a></li>
-  <li><a href="#programming">Programar</a></li>
+  <li><a href="#programming">Programação</a></li>
   <li><a href="#onlinehelp">Ajuda Online</a></li>
 </ol>
 <br />
@@ -513,15 +513,15 @@ Hardware detectado pelo kernel
 # atacontrol list                    <span class="cmt"># Exibir dispositivos ATA</span>
 # camcontrol devlist -v              <span class="cmt"># Exibir dispositivos SCSI</span>
 </pre>
-<h2 id="loadstats">Carga, estatísticas and mensagens</h2>
+<h2 id="loadstats">Carga, estatísticas e mensagens</h2>
 Os comandos a seguir são uteis para descobrir o que está acontecendo no sistema.
 <pre># top                                <span class="cmt"># exibe e atualiza o top dos processos do cpu</span>
 # mpstat 1                           <span class="cmt"># exibe estatísticas relacionadas ao processador</span>
 # vmstat 2                           <span class="cmt"># exibe estatísticas da memória virtual</span>
-# iostat 2                           <span class="cmt"># exibe estatíticas de I/O (intervalos de 2 s)</span>
-# systat -vmstat 1                   <span class="cmt"># resumo estatíticas de sistema BSD (intervalos de 1 s)</span>
+# iostat 2                           <span class="cmt"># exibe estatísticas de I/O (intervalos de 2 s)</span>
+# systat -vmstat 1                   <span class="cmt"># resumo estatísticas de sistema BSD (intervalos de 1 segundo)</span>
 # systat -tcp 1                      <span class="cmt"># conexões tcp BSD (tente também -ip)</span>
-# systat -netstat 1                  <span class="cmt"># conexẽos de rede de ativa BSD</span>
+# systat -netstat 1                  <span class="cmt"># conexôes de rede de ativa BSD</span>
 # systat -ifstat 1                   <span class="cmt"># tráfego de rede BSD pelas interfaces ativas</span>
 # systat -iostat 1                   <span class="cmt"># CPU BSD e rendimento de disco</span>
 # ipcs -a                            <span class="cmt"># informação de interprocessos no System</span>
@@ -570,12 +570,12 @@ asterisk hard nofile 409600          <span class="cmt"># Limite de arquivos aber
 </pre>
 <h4>Sistema</h4>
 Limites do kernel são configurados com o sysctl. Limites permanentes são configurados em <code>/etc/sysctl.conf</code>.
-<pre># sysctl -a                          <span class="cmt"># Visualizar todos os limites do sistema</span>
-# sysctl fs.file-max                 <span class="cmt"># Visualizar limite máximo de arquivos abertos</span>
-# sysctl fs.file-max=102400          <span class="cmt"># Alterar limite de máximo de arquivos abertos</span>
-# echo "1024 50000" &gt; /proc/sys/net/ipv4/ip_local_port_range  <span class="cmt"># alcande de porta</span>
+<pre># sysctl -a                          <span class="cmt"># Visualiza todos os limites do sistema</span>
+# sysctl fs.file-max                 <span class="cmt"># Visualiza limite máximo de arquivos abertos</span>
+# sysctl fs.file-max=102400          <span class="cmt"># Altera o limite de máximo de arquivos abertos</span>
+# echo "1024 50000" &gt; /proc/sys/net/ipv4/ip_local_port_range  <span class="cmt"># alcance de porta</span>
 # cat /etc/sysctl.conf
-fs.file-max=102400                   <span class="cmt"># Entrada permanetre em sysctl.conf</span>
+fs.file-max=102400                   <span class="cmt"># Entrada permanente em sysctl.conf</span>
 # cat /proc/sys/fs/file-nr           <span class="cmt"># Quantos descritores de arquivo estão em uso</span>
 </pre>
 
@@ -593,7 +593,7 @@ kern.maxfiles=65536                  <span class="cmt"># Valores tipicos para Sq
 kern.maxfilesperproc=32768
 kern.ipc.somaxconn=8192              <span class="cmt"># Fila de TCP. Melhor para apache/sendmail</span>
 # sysctl kern.openfiles              <span class="cmt"># Quantas descrições de arquivo estão em uso</span>
-# sysctl kern.ipc.numopensockets     <span class="cmt"># Qantos sockets abertos estão em uso</span>
+# sysctl kern.ipc.numopensockets     <span class="cmt"># Quantos sockets abertos estão em uso</span>
 # sysctl net.inet.ip.portrange.last=50000 <span class="cmt"># O padrão é 1024-5000</span>
 # netstat -m                         <span class="cmt"># Estatísticas de buffers de memória de rede</span>
 </pre>
@@ -625,21 +625,21 @@ O The runlevel atual pode ser alterado com o <code>init</code>. Por exemplo, par
 (Nota do tradutor: Não foi mencionado o valor de número 4, porém não é aconselhado utilizá-lo, pois esse valor não tem definição por se tratar de uso somente para propósitos especiais.)
 <ul>
 </ul>
-Use <code>chkconfig</code> para configurar os programas que serão incializados ao boot em um runlevel.
+Use <code>chkconfig</code> para configurar os programas que serão inicializados ao boot em um runlevel.
 <pre># chkconfig --list                   <span class="cmt"># Listar todos os scripts init</span>
 # chkconfig --list sshd              <span class="cmt"># Reportar o status do sshd</span>
 # chkconfig sshd --level 35 on       <span class="cmt"># Configuar o e sshd para os nívies 3 e 5</span>
 # chkconfig sshd off                 <span class="cmt"># Disabilitar o sshd para todos os runlevels</span>
 </pre>
-Debian e distribuições basadas em Debian como o Ubuntu ou o Knoppix utilizam o comando <code>update-rc.d</code> para gerenciar os scripts de runlevels. O padrão é iniciar em 2,3,4 and 5 e encerrar em 0,1 e 6.
+Debian e distribuições basadas em Debian como o Ubuntu ou o Knoppix utilizam o comando <code>update-rc.d</code> para gerenciar os scripts de runlevels. O padrão é iniciar em 2,3,4 e 5 e encerrar em 0,1 e 6.
 <pre># update-rc.d sshd defaults          <span class="cmt"># Ativar o sshd com os runlevels padrões</span>
 # update-rc.d sshd start 20 2 3 4 5 . stop 20 0 1 6 .  <span class="cmt"># Com argumentos explícitos</span>
 # update-rc.d -f sshd remove         <span class="cmt"># Disabilita o sshd para todos os runlevels</span>
-# shutdown -h now (or # poweroff)    <span class="cmt"># Ecerra e desliga o sistema</span>
+# shutdown -h now (or # poweroff)    <span class="cmt"># Encerra e desliga o sistema</span>
 </pre>
 
 <h3>FreeBSD</h3>
-A aproximação da inicialização do BSD é diferente do SysV, não há runlevels. O estado final do boot (single user, com ou sem X) é configurado em <code>/etc/ttys</code>. Todos os scripts do OS ficam localizados em <code>/etc/rc.d/</code> e em <code>/usr/local/etc/rc.d/</code> para aplicações de terceiros (third-party). A ativação do serviço é configurada em <code>/etc/rc.conf</code> e <code>/etc/rc.conf.local</code>. O comportameneto padrão é configurado em <code>/etc/defaults/rc.conf</code>. O scripts respondem ao menos a start|stop|status.
+A aproximação da inicialização do BSD é diferente do SysV, não há runlevels. O estado final do boot (single user, com ou sem X) é configurado em <code>/etc/ttys</code>. Todos os scripts do sistema operacional ficam localizados em <code>/etc/rc.d/</code> e em <code>/usr/local/etc/rc.d/</code> para aplicações de terceiros (third-party). A ativação do serviço é configurada em <code>/etc/rc.conf</code> e <code>/etc/rc.conf.local</code>. O comportamento padrão é configurado em <code>/etc/defaults/rc.conf</code>. O scripts respondem ao menos a start|stop|status.
 <pre># /etc/rc.d/sshd status
 sshd is running as pid 552.
 # shutdown now                       <span class="cmt"># Vá para o modo single-user</span>
@@ -667,7 +667,7 @@ net start "Windows Search"           <span class="cmt"># mesmo que acima utiliza
 Ao carregamento de boot [boot loader (lilo or grub)], entre a opção de boot a seguir:
 <pre>init=/bin/sh</pre>
 O kernel montará a partição root e <code>init</code> iniciará o bourne shell
-ao inves de <code>rc</code> e então um runlevel. Utilize o comando <code>passwd</code> no prompt e altere a senha e então reinicie. Esqueca o modo single user como se precisasse da senha para isso.<br />
+ao inves de <code>rc</code> e então um runlevel. Utilize o comando <code>passwd</code> no prompt e altere a senha e então reinicie. Esqueça o modo single user como se precisasse da senha para isso.<br />
 Se, depois de inicializar, a partição root estiver montada em somente leitura (read only), remonte em rw:
 <pre># mount -o remount,rw /
 # passwd                             <span class="cmt"># ou exclua a senha do root (/etc/shadow)</span>
@@ -682,7 +682,7 @@ No FreeBSD, inicialize em modo  single user, remonte / rw e utilize passwd. Voc�
 </pre>
 
 <h3>Método 2: Unixes e FreeBSD e Linux</h3>
-Outros Unixes podem não deixar você ir embora com um simples truque init. A solução é montar a partição root de um outro OS (como um CD de recuperação) e alterar a senha no disco.
+Outros <i>Unixes</i> podem não deixar você ir embora com um simples truque init. A solução é montar a partição root de um outro OS (como um CD de recuperação) e alterar a senha no disco.
 <ul>
   <li>Boot um live CD ou CD de instalação em modo de recuperação que lhe dará um shell.</li>
   <li>Encontre a partição root com o fdisk e.g. fdisk /dev/sda (Nota do tradutor: Bom, eu em particular prefiro utilizar o fdisk -l antes disso. Assim consegue identificar quais os discos caso não saiba qual é. Muito cuidado com a manipulação do fdisk)</li>
@@ -709,9 +709,9 @@ Outros Unixes podem não deixar você ir embora com um simples truque init. A so
 # make mrproper                      <span class="cmt"># Limpe tudo, incluindo arquivos de configuração</span>
 # make oldconfig                     <span class="cmt"># Re-utilize o antigo .config se existente</span>
 # make menuconfig                    <span class="cmt"># ou xconfig (Qt) ou gconfig (GTK)</span>
-# make                               <span class="cmt"># Crie uma imagen do kernel  comprimido</span>
-# make modules                       <span class="cmt"># Compile os modulos</span>
-# make modules_install               <span class="cmt"># Instale os modulos</span>
+# make                               <span class="cmt"># Crie uma imagem do kernel  comprimido</span>
+# make modules                       <span class="cmt"># Compile os módulos</span>
+# make modules_install               <span class="cmt"># Instale os módulos</span>
 # make install                       <span class="cmt"># Instale o kernel</span>
 # reboot
 </pre>
@@ -725,21 +725,21 @@ Eu utilizo o seguinte supfile:
 *default release=cvs delete tag=RELENG_7
 src-all
 </pre>
-Para modificar e reconstruir o kernel, copie o arquivo de configuração genérica para um novo nome e edite-o como necessário (você pode também editar o arquivo <code>GENERIC</code> diretamente). Para reiniciar a construção depois da interrupção, adicione a opção <code>NO_CLEAN=YES</code> para fazer o comando evitar que limpe os objetos já construidos.
+Para modificar e reconstruir o kernel, copie o arquivo de configuração genérica para um novo nome e edite-o como necessário (você pode também editar o arquivo <code>GENERIC</code> diretamente). Para reiniciar a construção depois da interrupção, adicione a opção <code>NO_CLEAN=YES</code> para fazer o comando evitar que limpe os objetos já construídos.
 <pre># cd /usr/src/sys/i386/conf/
 # cp GENERIC MYKERNEL
 # cd /usr/src
 # make buildkernel KERNCONF=MYKERNEL
 # make installkernel KERNCONF=MYKERNEL
 </pre>
-Para reconstruir o OS por completo:
-<pre># make buildworld                    <span class="cmt"># Construa o OS por completo, mas não o kernel</span>
+Para reconstruir o sistema operacional por completo:
+<pre># make buildworld                    <span class="cmt"># Construa o sistema operacional por completo, mas não o kernel</span>
 # make buildkernel                   <span class="cmt"># Utilize KERNCONF como acima se apropriado</span>
 # make installkernel
 # reboot
 # mergemaster -p                     <span class="cmt"># Compare somente arquivos conhecidos por serem essenciais</span>
 # make installworld
-# mergemaster -i -U                  <span class="cmt"># Atualizar todas as configurações e outros arquivos</span>
+# mergemaster -i -U                  <span class="cmt"># Atualiza todas as configurações e outros arquivos</span>
 # reboot
 </pre>
 Para pequenas mudanças na fonte você pode utilizar NO_CLEAN=yes para evitar reconstruir toda a arvore (tree).
@@ -756,7 +756,7 @@ Então você quebrou o grub? Inicie (boot) a partir de um live cd, [encontre sua
 # grub-install /dev/sda              <span class="cmt"># reinstale o grub com suas configurações antigas</span>
 </pre>
 <h2 id="sysmisc">Misc</h2>
-Desabilitar a memória virtual do OSX (repita com o <code>load</code> para re-abilitar). Sistema mais rapido, mas um pouco arriscado.
+Desabilitar a memória virtual do OSX (repita com o <code>load</code> para re-abilitar). Sistema mais rápido, mas um pouco arriscado.
 <pre># sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.dynamic_pager.plist
 # sleep 3600; pmset sleepnow           <span class="cmt"># vá para o modo standby dentro de uma hora (OSX)</span>
 # defaults write -g com.apple.mouse.scaling -float 8
@@ -767,13 +767,13 @@ Desabilitar a memória virtual do OSX (repita com o <code>load</code> para re-ab
 <div id="processes"><h1><a>Processos</a></h1>
 <p class="xrefp"><a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#ps">Listing</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#nice">Priority</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#bgfg">Background/Foreground</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#top">Top</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#kill">Kill</a></p>
 <h2 id="ps">Listar e PIDs</h2>
-Cada processo possui número unico, o chamado PID. Uma lista de todos os processos em execução é exibido com o <code>ps</code>.
+Cada processo possui número único, o chamado PID. Uma lista de todos os processos em execução é exibido com o <code>ps</code>.
 <pre># ps -auxefw                         <span class="cmt"># Lista extensiva de todos os processos em execução</span></pre>
 Contudo o uso mais tipico é com um pipe ou com <code>pgrep</code> (para o OS X instale <code>proctools</code> a partir do <a class="xref" href="http://cb.vu/unixtoolbox.xhtml#macports">MacPorts</a>):
 <pre># ps axww | grep cron
   586  ??  Is     0:01.48 /usr/sbin/cron -s
 # ps axjf                            <span class="cmt"># Todos os processos em um formato de arvore (Linux)</span>
-# ps aux | grep 'ss[h]'              <span class="cmt"># Encotre todos os pids ssh sem o pid do grep</span>
+# ps aux | grep 'ss[h]'              <span class="cmt"># Encontre todos os pids ssh sem o pid do grep</span>
 # pgrep -l sshd                      <span class="cmt"># Encontre os PIDs dos processos por (parte do) nome</span>
 # echo $$                            <span class="cmt"># O PID do seu shell</span>
 # fuser -va 22/tcp                   <span class="cmt"># Lista de processos utilizando a porta 22 (Linux)</span>
@@ -793,7 +793,7 @@ Inicie o processo com uma prioridade definida com <code>nice</code>. Positivo é
 # nice -n 5 top                      <span class="cmt"># Prioridade mais fraca(/usr/bin/nice)</span>
 # nice +5 top                        <span class="cmt"># tcsh builtin nice (o mesmo que acima!)</span>
 </pre>
-Enquanto nice altera o agedador do CPU (scheduler), um outro comando util <code>ionice</code> agendará o IO de disco. Isso é muto util para aplicações intensivas de IO (entrada e saída)(exemplo: compilar). Você pode selecionar uma classe [inativo (idle) - melhor esforço (best effort) - tempo real (real time)], a página de manual (man page) é curta e bem explicada.
+Enquanto nice altera o agendador do CPU (scheduler), um outro comando util <code>ionice</code> agendará o IO de disco. Isso é muto util para aplicações intensivas de IO (entrada e saída)(exemplo: compilar). Você pode selecionar uma classe [inativo (idle) - melhor esforço (best effort) - tempo real (real time)], a página de manual (man page) é curta e bem explicada.
 <pre># ionice c3 -p123                    <span class="cmt"># configura a classe inativa (idle class) para o pid 123 (somente em Linux)</span>
 # ionice -c2 -n0 firefox             <span class="cmt"># Roda o firefox com melhor empenho (best effort) e alta prioridade</span>
 # ionice -c3 -p$$                    <span class="cmt"># Configura a sheel atual para prioridade inativa</span>
