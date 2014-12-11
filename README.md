@@ -1,5 +1,6 @@
 # Caixa de Ferramentas do Unix 
 ###### versão 0.1 (alpha)
+###### Erro ortográficos serão encontrados nela, mas que serão corrigidas na versão beta
 =============================
 
 Uma coleção de comandos __Unix/Linux__ (*de diferentes distribuições*) __/BSD/MacOSX/Solaris__  
