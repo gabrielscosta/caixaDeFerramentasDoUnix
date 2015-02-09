@@ -490,9 +490,9 @@ Hardware detectado pelo kernel
 </pre>
 <h3>Linux</h3>
 <pre># cat /proc/cpuinfo                  <span class="cmt"># Modelo do CPU</span>
-# cat /proc/meminfo                  <span class="cmt"># Memória do Hardwarey</span>
+# cat /proc/meminfo                  <span class="cmt"># Memória do Hardware</span>
 # grep MemTotal /proc/meminfo        <span class="cmt"># Exibir a memória física</span>
-# watch -n1 'cat /proc/interrupts'   <span class="cmt"># Observar interrupções alteraveis continuamente</span>
+# watch -n1 'cat /proc/interrupts'   <span class="cmt"># Observar interrupções alteraveis continuadamente</span>
 # free -m                            <span class="cmt"># Memória utilizada e livre (-m para MB)</span>
 # cat /proc/devices                  <span class="cmt"># dispositivos configurados</span>
 # lspci -tv                          <span class="cmt"># Exibir dispositivos PCI</span>
@@ -516,21 +516,21 @@ Hardware detectado pelo kernel
 <h2 id="loadstats">Carga, estatísticas e mensagens</h2>
 Os comandos a seguir são uteis para descobrir o que está acontecendo no sistema.
 <pre># top                                <span class="cmt"># exibe e atualiza o top dos processos do cpu</span>
-# mpstat 1                           <span class="cmt"># exibe estatísticas relacionadas ao processador</span>
-# vmstat 2                           <span class="cmt"># exibe estatísticas da memória virtual</span>
-# iostat 2                           <span class="cmt"># exibe estatísticas de I/O (intervalos de 2 s)</span>
-# systat -vmstat 1                   <span class="cmt"># resumo estatísticas de sistema BSD (intervalos de 1 segundo)</span>
-# systat -tcp 1                      <span class="cmt"># conexões tcp BSD (tente também -ip)</span>
-# systat -netstat 1                  <span class="cmt"># conexôes de rede de ativa BSD</span>
-# systat -ifstat 1                   <span class="cmt"># tráfego de rede BSD pelas interfaces ativas</span>
+# mpstat 1                           <span class="cmt"># Exibe estatísticas relacionadas ao processador</span>
+# vmstat 2                           <span class="cmt"># Exibe estatísticas da memória virtual</span>
+# iostat 2                           <span class="cmt"># Exibe estatísticas de I/O (intervalos de 2 s)</span>
+# systat -vmstat 1                   <span class="cmt"># Resumo estatísticas de sistema BSD (intervalos de 1 segundo)</span>
+# systat -tcp 1                      <span class="cmt"># Conexões tcp BSD (tente também -ip)</span>
+# systat -netstat 1                  <span class="cmt"># Conexôes de rede de ativa BSD</span>
+# systat -ifstat 1                   <span class="cmt"># Tráfego de rede BSD pelas interfaces ativas</span>
 # systat -iostat 1                   <span class="cmt"># CPU BSD e rendimento de disco</span>
-# ipcs -a                            <span class="cmt"># informação de interprocessos no System</span>
+# ipcs -a                            <span class="cmt"># Informação de interprocessos no System</span>
 # tail -n 500 /var/log/messages      <span class="cmt"># Ultimas 500 mensagens kernel/syslog</span>
 # tail /var/log/warn                 <span class="cmt"># Mensagems de aviso do sistem; veja syslog.conf</span>
 </pre>
 <h2 id="users">Usuários</h2>
 <pre># id                                 <span class="cmt"># Exibe id do usuário ativo com login e group</span>
-# last                               <span class="cmt"># Exibe os ultimos logins no sistem</span>
+# last                               <span class="cmt"># Exibe os ultimos logins no sistema</span>
 # who                                <span class="cmt"># Exibe quem está logado no sistema</span>
 # groupadd admin                     <span class="cmt"># Adiciona grupo "admin" e usuário colin (Linux/Solaris)</span>
 # useradd -c "Colin Barschel" -g admin -m colin
@@ -583,7 +583,7 @@ fs.file-max=102400                   <span class="cmt"># Entrada permanente em s
 <h4>Por shell/script</h4>
 Utilize o comando <code>limits</code> no csh ou no tcsh ou como no Linux, utilize <code>ulimit</code> em um sh ou bash shell.
 <h4>Por user/processo</h4>
-Os limites padrões no login são configuradors em <code>/etc/login.conf</code>. Um valor ilimitdor é ainda assim limitado pelo valor máximo do sistema.
+Os limites padrões no login são configuradors em <code>/etc/login.conf</code>. Um valor ilimitador é ainda assim limitado pelo valor máximo do sistema.
 <h4>Sistema</h4>
 Limites do kernel também são configurados com o sysctl. Limites permanentes são configurados em <code>/etc/sysctl.conf</code> ou <code>/boot/loader.conf</code>. A syntax é a mesma como em Linux, mas as chaves são diferentes.
 <pre># sysctl -a                          <span class="cmt"># Visualizar todos os limites do sistema</span>
