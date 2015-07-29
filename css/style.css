@@ -1,1 +1,305 @@
-style
+
+/* basic CSS common to all media */
+html {
+    margin: 0;
+}
+body {
+    padding: 0;
+    font-family: verdana, arial, sans-serif;
+    font-size: 90%;
+    counter-reset: chapter section;
+}
+
+@media screen, handheld, print {
+    /* Colors only */
+    html {
+        background-color: white;
+        color: black;
+    }
+    h1 {
+        background-color: #000040;
+        color: white;
+        padding: 5px;
+    }
+    h3, h4, div.title, h2, a:link, a:visited, .cmt {
+        background-color: transparent;
+        color: #000040;
+    }
+    pre {
+        background-color: #F6F6FC;
+    }
+    pre, code { 
+        color: #003300;
+    }
+    a:hover, .pp {
+        color: #D55500;
+    }
+    a:active {
+        color: green;
+    }
+    .keyword {
+        color:#0000FF;
+    }
+}
+@media print {
+    /* print only colors */
+    pre, code { 
+        color: #000;
+    }
+    a:link, a:visited, .cmt {
+        background-color: transparent;
+        color: #000060;
+    }
+}
+
+div.title {
+    text-transform: uppercase;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 220%;
+    font-weight: bold;
+    letter-spacing: .22em;
+}
+h1, h2, h3 div.title {
+    font-family: verdana, sans-serif;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 150%;
+    letter-spacing: .15em;
+    counter-reset: section;
+    string-set: chaptertitle content();
+}
+h2 {
+    font-size: 120%;
+    letter-spacing: .10em;
+}
+h3, h4 {
+    font-size: 100%;
+    line-height:1em;
+    letter-spacing: .07em;
+}
+h4 {
+    font-style: italic;
+    font-weight: normal;
+    margin: 1em 0 0.5em 0;
+}
+pre {
+    padding: 0.1em 0em 0.1em 1em;
+}
+div.menu a {
+    font-weight: normal;
+    text-decoration: none;
+}
+h1:before {
+    content: counter(chapter) " ";
+    counter-increment: chapter;
+}
+h2:before {
+    counter-increment: section;
+    content: counter(chapter) "." counter(section) " ";
+}
+/* Not implemented in browsers yet */
+a.xref:after { 
+    content: " " target-counter(attr(href, url), chapter) "."
+    target-counter(attr(href, url), section); 
+}
+div.changestyle {
+    padding-top: 1em;
+}
+
+@media screen, handheld {
+/* Menu on the right for screen media */
+/* including some IE6 hacks */
+    body {
+        padding: 0;
+        margin: 1em 13em 0em 1.5em;
+    }	
+    html&gt;body {
+        margin: 1em 13em 0em 1.5em;
+    }
+    body&gt;div.menu {
+        position: fixed;
+    }
+    body&gt;div.changestyle {
+        position: fixed;
+    }
+    div.menu { 
+        position: absolute;
+        z-index: 2;
+        width: 10.7em; height: auto;
+        top: 0.4em; right: 0.5em; bottom: 0.8em; left: auto;
+    }
+    div.changestyle {
+        font-size: 80%;
+        font-weight: normal;
+        position: absolute;
+        z-index: 2;
+        width: 10.7em; height: auto;
+        bottom: 0;
+    }
+    ol.toc, ol.toc li  {
+        margin: 0;
+        list-style-type: none;
+        padding: 0.13em 0;
+        text-indent: 0;
+        text-align: left;
+        line-height: 1.1em;
+    }
+    p.last {
+        padding-top: 5em;
+    }
+    .fn {
+        display: none;
+        counter-increment: footnote
+    }
+}
+
+@media print {
+/* layout */
+/* Menu as TOC for print */
+    body {
+        font-size: 88%;
+    }	
+    div.title {
+        padding: 0.5em 0 2em 0;
+    }
+    div {
+        text-align: justify;
+    }
+    h2 {
+        margin-bottom: 0.5em;
+    }
+    h3 {
+        margin-bottom: 0.3em;
+    }
+    h4 {
+        margin-bottom: 0.3em;
+    }
+    pre {
+        font-size: 90%;
+        margin: 0.3em 0 0.3em 0;
+        padding: 0.2em 0 0.2em 0.4em;
+        text-align: left;
+        line-height: 115%;
+        letter-spacing:-0.03em
+    }
+    a {
+	text-decoration: none;
+    }
+    p.xrefp {  /* links below h1 headers */
+        padding-top: 0;
+        margin: -1em 0 1.3em 0;
+        page-break-inside: avoid;
+        page-break-after: avoid;
+    }
+    a.xrefp {
+        font-weight: normal;
+        text-decoration: none;
+    }
+    ol.toc li  {
+        list-style-type: decimal;
+        margin: 0;
+        padding: 0.25em 0;
+    }
+    ol.toc  {
+        margin: 0 0 0 2.2em;
+        list-style-position: outside;
+        font-weight: normal;
+        list-style-type: decimal;
+        padding: 4em 0;
+    }
+    ol.toc a::after {
+        content: leader(' . ') target-counter(attr(href), page);
+    }
+/*
+a.xref:after { 
+    content: " [" target-counter(attr(href, url), chapter) "."
+    target-counter(attr(href, url), section) " page " 
+    target-counter(attr(href, url), page) "]"; 
+}
+*/
+    a.xref:after { 
+        content: " (page " target-counter(attr(href, url), page) ")"; 
+    }
+    a.xrefp:after { 
+        content: " (p"target-counter(attr(href, url), page)")"; 
+    }
+    h1, h2, h3, h4, h5 { 
+        page-break-after: avoid;
+    }
+    div.footerfirst, div.footerlast {
+        position: absolute;
+        bottom: 0;
+    }
+    div.main {
+        page-break-before: always;
+    }
+    div.pb {
+        page-break-after: always;
+    }
+    div.changestyle, p.copyright, span.web {
+        display: none;
+    }
+    div#sysinfo {
+        margin-top: -1.5em;
+    }
+    p.last {
+        padding-top: 2em;
+    }
+    .fn {
+        display: prince-footnote;
+        counter-increment: footnote;
+        font: caption;
+        font-stretch: normal;
+        letter-spacing: normal;
+        font-size: xx-small;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+        vertical-align: super;
+    }
+    .fn::footnote-call {
+        content: counter(footnote);
+        font-size: 80%;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+        vertical-align: super;
+        line-height: none
+    }
+    .fn::footnote-marker {
+        list-style-position: inside;
+    }
+}
+@page {
+    size: A4 portrait;
+    margin: 15mm 12mm 14mm 12mm;
+    padding: 0mm 0 5mm 0;
+    @footnotes {
+	border-top: solid #000040 thin;
+	padding-top: 0.22em;
+        padding-left: 1.2em;
+        font-family: verdana, sans-serif;
+    }
+    @bottom-center {
+        padding: 0 0 5mm 0;
+        content: counter(page);
+        font-family: verdana, sans-serif;
+        font-size: 88%;
+    }
+    @top {
+        padding-top: 5mm;
+	content: "— " string(chaptertitle) " —";
+        font-family: verdana, sans-serif;
+    }
+}
+@page :first {
+    padding: 0;
+    @bottom-center {
+        content: normal;
+    }
+    @top {
+        content: normal;
+    }
+}
