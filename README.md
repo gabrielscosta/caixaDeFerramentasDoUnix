@@ -14,7 +14,7 @@ escrito por [__Colin Barschel__] (http://colin.barschel.net/).
 ## Sobre os tradutores
 
 Traduzido e mantido por: [__Gabriel da Silveira Costa__] (https://github.com/tocadotux/)
-Revisado por: [Rumbler Soppa] (https://github.com/rumbler), [Gabriel Almir (kewer)] (https://github.com/gabrielalmir10) e agora temos um novo integrante na equipe, o [Gabriel Masson] (https://github.com/gmasson). O Gabriel Masson criou um fork deste manual onde todas as alterações e melhorias serão emergidos nessa documentaão. Para conhecer o fork, visite o link https://github.com/gmasson/caixaDeFerramentasDoUnix
+Revisado por: [__Rumbler Soppa__] (https://github.com/rumbler), [__Gabriel Almir (kewer)__] (https://github.com/gabrielalmir10) e agora temos um novo integrante na equipe, o [__Gabriel Masson__] (https://github.com/gmasson). O Gabriel Masson criou um fork deste manual onde todas as alterações e melhorias serão emergidos nessa documentaão. Para conhecer o fork, visite o link https://github.com/gmasson/caixaDeFerramentasDoUnix.
 ######Três pessoas das quais agradeço muito pelo andamento do projeto.
 
 Divirta-se :smiley:
