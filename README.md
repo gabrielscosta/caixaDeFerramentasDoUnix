@@ -1,6 +1,6 @@
 # Caixa de Ferramentas do Unix 
 ###### versão 0.3 (alpha)
-###### Erros ortográficos serão encontrados aqui, mas que serão corrigidas na versão beta
+###### Erros ortográficos serão encontrados aqui, mas que serão corrigidas na versão beta. Quer contribuir com a evolução do projeto? entre em contato :-) tocadotux@gmail.com
 =============================
 
 [![Vídeo da Divulgação do Manual](https://i.ytimg.com/vi/uk-s6K479UU/0.jpg)](https://www.youtube.com/watch?v=uk-s6K479UU)
