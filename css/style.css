@@ -10,6 +10,13 @@ body {
     counter-reset: chapter section;
 }
 
+.extras-copy
+{
+    width: 80%;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 @media screen, handheld, print {
     /* Colors only */
     html {
@@ -146,8 +153,9 @@ div.changestyle {
         text-align: left;
         line-height: 1.1em;
     }
-    p.last {
+    .last {
         padding-top: 5em;
+        font-weight: bold;
     }
     .fn {
         display: none;
@@ -244,7 +252,7 @@ a.xref:after {
     div#sysinfo {
         margin-top: -1.5em;
     }
-    p.last {
+    .last {
         padding-top: 2em;
     }
     .fn {
@@ -292,7 +300,7 @@ a.xref:after {
         padding-top: 5mm;
 	content: "— " string(chaptertitle) " —";
         font-family: verdana, sans-serif;
-    }
+    }    
 }
 @page :first {
     padding: 0;
