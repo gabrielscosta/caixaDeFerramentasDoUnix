@@ -1,6 +1,6 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>                            
+  <head>
     <title>Caixa de Ferramentas do Unix</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="Content-Language" content="pt-br"/>
@@ -15,7 +15,6 @@
     <meta name="abstract" content="Unix Toolbox -  Uma referencia prática e compacta para administradores de sistemas e usuários avançados."/>
     <meta name="subject" content="Unix Toolbox revisão 14.4"/>
     <meta name="keywords" content="Unix Toolbox, ferramentas Unix, Unix, FreeBSD, Linux, lista de comandos, administração de sistema, guia prático, referência avançada, tarefas comuns Linux, syntax reminder, howtos, tunels ssh, rsync, certificados ssl"/>
-    <link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AOBfLwBbX14AWxgYABg8RwC/g14AGBgYAL9OJAB8KhgAfHFeAOCDUgC/g0cAGCo7AOCDXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcJCw4ODg4ODgUHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcLCgcHBwcHBwcHBwcHBwcHBwgOBQcHBwcHBwcHBwcHBwcHBAwNBwcHBwcHBwcHBwcHBwcJCwMHBwcHBwcHBwcHBwcCBg0HBwcHBwcHBwcHBwkLAwcHBwcHBwcHBwcHBwcMDQcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="/>
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
@@ -32,7 +31,7 @@
       Reportes de erros e comentários são muito bem vindos - <a href="mailto:c\at\cb.vu">c@cb.vu</a> Colin Barschel.
       <p class="copyright">© <a href="mailto:c_at_cb.vu">Colin Barschel</a> 2007-2012. <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Alguns direitos reservados sob a licença</a>.
       </p>
-    </div> 
+    </div>
     <!-- A tabela de conteúdo é exibida como um menu fixado verticalmente à direita quando visualizado em um navegador. Quando impresso TOC é exibido na página inicial como uma tabela clássica de conteúdo como números -->
     <div class="menu">
       <ol class="toc">
@@ -90,7 +89,7 @@
     <pre># cat /proc/cpuinfo                  <span class="cmt"># Modelo do CPU</span>
     # cat /proc/meminfo                  <span class="cmt"># Memória do Hardware</span>
     # grep MemTotal /proc/meminfo        <span class="cmt"># Exibir a memória física</span>
-    # watch -n1 'cat /proc/interrupts'   <span class="cmt"># Observar interrupções alteraveis continuadamente</span>
+    # watch -n1 'cat /proc/interrupts'   <span class="cmt"># Observar interrupções alteráveis continuadamente</span>
     # free -m                            <span class="cmt"># Memória utilizada e livre (-m para MB)</span>
     # cat /proc/devices                  <span class="cmt"># dispositivos configurados</span>
     # lspci -tv                          <span class="cmt"># Exibir dispositivos PCI</span>
@@ -207,7 +206,7 @@
     <h3>Linux</h3>
     Uma vez inicializado, o kernel inicia o <code>init</code> o qual então inicia <code>rc</code> o qual inicia todos os scripts pertencentes á um runlevel. Os scripts são armazenados em /etc/init.d e são linkados dentro de /etc/rc.d/rcN.d com N número do runlevel.<br />
     O runlevel padrão está configurado em /etc/inittab. É normalmente o 3 ou o 5:
-    <pre># grep default: /etc/inittab                                         
+    <pre># grep default: /etc/inittab
     id:3:initdefault:
     </pre>
     O The runlevel atual pode ser alterado com o <code>init</code>. Por exemplo, para ir do 3 para o 5:
@@ -273,7 +272,7 @@
     # reboot
     </pre> 
     <h3>Método FreeBSD 1</h3>
-    No FreeBSD, inicialize em modo  single user, remonte / rw e utilize passwd. Você oide selcionar o modo single user no menu de boot (opção 4) que é exibido por  10 segundos ao inicio. o modo single user lhe dará um shell root na partição /.
+    No FreeBSD, inicialize em modo  single user, remonte / rw e utilize passwd. Você pode secionar o modo single user no menu de boot (opção 4) que é exibido por  10 segundos ao inicio. o modo single user lhe dará um shell root na partição /.
     <pre># mount -u /; mount -a               <span class="cmt"># montará / rw</span>
     # passwd
     # reboot
@@ -412,7 +411,7 @@
     [2]  + 36233 Suspended (tty output)        top
     # fg %2                              <span class="cmt"># Traz processo  2 de volta para plano frontal</span>
     </pre>
-    <pre># make                               <span class="cmt"># Inicia um serviço long de compilação mas necessita deixar o terminal</span>
+    <pre># make                               <span class="cmt"># Inicia um serviço longo de compilação mas necessita deixar o terminal</span>
     ^Z                                   <span class="cmt"># suspenso (stopped) com [Ctrl]-[Z]</span> 
     # bg                                 <span class="cmt"># Coloca em plano de fundo e continua rodando</span>
     # disown -h %1                       <span class="cmt"># destaca processo a partir do terminal, não será morto no logout</span>
@@ -499,7 +498,7 @@
     </pre>
 
     <h2 id="filesstat">Quem tem quais arquivos abertos</h2>
-    Isso é util para descobrir qual arquivo está bloqueando uma partição que tem que ser desmontada e dá um típico erro de:
+    Isso é útil para descobrir qual arquivo está bloqueando uma partição que tem que ser desmontada e dá um típico erro de:
     <pre># umount /home/
     umount: unmount of /home             <span class="cmt"># umount impossible because a file is locking home (impossível desmontar por que um arquivo está travando o home)</span>
        failed: Device busy (falhou: dispositivo ocupado)
@@ -639,7 +638,7 @@
     </pre>
 
     <h3>FreeBSD</h3>
-    Com dispositivo de moméria (faça # kldload md.ko se necessário):
+    Com dispositivo de memória (faça # kldload md.ko se necessário):
     <pre># mdconfig -a -t vnode -f file.iso -u 0
     # mount -t cd9660 /dev/md0 /mnt
     # umount /mnt; mdconfig -d -u 0                         <span class="cmt"># Limpa o dispositivo md</span>
@@ -777,7 +776,7 @@
     # ifconfig fxp0 media 100baseTX mediaopt full-duplex <span class="cmt"># 100 Mbit full duplex (FreeBSD)</span>
     # netstat -s                <span class="cmt"># Estatisticas do System-wide para cada protocolo de rede</span>
     </pre>
-    Comandos adicionais que não são sempre instaladospor padrão, mas fáceis de encontrar:
+    Comandos adicionais que não são sempre instalados por padrão, mas fáceis de encontrar:
     <pre># arping 192.168.16.254     <span class="cmt"># Ping na camada Ethernet</span>
     # tcptraceroute -f 5 cb.vu  <span class="cmt"># utiliza o TCP ao invés do icmp para traçar pelos firewalls</span>
     </pre>
@@ -895,7 +894,7 @@
     <pre>net.ipv4.ip_forward = 1</pre>
 
     <h3>FreeBSD</h3>
-    Verifique e abilite com:
+    Verifique e habilite com:
     <pre># sysctl net.inet.ip.forwarding      <span class="cmt"># Verifica o direcionamento de IP 0=off, 1=on</span>
     # sysctl net.inet.ip.forwarding=1
     # sysctl net.inet.ip.fastforwarding=1	<span class="cmt"># Para roteador ou firewall dedicado</span>
@@ -917,7 +916,7 @@
     # ip route flush cache
     # iptables -L -t nat            <span class="cmt"># Verifica status do NAT</span>
     </pre>
-    Exclui o direcionamento de porta com o -D ao inves do -A. O programa <a href="http://tweegy.nl/projects/netstat-nat/">netstat-nat</a><span class="fn">http://tweegy.nl/projects/netstat-nat</span> é muito útil para rastrear conexões (ele utiliza <code>/proc/net/ip_conntrack</code> ou <code>/proc/net/nf_conntrack</code>).
+    Exclui o direcionamento de porta com o -D ao invés do -A. O programa <a href="http://tweegy.nl/projects/netstat-nat/">netstat-nat</a><span class="fn">http://tweegy.nl/projects/netstat-nat</span> é muito útil para rastrear conexões (ele utiliza <code>/proc/net/ip_conntrack</code> ou <code>/proc/net/nf_conntrack</code>).
     <pre># netstat-nat -n                <span class="cmt"># Exibe todas as conexões com IPs</span></pre>
 
     <h3>FreeBSD</h3>
@@ -930,7 +929,7 @@
     natd_flags="-s -m -u -dynamic -f /etc/natd.conf"
     </pre>
     Port forward with:
-    <pre># cat /etc/natd.conf 
+    <pre># cat /etc/natd.conf
     same_ports yes
     use_sockets yes
     unregistered_only
@@ -944,7 +943,7 @@
     search sleepyowl.net intern.lab
     domain sleepyowl.net
     </pre>
-    Verificar o nome do domíniop com:
+    Verificar o nome do domínio com:
     <pre># hostname -d                        <span class="cmt"># O mesmo que dnsdomainname</span></pre>
     <h3>Windows</h3>
     No Windows os DNS estão configurados por interface. Para exibir os DNS configurados e para limpar (flush) o cache de DNS utilize:
@@ -984,7 +983,7 @@
     </pre>
 
     <h3>/etc/hosts</h3>
-    Hosts únicos pode ser configurados no arquivo /etc/hosts ao invés de rodar <code>named</code> localmente para resolver as consultas de hostname. o formato ésimples, por exemplo:
+    Hosts únicos pode ser configurados no arquivo /etc/hosts ao invés de rodar <code>named</code> localmente para resolver as consultas de hostname. o formato é simples, por exemplo:
     <pre>78.31.70.238   sleepyowl.net   sleepyowl</pre>
     A prioridade entre hosts e uma consulta de dns, que é a ordem de resolução de nome, pode ser configurada em <code>/etc/nsswitch.conf</code> AND /etc/host.conf. O arquvo também existe no Windows, normalmente está em:
     <pre>C:\WINDOWS\SYSTEM32\DRIVERS\ETC</pre>
@@ -1022,7 +1021,7 @@
 
 
     <h2 id="traffic">Análise de tráfego</h2>
-    <a href="http://people.suug.ch/~tgr/bmon/">Bmon</a><span class="fn">http://people.suug.ch/~tgr/bmon/</span> é um pequeno console monitor  de largura de banda e pode exibir o fluxo nas diferentes interfaces. 
+    <a href="http://people.suug.ch/~tgr/bmon/">Bmon</a><span class="fn">http://people.suug.ch/~tgr/bmon/</span> é um pequeno console monitor  de largura de banda e pode exibir o fluxo nas diferentes interfaces.
     <h3>Sniff com tcpdump</h3>
     <pre># tcpdump -nl -i bge0 not port ssh and src \(192.168.16.121 or 192.168.16.54\)
     # tcpdump -n -i eth1 net 192.168.16.121           <span class="cmt"># seleciona para/de um único IP</span>
@@ -1101,8 +1100,8 @@
     </pre>
 
     <h4>FreeBSD</h4>
-    O link maximo de largura de banda é de 500 Kbit/s e definimos 3 filas com prioridade 100:10:1 para VoIP:ssh:all the rest.
-    <pre># ipfw pipe 1 config bw 500Kbit/s 
+    O link máximo de largura de banda é de 500 Kbit/s e definimos 3 filas com prioridade 100:10:1 para VoIP:ssh:all the rest.
+    <pre># ipfw pipe 1 config bw 500Kbit/s
     # ipfw queue 1 config pipe 1 weight 100
     # ipfw queue 2 config pipe 1 weight 10
     # ipfw queue 3 config pipe 1 weight 1
@@ -1121,7 +1120,7 @@
     <pre># ypwhich                  <span class="cmt"># obtém o nome do servidor NIS conectado</span>
     # domainname               <span class="cmt"># O nome do domínio NIS como está configurado</span>
     # ypcat group              <span class="cmt"># deve exibir o grupo a partir do servidor NIS</span>
-    # cd /var/yp &amp;&amp; make       <span class="cmt"># Reconstroe a base de dados do yp</span>
+    # cd /var/yp &amp;&amp; make       <span class="cmt"># Reconstrói a base de dados do yp</span>
     # rpcinfo -p servername    <span class="cmt"># Reporta os serviços RPC do servidor</span>
     </pre>
     O ypbind está rodando?
@@ -1142,19 +1141,19 @@
     <a rel="nofollow" href="http://netcat.sourceforge.net/">Netcat</a><span class="fn">http://netcat.sourceforge.net</span> (nc) é melhor conhecido como o "Canivete Suíço de Rede", ele pode manipular, criar ou ler/escrever conexões TCP/IP. Aqui alguns exemplos uteis, há muitos mais na net, por exemplo <a rel="nofollow" href="http://www.g-loaded.eu/2006/11/06/netcat-a-couple-of-useful-examples">g-loaded.eu[...]</a><span class="fn">http://www.g-loaded.eu/2006/11/06/netcat-a-couple-of-useful-examples</span> e <a rel="nofollow" href="http://www.terminally-incoherent.com/blog/2007/08/07/few-useful-netcat-tricks">aqui</a><span class="fn">http://www.terminally-incoherent.com/blog/2007/08/07/few-useful-netcat-tricks</span>.<br /> Você pode precisar usar o comando <code>netcat</code> ao inves do <code>nc</code>. Veja também o comando similar <a rel="nofollow" href="http://www.dest-unreach.org/socat">socat</a>.
 
     <h3>Transferência de arquivo</h3>
-    Copia um diretório grande através de uma conexão tcp bruta. A transferência é bem ráída (sem sobrecarga de protocolo) e você não precisa  bagunçar com NFS ou SMB ou FTP ou outros, simplesmente torne o arquivo disponível no servidor, e ser obtido a partir do cliente. Aqui 192.168.1.1 é o endereço de Ip do servidor.
+    Copia um diretório grande através de uma conexão tcp bruta. A transferência é bem rápida (sem sobrecarga de protocolo) e você não precisa  bagunçar com NFS ou SMB ou FTP ou outros, simplesmente torne o arquivo disponível no servidor, e ser obtido a partir do cliente. Aqui 192.168.1.1 é o endereço de Ip do servidor.
     <pre><span class="cmt">server#</span> tar -cf - -C VIDEO_TS . | nc -l -p 4444         <span class="cmt"># Serve o arquivo tar na porta 4444</span>
     <span class="cmt">client#</span> nc 192.168.1.1 4444 | tar xpf - -C VIDEO_TS     <span class="cmt"># Puxa o arquivo na porta 4444</span>
     <span class="cmt">server#</span> cat largefile | nc -l 5678                      <span class="cmt"># Serve um único arquivo</span>
     <span class="cmt">client#</span> nc 192.168.1.1 5678 &gt; largefile                 <span class="cmt"># Puxa um único arquivo</span>
     <span class="cmt">server#</span> dd if=/dev/da0 | nc -l 4444                     <span class="cmt"># Imagem da partição do servidor</span>
     <span class="cmt">client#</span> nc 192.168.1.1 4444 | dd of=/dev/da0            <span class="cmt"># Puxa partição para clonagem</span>
-    <span class="cmt">client#</span> nc 192.168.1.1 4444 | dd of=da0.img             <span class="cmt"># Puxa partção para o arquivo</span>
+    <span class="cmt">client#</span> nc 192.168.1.1 4444 | dd of=da0.img             <span class="cmt"># Puxa partição para o arquivo</span>
     </pre>
     <h3>Outras hacks</h3>
     Especialmente aqui, você deve saber o que está fazendo.
     <h4>Shell Remoto</h4>
-    Opção -e somnente na versão do Windows? Ou utilize <a rel="nofollow" href="http://download.insecure.org/stf/nc110.tgz">nc 1.10</a>.
+    Opção -e somente na versão do Windows? Ou utilize <a rel="nofollow" href="http://download.insecure.org/stf/nc110.tgz">nc 1.10</a>.
     <pre># nc -lp 4444 -e /bin/bash                        <span class="cmt"># Provê um shell remoto (backdoor de servidor)</span>
     # nc -lp 4444 -e cmd.exe                          <span class="cmt"># shell remoto para Windows</span>
     </pre>
@@ -1223,7 +1222,7 @@
     DSA key fingerprint is 14:4a:aa:d9:73:25:46:6d:0a:48:35:c7:f4:16:d4:ee.
     Are you sure you want to continue connecting (yes/no)? yes
     </pre>
-    <h2 id="scp">Transferencia segura de arquivo</h2>
+    <h2 id="scp">Transferência segura de arquivo</h2>
     Some simple commands:<br />
     <pre># scp file.txt host-two:/tmp
     # scp joe@host-two:/www/*.html /www/tmp
@@ -1244,13 +1243,13 @@
     </pre>
     Isso vai conectar ao gate e direcionar a porta local ao host desthost:destport. Note que desthost é o host de destino <i>como visto pelo gate</i>, então se a conexão é para o gate, então desthost é o localhost. Mais do que o direcionamento de uma porta é possível.
     <h3>Direcionamento direto no gate</h3>
-    Digamos que queremos acessar CVS (porta 2401) e http (porta 80) que estão executando no gate. Isso é o exemplo mais simples, desthost é assim o localhost, e nós usamos  a porta 8080 localmente ao inves da 80 então não precisamos ser o root. uma vez que a sessão ssh está aberta, ambos os serviços estão acessiveis nas portas local.
+    Digamos que queremos acessar CVS (porta 2401) e http (porta 80) que estão executando no gate. Isso é o exemplo mais simples, desthost é assim o localhost, e nós usamos  a porta 8080 localmente ao invés da 80 então não precisamos ser o root. uma vez que a sessão ssh está aberta, ambos os serviços estão acessíveis nas portas local.
     <pre># ssh -L 2401:localhost:2401 -L 8080:localhost:80 user@gate</pre>
     <h3>Direcionamento de Netbios e de área de trabalho remota para um segundo servidor</h3>
     Diagmos que um servidor smb Windows está porta trás do gate e não está rodando ssh. Precisamos de acesso para o compartilhamento smb e também para a área de trabalho no servidor.
     <pre># ssh -L 139:smbserver:139 -L 3388:smbserver:3389 user@gate</pre>
     O compartilhamento smb pode agora ser acessado com o \\127.0.0.1\, mas somente se o compartilhamento local for desabilitado, por que <i>to compartilhamento local está escutando na porta 139</i>.<br />
-    É possível manter o compartilhamento local habilitado, para isso precisamos criar um novo dispositivo virtual com um novo endereço de IP para o tunel, o compartilhamento  smb será conectado nesse endereço. Além disso <i>o RPD local já está escutando na 3389</i>, então nós escolhemos a 3388. Para esse exemplo vamos utilizar o IP virtual de 10.1.1.1.<br />
+    É possível manter o compartilhamento local habilitado, para isso precisamos criar um novo dispositivo virtual com um novo endereço de IP para o túnel, o compartilhamento  smb será conectado nesse endereço. Além disso <i>o RPD local já está escutando na 3389</i>, então nós escolhemos a 3388. Para esse exemplo vamos utilizar o IP virtual de 10.1.1.1.<br />
     <ul>
     <li>Com o putty utilize a Source port=10.1.1.1:139. É possível criar dispositivos de loop e de túnel múltiplos. No Windows 2000, somente o putty funcionou para mim. No Windows Vista também direcionou para a porta 445 em adição à porta 139. Também no Vista o patch KB942624 impede a porta 445 direcionar, então eu tive que desinstalar esse path no Vista.</li>
     <li>Com o cliente ssh.com, desabilite "Allow local connections only". Já que ssh.com vinculará todos os endereços, somente um único compartilhamento pode ser conectado.</li>
@@ -1292,11 +1291,11 @@
     Agora o admin pode conectar diretamente ao cliente VNC com:
     <pre># vncconnect -display :0 localhost</pre>
 
-    <h3 id="sshmultihop">Cave (Dig) um tunel ssh multi-hop</h3>
+    <h3 id="sshmultihop">Cave (Dig) um túnel ssh multi-hop</h3>
     Suponhamos que você não consiga alcançar um servidor diretamente com o ssh, mas somente via múltiplos hosts intermediários (por questões de roteamento por exemplo). Algumas vezes é necessário obter uma conexão direta  cliente - servidor, por exemplo para compilar arquivos com o scp, ou direcionar outras portas como smb ou vnc. 
     Um jeito de fazer isso é acorrentar túneis (chain tunnels together) para direcionar uma porta para o servidor ao longo dos saltos. Essa porta "carrier" somente alcança seu destino final na ultima conexão para o servidor.<br />
-    Suponhamos que queremos direcionar a porta ssh de um cliente para um servidor em dois saltos (hops). Um vez que o tunel é construído, é possível conectar ao servidor diretamente do cliente (e também adicionar um outra porta de direcionamento).
-    <h4>Cria tunel em um shell</h4>
+    Suponhamos que queremos direcionar a porta ssh de um cliente para um servidor em dois saltos (hops). Um vez que o túnel é construído, é possível conectar ao servidor diretamente do cliente (e também adicionar um outra porta de direcionamento).
+    <h4>Cria túnel em um shell</h4>
     cliente -&gt; host1 -&gt; host2 -&gt; servidor e cave (dig) o túnel 5678
     <pre><span class="cmt">client&gt;</span># ssh -L5678:localhost:5678 host1        <span class="cmt"># 5678 é uma porta arbitraria para o túnel</span>
     <span class="cmt">host_1&gt;</span># ssh -L5678:localhost:5678 host2        <span class="cmt"># acorrenta 5678 do host1 para o host2</span>
@@ -1346,7 +1345,7 @@
     <pre><span class="cmt">cli&gt;#</span> ifconfig tun5 10.0.1.2 netmask 255.255.255.252   <span class="cmt"># Cliente no Linux</span>
     <span class="cmt">cli&gt;#</span> ifconfig tun5 10.0.1.2 10.0.1.1                  <span class="cmt"># Cliente no FreeBSD</span>
     </pre>
-    Os dois hosts estão agora conhectados e podem transparentemente comunicar com qualquer protocolo de camada 3/4 utilizando o endereço de IP do túnel.
+    Os dois hosts estão agora conectados e podem transparentemente comunicar com qualquer protocolo de camada 3/4 utilizando o endereço de IP do túnel.
 
     <h2 id="sshg2g">Conectar duas redes</h2>
     Em adição a configuração p2p acima, é mais útil conectar duas redes privadas com uma VPN SSH utilizando dois gates. Suponhamos por exemplo, netA seja 192.168.51.0/24 e netB 192.168.16.0/24. O procedimento é similar ao acima, precisamos somente adicionar o reteamento. O NAT deve ser ativado na interface privada somente se os gates não forem os mesmos que o gateway padrão de sua rede.<br />
@@ -1377,7 +1376,7 @@
     </pre>
 
     <h3>Configure o gateA</h3>
-    Comandos executdos no gateA:
+    Comandos executados no gateA:
     <h4>gateA está no Linux</h4>
     <pre><span class="cmt">gateA&gt;#</span> ifconfig tun5 10.0.1.2 netmask 255.255.255.252
     <span class="cmt">gateA&gt;#</span> route add -net 192.168.16.0 netmask 255.255.255.0 dev tun5
@@ -1788,7 +1787,7 @@
 
     <ul>
       <li>Acesso local direto ao file system. O(s) usuário(s) precisa(m) permissão ao arquivo o suficiente para acessar o CS directamente e não há mais autenticação em adição ao login do OS. No entando isso só é útil se o repositório for local.</li>
-      <li>Acesso remoto com o ssh e com o protocolo ext (ext protocol). Qualquer uso de uma conta com shell ssh e permissões de leitura e escrita (read/write) no servidor CVS podem acessar o CVS diretamente com o ext no ssh sem qualquer tunel adicional. Não há processo no servidor sendo executado no CVS para ele que funcione. O login ssh faz a autenticação de login.</li>
+      <li>Acesso remoto com o ssh e com o protocolo ext (ext protocol). Qualquer uso de uma conta com shell ssh e permissões de leitura e escrita (read/write) no servidor CVS podem acessar o CVS diretamente com o ext no ssh sem qualquer  túneladicional. Não há processo no servidor sendo executado no CVS para ele que funcione. O login ssh faz a autenticação de login.</li>
       <li>Acesso remoto com o pserver (porta padrão: 2401/tcp). Esse é o uso preferido por grande base de usuário desde que os usuários são autenticados pelo CVS pserver com uma base de dados de senha dedicada, logo não há necessidade para contas de usuários local. Essa configuração é explicada abaixo.</li>
     </ul>
 
@@ -1912,9 +1911,9 @@
     </pre>
     O novo diretório "trunk" é somente uma convenção, isso não exigido.
     <h3 id="svnssh">Acesso remoto com ssh</h3>
-    Nenhuma configuração especial é exigida para acessar o repositório via ssh, simplesmente sustitua <code>file://</code> com <code>svn+ssh/hostname</code>. Por exemplo:
+    Nenhuma configuração especial é exigida para acessar o repositório via ssh, simplesmente substitua <code>file://</code> com <code>svn+ssh/hostname</code>. Por exemplo:
     <pre># svn checkout svn+ssh://hostname/home/svn/project1</pre>
-    Assim com o acesso ao arquivo local, todo usuário precisa de um acesso ssh para o servidor (com uma conta local) e também acesso a leitura/escrita. Esse metodo pode ser adequado para um grupo pequeno. Todos os usuários poderia pertencer a um grupo de subversão que pertence ao repositório, por exemplo:
+    Assim com o acesso ao arquivo local, todo usuário precisa de um acesso ssh para o servidor (com uma conta local) e também acesso a leitura/escrita. Esse método pode ser adequado para um grupo pequeno. Todos os usuários poderia pertencer a um grupo de subversão que pertence ao repositório, por exemplo:
     <pre># groupadd subversion
     # groupmod -A user1 subversion
     # chown -R root:subversion /home/svn
@@ -2008,7 +2007,7 @@
       <li><strong>/string</strong>       Busca por string para frente</li>
       <li><strong>?string</strong>       Volta por string para tras</li>
       <li><strong>n</strong>       Busca pela próxima instancia de string</li>
-      <li><strong>N</strong>       Busca por instancia de instring anterior</li>
+      <li><strong>N</strong>       Busca por instancia de string anterior</li>
       <li><strong>{</strong>       Move um paragrafo para tras</li>
       <li><strong>}</strong>       Move um paragrafo para frente</li>
       <li><strong>1G</strong>       Move para a primeira linha do arquivo</li>
@@ -2090,7 +2089,7 @@
       <li><code>noerror</code>       continua depois da leitura de erros (ex. bad blocks)</li>
       <li><code>sync</code>       Enche todo bloco de entrada com Nulls para ibs-size</li>
     </ul>
-    O tamanho de byte padrão é de 512 (um bloco). O MBR, aonde a tabela de partição fica localizada, fica no primeiro bloco, os primeiros 63 blocos de um disco ficam vazios. Tamanhos maiores de byte são mais raídos para copiar mas requer também mais memória.
+    O tamanho de byte padrão é de 512 (um bloco). O MBR, aonde a tabela de partição fica localizada, fica no primeiro bloco, os primeiros 63 blocos de um disco ficam vazios. Tamanhos maiores de byte são mais rápidos para copiar mas requer também mais memória.
     <h3>Backup e restaurção</h3>
     <pre># dd if=/dev/hda of=/dev/hdc bs=16065b                <span class="cmt"># Copia de disco para disco (do mesmo tamanho)</span>
     # dd if=/dev/sda7 of=/home/root.img bs=4096 conv=notrunc,noerror <span class="cmt"># Realiza backup do /</span>
@@ -2114,7 +2113,7 @@
     # dd bs=1k if=/dev/hda1 conv=sync,noerror,notrunc of=hda1.img    <span class="cmt"># Armazena dentro de uma imagem</span>
     # mount -o loop /hda1.img /mnt                        <span class="cmt"># <a class="xref" href="http://cb.vu/unixtoolbox.xhtml#createimg">Monta a imagem</a></span>
     # rsync -ax /mnt/ /newdisk/                           <span class="cmt"># Copia em um novo disco</span>
-    # dd if=/dev/hda of=/dev/hda                          <span class="cmt"># Atulizar o estado magnético (apagará todo o disco)</span>
+    # dd if=/dev/hda of=/dev/hda                          <span class="cmt"># Atualizar o estado magnético (apagará todo o disco)</span>
       <span class="cmt"># A opção acima é util para atualizar o disco. É perfeitamente seguro, mas deve ser desmontado.</span>
     </pre>
     <h3>Excluir</h3>
@@ -2162,7 +2161,7 @@
       <li><strong>Ctrl-a Ctrl-d</strong> para desconectar e deixar a sessão que está em execução no plano de fundo (background)</li>
       <li><strong>Ctrl-a x</strong> trava o terminal com uma senha</li>
       <li><strong>Ctrl-a [</strong> entra no modo <strong>scrollback</strong>, sai com <strong>esc</strong>.<br />
-      Use <code>echo "defscrollback 5000" &gt; ~/.screenrc</code> para almentar o buffer (o padrão é 100)</li>
+      Use <code>echo "defscrollback 5000" &gt; ~/.screenrc</code> para alimentar o buffer (o padrão é 100)</li>
       <ul>
         <li><strong>C-u</strong> Rola meia página para cima</li>
         <li><strong>C-b</strong> Rola uma página inteira para cima</li>
@@ -2234,7 +2233,7 @@
     # ls -1                              <span class="cmt"># lista um arquivo por linha</span>
     # history | tail -50                 <span class="cmt"># Exibe us últimos 50 comandos utilizados</span>
     # cd -                               <span class="cmt"># cd para o diretório anterior ($OLDPWD)</span>
-    # /bin/ls| grep -v .py | xargs rm -r <span class="cmt"># canalisa (pipe) nomes de arquivos para o rm com o xargs</span>
+    # /bin/ls| grep -v .py | xargs rm -r <span class="cmt"># canaliza (pipe) nomes de arquivos para o rm com o xargs</span>
     </pre>
     Verificar hashs de arquivo com o openssl. Essa é uma boa alternativa para os comandos <code>md5sum</code> ou <code>sha1sum</code> (FreeBSD utiliza <code>md5</code> e <code>sha1</code>) que não ven sempre instalados por padrão.
     <pre># openssl md5 file.tar.gz            <span class="cmt"># Gera um checksum md5 do arquivo</span>
@@ -2328,7 +2327,7 @@
     </div>
 
     <div id="convert"><h1><a>Converte Mídia</a></h1>
-    Algumas vezes alguém precisa simplesmnte converter um arquivo de vídeo, de audio ou documenta para outro formato.
+    Algumas vezes alguém precisa simplesmente converter um arquivo de vídeo, de áudio ou documenta para outro formato.
     <h2 id="encoding">Text encoding</h2>
     Text encoding can get totally wrong, specially when the language requires
     special characters like àäç. The command <code>iconv</code> can convert from
@@ -2339,7 +2338,7 @@
     </pre>
     Sem a opção -f, iconv utilizará o char-set local, que é normalmente bom
     se o documento exibe bem.<br />
-    Converte filenames de uma condificação para outra (não o conteúdo do arquivo). Funciona também se somente alguns arquivos já forem utf8
+    Converte filenames de uma codificação para outra (não o conteúdo do arquivo). Funciona também se somente alguns arquivos já forem utf8
     <pre># convmv -r -f utf8 --nfd -t utf8 --nfc /dir/* --notest</pre>
 
     <h2 id="newlines">Unix - DOS newlines</h2>
@@ -2364,7 +2363,7 @@
     # convert imagem000* -resample 120x120 -compress JPEG -quality 80 imagens.pdf
     # mogrify -format png *.ppm          <span class="cmt"># converte todas as imagens ppm para o formato png</span>
     </pre>
-    Ghostscript pode também concatenar multiplos arquivos pdf dentro de um único. Isso só funciona bem se os arquivos PDF forem "well behaved".
+    Ghostscript pode também concatenar múltiplos arquivos pdf dentro de um único. Isso só funciona bem se os arquivos PDF forem "well behaved".
     <pre># gs -q -sPAPERSIZE=a4 -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=all.pdf \
     file1.pdf file2.pdf ...              <span class="cmt"># No Windows utilize '#' ao inves de '='</span>
     </pre>
@@ -2489,9 +2488,9 @@
     Aqui em "secret" é  a senha root do mysql, não há espaço depois do -p. Quando a opção -p é utilizada sosinha (w/o password), a seha é pergunatada no prompt de comando.
 
     <h2 id="sqlite">SQLite</h2>
-    <a href="http://www.sqlite.org/">SQLite</a><span class="fn">http://www.sqlite.org</span> é uma base de dados SQL pequena e poderoza independente, sem servidor (serverless), e sem configuração (zero-configuration).
+    <a href="http://www.sqlite.org/">SQLite</a><span class="fn">http://www.sqlite.org</span> é uma base de dados SQL pequena e poderosa independente, sem servidor (serverless), e sem configuração (zero-configuration).
     <h3>desepejar (Dump) e restaurar</h3>
-    Pode ser util desepejar e restaura uma base de dados SQLite. Por exemplo, você pode editar o arquivo dump para alterar um atributo de coluna ou tipe e depois restaurar a base de dados. Isso é mais fácil do que bagunçar com os comandos do SQL. Utilize o comando <code>sqlite3</code> para uma base de dados 3.x.
+    Pode ser útil despejar e restaura uma base de dados SQLite. Por exemplo, você pode editar o arquivo dump para alterar um atributo de coluna ou tipe e depois restaurar a base de dados. Isso é mais fácil do que bagunçar com os comandos do SQL. Utilize o comando <code>sqlite3</code> para uma base de dados 3.x.
     <pre># sqlite database.db .dump &gt; dump.sql              <span class="cmt"># dump</span>
     # sqlite database.db &lt; dump.sql                    <span class="cmt"># restaura</span>
     </pre>
@@ -2524,7 +2523,7 @@
     <pre>/dev/ad0s1d    /home    ufs     rw,noatime,userquota    2  2
     # mount /home                        <span class="cmt"># Para remontar a partição</span>
     </pre>
-    Abilita quatos de disco em /etc/rc.conf e inicia a quota.
+    Habilita quartos de disco em /etc/rc.conf e inicia a quota.
     <pre># grep quotas /etc/rc.conf
     enable_quotas="YES"                  <span class="cmt"># lig quotas no startup (ou NO).</span>
     check_quotas="YES"                   <span class="cmt"># Verfica quotas no startup (or NO).</span>
@@ -2545,7 +2544,7 @@
        inodes in use: 1792, limits (soft = 0, hard = 0)
     </pre>
     <h3>Para muitos usuários</h3>
-    O comando <code>edquota -p</code> é usado para duplicar uma quota á putros usuários. Por exemplo, para duplicar uma quota de referencia a todos os usuários:
+    O comando <code>edquota -p</code> é usado para duplicar uma quota á outros usuários. Por exemplo, para duplicar uma quota de referencia a todos os usuários:
     <pre># edquota -p refuser `awk -F: '$3 &gt; 499 {print $1}' /etc/passwd`
     # edquota -p refuser user1 user2     <span class="cmt"># Duplicate to 2 users</span>
     </pre>
@@ -2569,7 +2568,7 @@
     <pre># ifconfig | sed 's/  / /g' | cut -d" " -f1 | uniq | grep -E "[a-z0-9]+" | sort -r
     # ifconfig | sed '/.*inet addr:/!d;s///;s/ .*//'|sort -t. -k1,1n -k2,2n -k3,3n -k4,4n
     </pre>
-    O primeiro caracter no parâmetro do sed é uma guia. Para escrever uma guia no console, utilize ctrl-v ctrl-tab.
+    O primeiro carácter no parâmetro do sed é uma guia. Para escrever uma guia no console, utilize ctrl-v ctrl-tab.
 
     <h2 id="bash">bash</h2>
     Redireciona e canaliza para o bash e para o sh:
@@ -2642,7 +2641,7 @@
       <li>C-y       Cola a ultima coisa cortada (simplesmente cola)</li>
       <li>C-_       Desfaz</li>
     </ul>
-    <i>Nota:</i> C- = precione control, M- = precione meta (que geralmente é o alt ou a tecla escape).
+    <i>Nota:</i> C- = pressione control, M- = pressione meta (que geralmente é o alt ou a tecla escape).
     </div>
 
     <div id="scripting"><h1><a>Scripting</a></h1>
@@ -2748,7 +2747,7 @@
     <h2 id="sed">Alguns comandos sed</h2>
     Aqui está <a href="http://student.northpark.edu/pemente/sed/sed1line.txt">a mina de ouro</a><span class="fn">http://student.northpark.edu/pemente/sed/sed1line.txt</span>. E uma boa <a href="http://www.grymoire.com/Unix/Sed.html">introdução e tutorial ao sed</a><span class="fn">http://www.grymoire.com/Unix/Sed.html</span>.
     <pre>sed 's/string1/string2/g'                    <span class="cmt"># Substituí string1 com string2</span>
-    sed -i 's/wroong/wrong/g' *.txt              <span class="cmt"># Substitue uma palavra recorrente com g</span>
+    sed -i 's/wroong/wrong/g' *.txt              <span class="cmt"># Substituí uma palavra recorrente com g</span>
     sed 's/\(.*\)1/\12/g'                        <span class="cmt"># Modifica anystring1 para anystring2</span>
     sed '/&lt;p&gt;/,/&lt;\/p&gt;/d' t.xhtml                 <span class="cmt"># Exclui linhas que iniciam com &lt;p&gt;</span>
                                                  <span class="cmt"># e terminam com &lt;/p&gt;</span>
@@ -2791,7 +2790,7 @@
     :(){ :|:&amp; };:                                <span class="cmt"># bash fork bomb. Vai matar a sua máquina</span>
     tail +2 file &gt; file2                         <span class="cmt"># remove a primeira linha do arquivo</span>
     </pre>
-    I utilizo esse truque para alterar a extenção do arquivo para muitos arquivos de uma vez. Por exemplo de .cxx para .cpp. Testa-o ante sem o <code>| sh</code> no final. Você pode tambem fazer isso com o comando <code>rename</code> se instalado. Ou com o bash builtins.
+    I utilizo esse truque para alterar a extensão do arquivo para muitos arquivos de uma vez. Por exemplo de .cxx para .cpp. Testa-o ante sem o <code>| sh</code> no final. Você pode tambem fazer isso com o comando <code>rename</code> se instalado. Ou com o bash builtins.
     <pre># ls *.cxx | awk -F. '{print "mv "$0" "$1".cpp"}' | sh
     # ls *.c | sed "s/.*/cp &amp; &amp;.$(date "+%Y%m%d")/" | sh <span class="cmt"># ex. copia *.c para *.c.20080401</span>
     # rename .cxx .cpp *.cxx                             <span class="cmt"># Renomeia todos os .cxx para o cpp</span>
@@ -2815,7 +2814,7 @@
     <pre><span class="pp">#include</span> &lt;stdio.h&gt;
     main() {
         <span class="keyword">int</span> number=42;
-        printf("The answer is %i\n", number);  
+        printf("The answer is %i\n", number);
     }
     </pre>
     Compile com o:

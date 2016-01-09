@@ -1,14 +1,14 @@
 # Caixa de Ferramentas do Unix 
 ###### versão 0.3 (alpha)
-###### Erros ortográficos serão encontrados ainda nessa versão, mas serão corrigidas ao longo do tempo e estará com a ortografia ok na versão beta. Quer contribuir com a evolução do projeto? entre em contato :-) tocadotux@gmail.com
+###### Erros ortográficos poderão ser encontrados nesta versão, mas serão corrigidas ao longo do tempo e na versão beta a ortografia estará ok. Quer contribuir com a evolução do projeto? entre em contato :-) tocadotux@gmail.com
 =============================
 
 [![Vídeo da Divulgação do Manual](https://i.ytimg.com/vi/uk-s6K479UU/0.jpg)](https://www.youtube.com/watch?v=uk-s6K479UU)
 
 ## O que é o Caixa de Ferramentas do Unix?
-É uma coleção de comandos __Unix/Linux__ (*de diferentes distribuições*) __/BSD/MacOSX/Solaris__  
-E de tarefas que são uteis para o trabalho do profissional de TI ou para usuários avançados.  
-Uma referência compacta e prática derivada do trabalho "[Unix Toolbox] (http://cb.vu/unixtoolbox/)", 
+É uma coleção de comandos __Unix/Linux__ (*de diferentes distribuições*) __/BSD/MacOSX/Solaris__
+E de tarefas que são uteis para o trabalho do profissional de TI ou para usuários avançados.
+Uma referência compacta e prática derivada do trabalho "[Unix Toolbox] (http://cb.vu/unixtoolbox/)",
 escrito por [__Colin Barschel__] (http://colin.barschel.net/).
 
 ## Sobre os tradutores

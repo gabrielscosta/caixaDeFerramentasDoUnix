@@ -50,7 +50,7 @@ body {
 }
 @media print {
     /* print only colors */
-    pre, code { 
+    pre, code {
         color: #000;
     }
     a:link, a:visited, .cmt {
@@ -109,7 +109,7 @@ h2:before {
 /* Not implemented in browsers yet */
 a.xref:after { 
     content: " " target-counter(attr(href, url), chapter) "."
-    target-counter(attr(href, url), section); 
+    target-counter(attr(href, url), section);
 }
 div.changestyle {
     padding-top: 1em;
@@ -193,7 +193,7 @@ div.changestyle {
         letter-spacing:-0.03em
     }
     a {
-	text-decoration: none;
+    text-decoration: none;
     }
     p.xrefp {  /* links below h1 headers */
         padding-top: 0;
@@ -227,7 +227,7 @@ a.xref:after {
     target-counter(attr(href, url), page) "]"; 
 }
 */
-    a.xref:after { 
+    a.xref:after {
         content: " (page " target-counter(attr(href, url), page) ")"; 
     }
     a.xrefp:after { 
@@ -285,8 +285,8 @@ a.xref:after {
     margin: 15mm 12mm 14mm 12mm;
     padding: 0mm 0 5mm 0;
     @footnotes {
-	border-top: solid #000040 thin;
-	padding-top: 0.22em;
+    border-top: solid #000040 thin;
+    padding-top: 0.22em;
         padding-left: 1.2em;
         font-family: verdana, sans-serif;
     }
@@ -298,9 +298,9 @@ a.xref:after {
     }
     @top {
         padding-top: 5mm;
-	content: "— " string(chaptertitle) " —";
+    content: "— " string(chaptertitle) " —";
         font-family: verdana, sans-serif;
-    }    
+    }
 }
 @page :first {
     padding: 0;
