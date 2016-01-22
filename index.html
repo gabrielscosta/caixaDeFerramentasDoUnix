@@ -67,13 +67,15 @@
     <div id="sysinfo"><h1><a>Sistema</a></h1>
     <p class="xrefp"><a class="xrefp" href="#hardwareinfo">Hardware</a> | <a class="xrefp" href="#loadstats">Estatísticas</a> | <a class="xrefp" href="#users">Usuários</a> | <a class="xrefp" href="#limits">Limites</a> | <a class="xrefp" href="#runlevels">Runlevels</a> | <a class="xrefp" href="#resetpasswd">Senha de root</a> | <a class="xrefp" href="#compilekernel">Compilar o kernel</a> | <a class="xrefp" href="#grub">Concertar o grub</a> | <a class="xrefp" href="#sysmisc">Outros</a></p>
     Rodando o kernel e informações do sistema
-    <pre># uname -a                           <span class="cmt"># Obter versão do kernel (e versão do BSD também)</span>
+    <pre>
+    # uname -a                           <span class="cmt"># Obter versão do kernel (e versão do BSD também)</span>
     # lsb_release -a                     <span class="cmt"># Informação completa de lançamento de qualquer distribuição LSB</span>
     # cat /etc/SuSE-release              <span class="cmt"># Obter versão do SuSE</span>
     # cat /etc/debian_version            <span class="cmt"># Obter versão do Debian</span>
     </pre>
     Utilize /etc/<code>DISTR</code>-release com <code>DISTR=</code> lsb (Ubuntu), redhat, gentoo, mandrake, sun (Solaris), e assim por diante. veja também <code>/etc/issue</code>.
-    <pre># uptime                             <span class="cmt"># Exibir a quanto tempo o sistema está rodando + carga</span>
+    <pre>
+    # uptime                             <span class="cmt"># Exibir a quanto tempo o sistema está rodando + carga</span>
     # hostname                           <span class="cmt"># host name do sistema</span>
     # hostname -i                        <span class="cmt"># Exibir o endereço de IP do host. (somente para Linux)</span>
     # man hier                           <span class="cmt"># Descrição da hierarquia do sistema de arquivo</span>
@@ -86,7 +88,8 @@
     # dd if=/dev/mem bs=1k skip=768 count=256 2&gt;/dev/null | strings -n 8 <span class="cmt"># Lê BIOS</span>
     </pre>
     <h3>Linux</h3>
-    <pre># cat /proc/cpuinfo                  <span class="cmt"># Modelo do CPU</span>
+    <pre>
+    # cat /proc/cpuinfo                  <span class="cmt"># Modelo do CPU</span>
     # cat /proc/meminfo                  <span class="cmt"># Memória do Hardware</span>
     # grep MemTotal /proc/meminfo        <span class="cmt"># Exibir a memória física</span>
     # watch -n1 'cat /proc/interrupts'   <span class="cmt"># Observar interrupções alteráveis continuadamente</span>
@@ -98,7 +101,8 @@
     # dmidecode                          <span class="cmt"># Exibir DMI/SMBIOS: hw info da BIOS</span>
     </pre>
     <h3>FreeBSD</h3>
-    <pre># sysctl hw.model                    <span class="cmt"># Modelo do CPU</span>
+    <pre>
+    # sysctl hw.model                    <span class="cmt"># Modelo do CPU</span>
     # sysctl hw                          <span class="cmt"># Dá um monte de informações de hardware</span>
     # sysctl hw.ncpu                     <span class="cmt"># número de CPUs ativos instalados</span>
     # sysctl vm                          <span class="cmt"># Uso de memória</span>
@@ -112,7 +116,8 @@
     </pre>
     <h2 id="loadstats">Carga, estatísticas e mensagens</h2>
     Os comandos a seguir são uteis para descobrir o que está acontecendo no sistema.
-    <pre># top                                <span class="cmt"># exibe e atualiza o top dos processos do cpu</span>
+    <pre>
+    # top                                <span class="cmt"># exibe e atualiza o top dos processos do cpu</span>
     # mpstat 1                           <span class="cmt"># Exibe estatísticas relacionadas ao processador</span>
     # vmstat 2                           <span class="cmt"># Exibe estatísticas da memória virtual</span>
     # iostat 2                           <span class="cmt"># Exibe estatísticas de I/O (intervalos de 2 s)</span>
@@ -126,7 +131,8 @@
     # tail /var/log/warn                 <span class="cmt"># Mensagens de aviso do sistema; veja syslog.conf</span>
     </pre>
     <h2 id="users">Usuários</h2>
-    <pre># id                                 <span class="cmt"># Exibe id do usuário ativo com login e group</span>
+    <pre>
+    # id                                 <span class="cmt"># Exibe id do usuário ativo com login e group</span>
     # last                               <span class="cmt"># Exibe os últimos logins no sistema</span>
     # who                                <span class="cmt"># Exibe quem está logado no sistema</span>
     # groupadd admin                     <span class="cmt"># Adiciona grupo "admin" e usuário colin (Linux/Solaris)</span>
@@ -167,7 +173,8 @@
     </pre>
     <h4>Sistema</h4>
     Limites do kernel são configurados com o sysctl. Limites permanentes são configurados em <code>/etc/sysctl.conf</code>.
-    <pre># sysctl -a                          <span class="cmt"># Visualiza todos os limites do sistema</span>
+    <pre>
+    # sysctl -a                          <span class="cmt"># Visualiza todos os limites do sistema</span>
     # sysctl fs.file-max                 <span class="cmt"># Visualiza limite máximo de arquivos abertos</span>
     # sysctl fs.file-max=102400          <span class="cmt"># Altera o limite de máximo de arquivos abertos</span>
     # echo "1024 50000" &gt; /proc/sys/net/ipv4/ip_local_port_range  <span class="cmt"># alcance de porta</span>
@@ -183,7 +190,8 @@
     Os limites padrões no login são configurados em <code>/etc/login.conf</code>. Um valor ilimitador é ainda assim limitado pelo valor máximo do sistema.
     <h4>Sistema</h4>
     Limites do kernel também são configurados com o sysctl. Limites permanentes são configurados em <code>/etc/sysctl.conf</code> ou <code>/boot/loader.conf</code>. A syntax é a mesma como em Linux, mas as chaves são diferentes.
-    <pre># sysctl -a                          <span class="cmt"># Visualizar todos os limites do sistema</span>
+    <pre>
+    # sysctl -a                          <span class="cmt"># Visualizar todos os limites do sistema</span>
     # sysctl kern.maxfiles=XXXX          <span class="cmt"># Número máximo de descrições de arquivo</span>
     kern.ipc.nmbclusters=32768           <span class="cmt"># Entrada permanente em /etc/sysctl.conf</span>
     kern.maxfiles=65536                  <span class="cmt"># Valores típicos para Squid</span>
@@ -223,13 +231,15 @@
     <ul>
     </ul>
     Use <code>chkconfig</code> para configurar os programas que serão inicializados ao boot em um runlevel.
-    <pre># chkconfig --list                   <span class="cmt"># Listar todos os scripts init</span>
+    <pre>
+    # chkconfig --list                   <span class="cmt"># Listar todos os scripts init</span>
     # chkconfig --list sshd              <span class="cmt"># Reportar o status do sshd</span>
     # chkconfig sshd --level 35 on       <span class="cmt"># Configura o e sshd para os nívies 3 e 5</span>
     # chkconfig sshd off                 <span class="cmt"># Desabilitar o sshd para todos os runlevels</span>
     </pre>
     Debian e distribuições basadas em Debian como o Ubuntu ou o Knoppix utilizam o comando <code>update-rc.d</code> para gerenciar os scripts de runlevels. O padrão é iniciar em 2,3,4 e 5 e encerrar em 0,1 e 6.
-    <pre># update-rc.d sshd defaults          <span class="cmt"># Ativar o sshd com os runlevels padrões</span>
+    <pre>
+    # update-rc.d sshd defaults          <span class="cmt"># Ativar o sshd com os runlevels padrões</span>
     # update-rc.d sshd start 20 2 3 4 5 . stop 20 0 1 6 .  <span class="cmt"># Com argumentos explícitos</span>
     # update-rc.d -f sshd remove         <span class="cmt"># Desabilita o sshd para todos os runlevels</span>
     # shutdown -h now (or # poweroff)    <span class="cmt"># Encerra e desliga o sistema</span>
@@ -266,14 +276,16 @@
     O kernel montará a partição root e <code>init</code> iniciará o bourne shell
     ao inves de <code>rc</code> e então um runlevel. Utilize o comando <code>passwd</code> no prompt e altere a senha e então reinicie. Esqueça o modo single user como se precisasse da senha para isso.<br />
     Se, depois de inicializar, a partição root estiver montada em somente leitura (read only), remonte em rw:
-    <pre># mount -o remount,rw /
+    <pre>
+    # mount -o remount,rw /
     # passwd                             <span class="cmt"># ou exclua a senha do root (/etc/shadow)</span>
     # sync; mount -o remount,ro /        <span class="cmt"># sincroniza antes para remontar em somente leitura (read only)</span>
     # reboot
     </pre> 
     <h3>Método FreeBSD 1</h3>
     No FreeBSD, inicialize em modo  single user, remonte / rw e utilize passwd. Você pode secionar o modo single user no menu de boot (opção 4) que é exibido por  10 segundos ao inicio. o modo single user lhe dará um shell root na partição /.
-    <pre># mount -u /; mount -a               <span class="cmt"># montará / rw</span>
+    <pre>
+    # mount -u /; mount -a               <span class="cmt"># montará / rw</span>
     # passwd
     # reboot
     </pre>
@@ -285,7 +297,8 @@
       <li>Encontre a partição root com o fdisk e.g. fdisk /dev/sda (Nota do tradutor: Bom, eu em particular prefiro utilizar o fdisk -l antes disso. Assim consegue identificar quais os discos caso não saiba qual é. Muito cuidado com a manipulação do fdisk)</li>
       <li>Monte-o e use o chroot:</li>
     </ul>
-    <pre># mount -o rw /dev/ad4s3a /mnt
+    <pre>
+    # mount -o rw /dev/ad4s3a /mnt
     # chroot /mnt                        <span class="cmt"># chroot no /mnt</span>
     # passwd
     # reboot
@@ -293,7 +306,8 @@
 
     <h2 id="kernelmodules">módulos do kernel</h2>
     <h3>Linux</h3>
-    <pre># lsmod                              <span class="cmt"># Listar todos os módulos carregados no kernel</span>
+    <pre>
+    # lsmod                              <span class="cmt"># Listar todos os módulos carregados no kernel</span>
     # modprobe isdn                      <span class="cmt"># Para carregar um módulo (aqui no exemplo, isdn)</span>
     </pre>
     <h3>FreeBSD</h3>
@@ -302,7 +316,8 @@
     </pre>
     <h2 id="compilekernel">Compilar o Kernel</h2>
     <h3>Linux</h3>
-    <pre># cd /usr/src/linux
+    <pre>
+    # cd /usr/src/linux
     # make mrproper                      <span class="cmt"># Limpe tudo, incluindo arquivos de configuração</span>
     # make oldconfig                     <span class="cmt"># Reutilize o antigo .config se existente</span>
     # make menuconfig                    <span class="cmt"># ou xconfig (Qt) ou gconfig (GTK)</span>
@@ -323,7 +338,8 @@
     src-all
     </pre>
     Para modificar e reconstruir o kernel, copie o arquivo de configuração genérica para um novo nome e edite-o como necessário (você pode também editar o arquivo <code>GENERIC</code> diretamente). Para reiniciar a construção depois da interrupção, adicione a opção <code>NO_CLEAN=YES</code> para fazer o comando evitar que limpe os objetos já construídos.
-    <pre># cd /usr/src/sys/i386/conf/
+    <pre> 
+    # cd /usr/src/sys/i386/conf/
     # cp GENERIC MYKERNEL
     # cd /usr/src
     # make buildkernel KERNCONF=MYKERNEL
@@ -354,7 +370,8 @@
     </pre>
     <h2 id="sysmisc">Misc</h2>
     Desabilitar a memória virtual do OSX (repita com o <code>load</code> para reabilitar). Sistema mais rápido, mas um pouco arriscado.
-    <pre># sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.dynamic_pager.plist
+    <pre> 
+    # sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.dynamic_pager.plist
     # sleep 3600; pmset sleepnow           <span class="cmt"># vá para o modo standby dentro de uma hora (OSX)</span>
     # defaults write -g com.apple.mouse.scaling -float 8
                                          <span class="cmt"># aceleração de mouse do OSX (utilize p -1 para reverter)</span>
