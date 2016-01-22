@@ -1,5 +1,5 @@
 # Caixa de Ferramentas do Unix 
-###### versão 0.3 (alpha)
+###### versão 0.4 (alpha)
 ###### Erros ortográficos poderão ser encontrados nesta versão, mas serão corrigidas ao longo do tempo e na versão beta a ortografia estará ok. Quer contribuir com a evolução do projeto? entre em contato :-) tocadotux@gmail.com
 =============================
 
@@ -14,7 +14,7 @@ escrito por [__Colin Barschel__] (http://colin.barschel.net/).
 ## Sobre os tradutores
 
 Traduzido e mantido por: [__Gabriel da Silveira Costa__] (https://github.com/tocadotux/).
-Revisado por: [__Rumbler Soppa__] (https://github.com/rumbler), [__Gabriel Almir (kewer)__] (https://github.com/gabrielalmir10) e agora contamos com as contribuições de [__Gabriel Masson__] (https://github.com/gmasson) e o [__Tiago Alvez__] (https://github.com/cegohub/). O Gabriel Masson criou um [__fork__] (https://github.com/gmasson/caixaDeFerramentasDoUnix) desta documentação, assim também como o Tiago alves criou o seu [__fork__] (https://github.com/cegohub/caixaDeFerramentasDoUnix). Desta forma, todas as alterações e melhorias feitas nos forks serão incorporadas a esta documentação, formando assim a versão atual.
+Revisado por: [__Rumbler Soppa__] (https://github.com/rumbler), [__Gabriel Almir (kewer)__] (https://github.com/gabrielalmir10) e agora contamos com as contribuições de [__Gabriel Masson__] (https://github.com/gmasson), o [__Tiago Alvez__] (https://github.com/cegohub/) e [__Darleilson__] (https://github.com/darleison) na versão 0.4. O Gabriel Masson criou um [__fork__] (https://github.com/gmasson/caixaDeFerramentasDoUnix) desta documentação, assim também como o Tiago alves criou o seu [__fork__] (https://github.com/cegohub/caixaDeFerramentasDoUnix). Desta forma, todas as alterações e melhorias feitas nos forks serão incorporadas a esta documentação, formando assim a versão atual.
 ######Cinco pessoas das quais sou muito grato pelo andamento do projeto.
 
 Divirta-se :smiley:
