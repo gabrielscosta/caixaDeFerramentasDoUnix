@@ -10,7 +10,7 @@ Thumbs.db
 *.tmp
 
 # project readme
-.md
+#.md
 
 # Make
 CMakeCache.txt
