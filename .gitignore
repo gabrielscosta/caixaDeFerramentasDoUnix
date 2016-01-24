@@ -1,4 +1,4 @@
-# OS files
+### OS files ###
 .DS_Store
 .DS_Store?
 ._*
@@ -9,10 +9,7 @@ ethumbs.db
 Thumbs.db
 *.tmp
 
-# project readme
-#.md
-
-# Make
+### Make ###
 CMakeCache.txt
 CMakeFiles
 Makefile
@@ -21,25 +18,31 @@ install_manifest.txt
 tags
 Makefile.in
 
-# Testing
+### Testing ###
 testing/data
 *~
 
-# Vim
+### Vim ###
 *.swp
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
 
-# Object files
+### Object files ###
 *.o
 *.lo
 *.a
 
-# Executables
+### Executables ###
 *.exe
 *.out
 *.app
 *.la
 
-# Misc (?)
+### Misc (?) ###
 m4/*
 configure
 configure_aux
@@ -58,16 +61,124 @@ libtool
 .dirstamp
 build/
 
-#kdevelop
+### Kdevelop ###
 .kdev/
 *.kdev*
 
-# Netbeans
+### Netbeans ###
 nbproject
 
-# astyle
+### astyle ###
 *.orig
 
-# Android buildscript
+### Android buildscript ###
 android-toolchain-*
 toxcore-android-*
+
+### SublimeText ###
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
+
+# sftp configuration file
+sftp-config.json
+
+### Emacs ###
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+### Windows ###
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
