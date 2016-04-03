@@ -23,11 +23,11 @@
   <body>
     <div class="title">Unix Toolbox</div>
     <div class="abstract">
-      Esse documento é uma coleção de comandos Unix/Linux/BSD e de tarefas que são uteis para trabalho em TI ou usuários avançados. Esse é um guia prático com explicações concisas, embora o leitor deve saber o que está fazendo.<br /><br />
+      Esse documento é uma coleção de comandos Unix/Linux/BSD e de tarefas que são úteis para trabalho em TI ou usuários avançados. Esse é um guia prático com explicações concisas, embora o leitor deve saber o que está fazendo.<br /><br />
     </div>
     <div class="footerfirst">
       Unix Toolbox revisão 14.4<br />
-      A ultima versão desse documento pode ser encontrado em <a href="http://cb.vu/unixtoolbox.xhtml">http://cb.vu/unixtoolbox.xhtml</a>. Substitua .xhtml no link com <a href="http://cb.vu/unixtoolbox.pdf">.pdf</a> para a versão PDF e com <a href="http://cb.vu/unixtoolbox.book.pdf">.book.pdf</a> para a versão folheto. Em uma impressora duplex o folheto criará um pequeno livro pronto para encadernar. <span class="web">Essa página XHTML pode ser convertida para um bom documento PDF com uma aplicação complacente CSS3 (veja o <a class="xref" href="https://github.com/tocadotux/caixaDeFerramentasDoUnix/blob/master/Caixa%20de%20ferramentas%20do%20Unix%20(alfa).xhml">script exemplo</a>).</span> Veja também a <a href="http://cb.vu/unixtoolbox">página sobre</a>.<br />
+      A última versão desse documento pode ser encontrado em <a href="http://cb.vu/unixtoolbox.xhtml">http://cb.vu/unixtoolbox.xhtml</a>. Substitua .xhtml no link com <a href="http://cb.vu/unixtoolbox.pdf">.pdf</a> para a versão PDF e com <a href="http://cb.vu/unixtoolbox.book.pdf">.book.pdf</a> para a versão folheto. Em uma impressora duplex o folheto criará um pequeno livro pronto para encadernar. <span class="web">Essa página XHTML pode ser convertida para um bom documento PDF com uma aplicação complacente CSS3 (veja o <a class="xref" href="https://github.com/tocadotux/caixaDeFerramentasDoUnix/blob/master/Caixa%20de%20ferramentas%20do%20Unix%20(alfa).xhml">script exemplo</a>).</span> Veja também a <a href="http://cb.vu/unixtoolbox">página sobre</a>.<br />
       Reportes de erros e comentários são muito bem vindos - <a href="mailto:c\at\cb.vu">c@cb.vu</a> Colin Barschel.
       <p class="copyright">© <a href="mailto:c_at_cb.vu">Colin Barschel</a> 2007-2012. <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Alguns direitos reservados sob a licença</a>.
       </p>
@@ -76,7 +76,7 @@
     Utilize /etc/<code>DISTR</code>-release com <code>DISTR=</code> lsb (Ubuntu), redhat, gentoo, mandrake, sun (Solaris), e assim por diante. veja também <code>/etc/issue</code>.
     <pre>
     # uptime                             <span class="cmt"># Exibir a quanto tempo o sistema está rodando + carga</span>
-    # hostname                           <span class="cmt"># host name do sistema</span>
+    # hostname                           <span class="cmt"># Host name do sistema</span>
     # hostname -i                        <span class="cmt"># Exibir o endereço de IP do host. (somente para Linux)</span>
     # man hier                           <span class="cmt"># Descrição da hierarquia do sistema de arquivo</span>
     # last reboot                        <span class="cmt"># Exibir histórico de reboot do sistema</span>
@@ -84,7 +84,7 @@
     <h2 id="hardwareinfo">Informações de Hardware</h2>
     Hardware detectado pelo kernel
     <pre># dmesg                              <span class="cmt"># Hardware detectado e mensagens de boot</span>
-    # lsdev                              <span class="cmt"># informação a respeito do hardware instalado</span>
+    # lsdev                              <span class="cmt"># Informação a respeito do hardware instalado</span>
     # dd if=/dev/mem bs=1k skip=768 count=256 2&gt;/dev/null | strings -n 8 <span class="cmt"># Lê BIOS</span>
     </pre>
     <h3>Linux</h3>
@@ -94,7 +94,7 @@
     # grep MemTotal /proc/meminfo        <span class="cmt"># Exibir a memória física</span>
     # watch -n1 'cat /proc/interrupts'   <span class="cmt"># Observar interrupções alteráveis continuadamente</span>
     # free -m                            <span class="cmt"># Memória utilizada e livre (-m para MB)</span>
-    # cat /proc/devices                  <span class="cmt"># dispositivos configurados</span>
+    # cat /proc/devices                  <span class="cmt"># Dispositivos configurados</span>
     # lspci -tv                          <span class="cmt"># Exibir dispositivos PCI</span>
     # lsusb -tv                          <span class="cmt"># Exibir dispositivos USB</span>
     # lshal                              <span class="cmt"># Exibir uma lista de todos os dispositivos com suas propriedades</span>
@@ -104,7 +104,7 @@
     <pre>
     # sysctl hw.model                    <span class="cmt"># Modelo do CPU</span>
     # sysctl hw                          <span class="cmt"># Dá um monte de informações de hardware</span>
-    # sysctl hw.ncpu                     <span class="cmt"># número de CPUs ativos instalados</span>
+    # sysctl hw.ncpu                     <span class="cmt"># Número de CPUs ativos instalados</span>
     # sysctl vm                          <span class="cmt"># Uso de memória</span>
     # sysctl hw.realmem                  <span class="cmt"># Memória do hardware</span>
     # sysctl -a | grep mem               <span class="cmt"># Configurações de memória do kernel e informações</span>
@@ -115,19 +115,19 @@
     # camcontrol devlist -v              <span class="cmt"># Exibir dispositivos SCSI</span>
     </pre>
     <h2 id="loadstats">Carga, estatísticas e mensagens</h2>
-    Os comandos a seguir são uteis para descobrir o que está acontecendo no sistema.
+    Os comandos a seguir são úteis para descobrir o que está acontecendo no sistema.
     <pre>
-    # top                                <span class="cmt"># exibe e atualiza o top dos processos do cpu</span>
+    # top                                <span class="cmt"># Exibe e atualiza o top dos processos do cpu</span>
     # mpstat 1                           <span class="cmt"># Exibe estatísticas relacionadas ao processador</span>
     # vmstat 2                           <span class="cmt"># Exibe estatísticas da memória virtual</span>
     # iostat 2                           <span class="cmt"># Exibe estatísticas de I/O (intervalos de 2 s)</span>
-    # systat -vmstat 1                   <span class="cmt"># Resumo estatísticas de sistema BSD (intervalos de 1 segundo)</span>
+    # systat -vmstat 1                   <span class="cmt"># Resume estatísticas do sistema BSD (intervalos de 1 segundo)</span>
     # systat -tcp 1                      <span class="cmt"># Conexões TCP BSD (tente também -ip)</span>
-    # systat -netstat 1                  <span class="cmt"># Conexões de rede de ativa BSD</span>
+    # systat -netstat 1                  <span class="cmt"># Conexões de rede ativa BSD</span>
     # systat -ifstat 1                   <span class="cmt"># Tráfego de rede BSD pelas interfaces ativas</span>
     # systat -iostat 1                   <span class="cmt"># CPU BSD e rendimento de disco</span>
-    # ipcs -a                            <span class="cmt"># Informação de interprocessos no System</span>
-    # tail -n 500 /var/log/messages      <span class="cmt"># Ultimas 500 mensagens kernel/syslog</span>
+    # ipcs -a                            <span class="cmt"># Informações de interprocessos no System</span>
+    # tail -n 500 /var/log/messages      <span class="cmt"># Últimas 500 mensagens kernel/syslog</span>
     # tail /var/log/warn                 <span class="cmt"># Mensagens de aviso do sistema; veja syslog.conf</span>
     </pre>
     <h2 id="users">Usuários</h2>
@@ -143,7 +143,7 @@
     # adduser joe                        <span class="cmt"># FreeBSD adicionar usuário joe (interativo)</span>
     # rmuser joe                         <span class="cmt"># FreeBSD remove usuário joe (interativo)</span>
     # pw groupadd admin                  <span class="cmt"># Utilize pw no FreeBSD</span>
-    # pw groupmod admin -m newmember     <span class="cmt"># Adicione um novo menbro ao grupo</span>
+    # pw groupmod admin -m newmember     <span class="cmt"># Adicione um novo membro ao grupo</span>
     # pw useradd colin -c "Colin Barschel" -g admin -m -s /bin/tcsh 
     # pw userdel colin; pw groupdel admin
     </pre>
@@ -166,7 +166,7 @@
     O comando <code>ulimit</code> pode ser utilizado em um script para alterar os limites para o script somente.
 
     <h4>Por usuário/processo</h4>
-    Login, usuários e aplicações podem ser configurados em <code>/etc/security/limits.conf</code>. por exemplo:
+    Login, usuários e aplicações podem ser configurados em <code>/etc/security/limits.conf</code>. Por exemplo:
     <pre># cat /etc/security/limits.conf
     *   hard    nproc   250              <span class="cmt"># Limite de processos por usuário</span>
     asterisk hard nofile 409600          <span class="cmt"># Limite de arquivos abertos por aplicação</span>
@@ -177,7 +177,7 @@
     # sysctl -a                          <span class="cmt"># Visualiza todos os limites do sistema</span>
     # sysctl fs.file-max                 <span class="cmt"># Visualiza limite máximo de arquivos abertos</span>
     # sysctl fs.file-max=102400          <span class="cmt"># Altera o limite de máximo de arquivos abertos</span>
-    # echo "1024 50000" &gt; /proc/sys/net/ipv4/ip_local_port_range  <span class="cmt"># alcance de porta</span>
+    # echo "1024 50000" &gt; /proc/sys/net/ipv4/ip_local_port_range  <span class="cmt"># Alcance de porta</span>
     # cat /etc/sysctl.conf
     fs.file-max=102400                   <span class="cmt"># Entrada permanente em sysctl.conf</span>
     # cat /proc/sys/fs/file-nr           <span class="cmt"># Quantos descritores de arquivo estão em uso</span>
@@ -187,7 +187,7 @@
     <h4>Por shell/script</h4>
     Utilize o comando <code>limits</code> no csh ou no tcsh ou como no Linux, utilize <code>ulimit</code> em um sh ou bash shell.
     <h4>Por user/processo</h4>
-    Os limites padrões no login são configurados em <code>/etc/login.conf</code>. Um valor ilimitador é ainda assim limitado pelo valor máximo do sistema.
+    Os limites padrões no login são configurados em <code>/etc/login.conf</code>. Um valor ilimitado é ainda assim limitado pelo valor máximo do sistema.
     <h4>Sistema</h4>
     Limites do kernel também são configurados com o sysctl. Limites permanentes são configurados em <code>/etc/sysctl.conf</code> ou <code>/boot/loader.conf</code>. A syntax é a mesma como em Linux, mas as chaves são diferentes.
     <pre>
@@ -2954,15 +2954,14 @@
 
     <div class="footerlast">
         <p>Essa documentação: "Unix Toolbox revisão 14.4" está licenciada sob a <a rel="nofollow" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Licence [Attribution - Share Alike]</a>. </p>
-        <p>Traduzido para o Português do Brasil por <a href="https://www.youtube.com/c/tocadotux"></a><strong>Gabriel da Silveira Costa</strong></a>. Revisado por: <a href="https://github.com/rumbler">Rumbler Soppa</a>, <a href="https://github.com/gabrielalmir10">Gabriel Almir (kewer)</a>, o <a href="https://github.com/gmasson">Gabriel Masson</a> e o <a href="https://github.com/cegohub/">Tiago Alvez</a>. Rececbemos também contribuição do <a href="https://github.com/ryuuzaki42"> João batista</a>, <a href="https://github.com/darleison"> Darleilson</a> e graças ao quadro <a href="https://www.youtube.com/watch?v=cRxjfnYoA1s">"Dica de Leitura"</a> recebemos a contribiução do <a href="https://github.com/Ziggoto">Fábio M. Theofilo</a>.
+        <p>Traduzido para o Português do Brasil por <a href="https://www.youtube.com/c/tocadotux"></a><strong>Gabriel da Silveira Costa</strong></a>. Revisado por: <a href="https://github.com/rumbler">Rumbler Soppa</a>, <a href="https://github.com/gabrielalmir10">Gabriel Almir (kewer)</a>, o <a href="https://github.com/gmasson">Gabriel Masson</a> e o <a href="https://github.com/cegohub/">Tiago Alvez</a>. Recebemos também contribuição do <a href="https://github.com/ryuuzaki42"> João batista</a>, <a href="https://github.com/darleison"> Darleilson</a> e graças ao quadro <a href="https://www.youtube.com/watch?v=cRxjfnYoA1s">"Dica de Leitura"</a> recebemos a contribiução do <a href="https://github.com/Ziggoto">Fábio M. Theofilo</a>.
         </p>
         <p class="extras-copy">
           O <a href="https://github.com/gmasson"> Gabriel Masson</a> criou um fork dessa documentação: <a href="https://github.com/gmasson/caixaDeFerramentasDoUnix">https://github.com/gmasson/caixaDeFerramentasDoUnix</a>. Assim também como o
             <a href="https://github.com/cegohub/">Tiago Alves</a> criou o seu <a href="https://github.com/cegohub/caixaDeFerramentasDoUnix">https://github.com/cegohub/caixaDeFerramentasDoUnix</a>.  Desta forma, todas as melhorias e correções serão emergidas nessa documentação,
             formando assim, a versão atual (uma ótima ideia que o <a href="https://github.com/gmasson">Gabriel Masson teve</a>).
-            Oito pessoas (incluindo Colin Barschel) das quais sou muito grato pelo andamento do projet.
+            Oito pessoas (incluindo Colin Barschel) das quais sou muito grato pelo andamento do projeto.
         </p>
     </div>
-
   </body>
 </html>
