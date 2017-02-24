@@ -2218,7 +2218,7 @@
     # find flac/ -iname *.flac -print -size +500k -exec /Applications/Fluke.app/Contents/MacOS/Fluke {} \;
                                           <span class="cmt"># Eu utilizo a opção acima para adicionar arquivos flac (formato de audio) ao iTunes no OSX</span>
     </pre>
-    Seja cuidadoso com o xarg ou o exec já que pode ou não honrar quotings e pode retornar resultados errados quando os arquivos ou diretórios conterem espaços. Na dúvida, utilize "-print0 | xargs -0" instead of "| xargs". A opção -print0 deve ser a ultima no comando find. Veja esse bom <a href="http://www.hccfl.edu/pollock/Unix/FindCmd.htm">mini tutorial para o find (em inglês)</a><span class="fn">http://www.hccfl.edu/pollock/Unix/FindCmd.htm</span>.
+    Seja cuidadoso com o xarg ou o exec já que pode ou não honrar quotings e pode retornar resultados errados quando os arquivos ou diretórios conterem espaços. Na dúvida, utilize "-print0 | xargs -0" ao invés de "| xargs". A opção -print0 deve ser a ultima no comando find. Veja esse bom <a href="http://www.hccfl.edu/pollock/Unix/FindCmd.htm">mini tutorial para o find (em inglês)</a><span class="fn">http://www.hccfl.edu/pollock/Unix/FindCmd.htm</span>.
     <pre># find . -type f | xargs ls -l       <span class="cmt"># Não funcionará com espaços nos names</span>
     # find . -type f -print0 | xargs -0 ls -l  <span class="cmt"># Não funcionará com espaços nos nomes</span>
     # find . -type f -exec ls -l '{}' \; <span class="cmt"># Or use quotes '{}' with -exec</span>
