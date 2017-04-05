@@ -17,7 +17,7 @@ escrito por [__Colin Barschel__] (http://colin.barschel.net/).
 ## Sobre os tradutores
 
 Traduzido e mantido por: [__Gabriel da Silveira Costa__] (https://github.com/tocadotux/) do canal [__Toca do Tux__] (https://www.youtube.com/user/tocadotux).
-Revisado por: [__Rumbler Soppa__] (https://github.com/rumbler), [__Gabriel Almir (kewer)__] (https://github.com/gabrielalmir10) e agora contamos com as contribuições de [__Gabriel Masson__] (https://github.com/gmasson), o [__Tiago Alvez__] (https://github.com/cegohub/).
+Revisado por: [__Rumbler Soppa__] (https://github.com/rumbler), [__Gabriel Almir (voidyo)__] (https://github.com/voidyo) e agora contamos com as contribuições de [__Gabriel Masson__] (https://github.com/gmasson), o [__Tiago Alvez__] (https://github.com/cegohub/).
 
 O Gabriel Masson criou um [__fork__] (https://github.com/gmasson/caixaDeFerramentasDoUnix) desta documentação, assim também como o Tiago alves criou o seu [__fork__] (https://github.com/cegohub/caixaDeFerramentasDoUnix). Desta forma, todas as alterações e melhorias feitas nos forks serão incorporadas a esta documentação, formando assim a versão atual.
 
