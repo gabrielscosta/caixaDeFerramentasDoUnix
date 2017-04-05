@@ -11,7 +11,7 @@
     <meta name="autor" content="Colin Barschel c@cb.vu"/>
     <meta name="translator" content="Gabriel da Silveira Costa tocadotux@gmail.com"/>
     <meta name="copyright" content="Copyright (c) 2007-2012 Colin Barschel. Alguns direitos reservados sob a licença Creative Commons [Attribution - Share Alike]"/>
-    <meta name="description" content="Uma coleção de comandos Unix/Linux/BSD e tarefas que são uteis para o trabalho de TI ou para usuários avançados, uma referência compacta e prática."/>
+    <meta name="description" content="Uma coleção de comandos Unix/Linux/BSD e tarefas que são úteis para o trabalho de TI ou para usuários avançados, uma referência compacta e prática."/>
     <meta name="abstract" content="Unix Toolbox -  Uma referencia prática e compacta para administradores de sistemas e usuários avançados."/>
     <meta name="subject" content="Unix Toolbox revisão 14.4"/>
     <meta name="keywords" content="Unix Toolbox, ferramentas Unix, Unix, FreeBSD, Linux, lista de comandos, administração de sistema, guia prático, referência avançada, tarefas comuns Linux, syntax reminder, howtos, tunels ssh, rsync, certificados ssl"/>
@@ -23,11 +23,11 @@
   <body>
     <div class="title">Unix Toolbox</div>
     <div class="abstract">
-      Esse documento é uma coleção de comandos Unix/Linux/BSD e de tarefas que são uteis para trabalho em TI ou usuários avançados. Esse é um guia prático com explicações concisas, embora o leitor deve saber o que está fazendo.<br /><br />
+      Esse documento é uma coleção de comandos Unix/Linux/BSD e de tarefas que são úteis para trabalho em TI ou usuários avançados. Esse é um guia prático com explicações concisas, embora o leitor deve saber o que está fazendo.<br /><br />
     </div>
     <div class="footerfirst">
       Unix Toolbox revisão 14.4<br />
-      A ultima versão desse documento pode ser encontrado em <a href="http://cb.vu/unixtoolbox.xhtml">http://cb.vu/unixtoolbox.xhtml</a>. Substitua .xhtml no link com <a href="http://cb.vu/unixtoolbox.pdf">.pdf</a> para a versão PDF e com <a href="http://cb.vu/unixtoolbox.book.pdf">.book.pdf</a> para a versão folheto. Em uma impressora duplex o folheto criará um pequeno livro pronto para encadernar. <span class="web">Essa página XHTML pode ser convertida para um bom documento PDF com uma aplicação complacente CSS3 (veja o <a class="xref" href="https://github.com/tocadotux/caixaDeFerramentasDoUnix/blob/master/Caixa%20de%20ferramentas%20do%20Unix%20(alfa).xhml">script exemplo</a>).</span> Veja também a <a href="http://cb.vu/unixtoolbox">página sobre</a>.<br />
+      A última versão desse documento pode ser encontrado em <a href="http://cb.vu/unixtoolbox.xhtml">http://cb.vu/unixtoolbox.xhtml</a>. Substitua .xhtml no link com <a href="http://cb.vu/unixtoolbox.pdf">.pdf</a> para a versão PDF e com <a href="http://cb.vu/unixtoolbox.book.pdf">.book.pdf</a> para a versão folheto. Em uma impressora duplex o folheto criará um pequeno livro pronto para encadernar. <span class="web">Essa página XHTML pode ser convertida para um bom documento PDF com uma aplicação complacente CSS3 (veja o <a class="xref" href="https://github.com/tocadotux/caixaDeFerramentasDoUnix/blob/master/Caixa%20de%20ferramentas%20do%20Unix%20(alfa).xhml">script exemplo</a>).</span> Veja também a <a href="http://cb.vu/unixtoolbox">página sobre</a>.<br />
       Reportes de erros e comentários são muito bem vindos - <a href="mailto:c\at\cb.vu">c@cb.vu</a> Colin Barschel.
       <p class="copyright">© <a href="mailto:c_at_cb.vu">Colin Barschel</a> 2007-2012. <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Alguns direitos reservados sob a licença</a>.
       </p>
@@ -65,7 +65,7 @@
     <div class="pb">
      <!-- <div class="main"> Every chapter is inside a div block for easy XML parsing -->
     <div id="sysinfo"><h1><a>Sistema</a></h1>
-    <p class="xrefp"><a class="xrefp" href="#hardwareinfo">Hardware</a> | <a class="xrefp" href="#loadstats">Estatísticas</a> | <a class="xrefp" href="#users">Usuários</a> | <a class="xrefp" href="#limits">Limites</a> | <a class="xrefp" href="#runlevels">Runlevels</a> | <a class="xrefp" href="#resetpasswd">Senha de root</a> | <a class="xrefp" href="#compilekernel">Compilar o kernel</a> | <a class="xrefp" href="#grub">Concertar o grub</a> | <a class="xrefp" href="#sysmisc">Outros</a></p>
+    <p class="xrefp"><a class="xrefp" href="#hardwareinfo">Hardware</a> | <a class="xrefp" href="#loadstats">Estatísticas</a> | <a class="xrefp" href="#users">Usuários</a> | <a class="xrefp" href="#limits">Limites</a> | <a class="xrefp" href="#runlevels">Runlevels</a> | <a class="xrefp" href="#resetpasswd">Senha de root</a> | <a class="xrefp" href="#compilekernel">Compilar o kernel</a> | <a class="xrefp" href="#grub">Consertar o grub</a> | <a class="xrefp" href="#sysmisc">Outros</a></p>
     Rodando o kernel e informações do sistema
     <pre>
     # uname -a                           <span class="cmt"># Obter versão do kernel (e versão do BSD também)</span>
@@ -76,7 +76,7 @@
     Utilize /etc/<code>DISTR</code>-release com <code>DISTR=</code> lsb (Ubuntu), redhat, gentoo, mandrake, sun (Solaris), e assim por diante. veja também <code>/etc/issue</code>.
     <pre>
     # uptime                             <span class="cmt"># Exibir a quanto tempo o sistema está rodando + carga</span>
-    # hostname                           <span class="cmt"># host name do sistema</span>
+    # hostname                           <span class="cmt"># Host name do sistema</span>
     # hostname -i                        <span class="cmt"># Exibir o endereço de IP do host. (somente para Linux)</span>
     # man hier                           <span class="cmt"># Descrição da hierarquia do sistema de arquivo</span>
     # last reboot                        <span class="cmt"># Exibir histórico de reboot do sistema</span>
@@ -84,7 +84,7 @@
     <h2 id="hardwareinfo">Informações de Hardware</h2>
     Hardware detectado pelo kernel
     <pre># dmesg                              <span class="cmt"># Hardware detectado e mensagens de boot</span>
-    # lsdev                              <span class="cmt"># informação a respeito do hardware instalado</span>
+    # lsdev                              <span class="cmt"># Informação a respeito do hardware instalado</span>
     # dd if=/dev/mem bs=1k skip=768 count=256 2&gt;/dev/null | strings -n 8 <span class="cmt"># Lê BIOS</span>
     </pre>
     <h3>Linux</h3>
@@ -94,7 +94,7 @@
     # grep MemTotal /proc/meminfo        <span class="cmt"># Exibir a memória física</span>
     # watch -n1 'cat /proc/interrupts'   <span class="cmt"># Observar interrupções alteráveis continuadamente</span>
     # free -m                            <span class="cmt"># Memória utilizada e livre (-m para MB)</span>
-    # cat /proc/devices                  <span class="cmt"># dispositivos configurados</span>
+    # cat /proc/devices                  <span class="cmt"># Dispositivos configurados</span>
     # lspci -tv                          <span class="cmt"># Exibir dispositivos PCI</span>
     # lsusb -tv                          <span class="cmt"># Exibir dispositivos USB</span>
     # lshal                              <span class="cmt"># Exibir uma lista de todos os dispositivos com suas propriedades</span>
@@ -104,7 +104,7 @@
     <pre>
     # sysctl hw.model                    <span class="cmt"># Modelo do CPU</span>
     # sysctl hw                          <span class="cmt"># Dá um monte de informações de hardware</span>
-    # sysctl hw.ncpu                     <span class="cmt"># número de CPUs ativos instalados</span>
+    # sysctl hw.ncpu                     <span class="cmt"># Número de CPUs ativos instalados</span>
     # sysctl vm                          <span class="cmt"># Uso de memória</span>
     # sysctl hw.realmem                  <span class="cmt"># Memória do hardware</span>
     # sysctl -a | grep mem               <span class="cmt"># Configurações de memória do kernel e informações</span>
@@ -115,19 +115,19 @@
     # camcontrol devlist -v              <span class="cmt"># Exibir dispositivos SCSI</span>
     </pre>
     <h2 id="loadstats">Carga, estatísticas e mensagens</h2>
-    Os comandos a seguir são uteis para descobrir o que está acontecendo no sistema.
+    Os comandos a seguir são úteis para descobrir o que está acontecendo no sistema.
     <pre>
-    # top                                <span class="cmt"># exibe e atualiza o top dos processos do cpu</span>
+    # top                                <span class="cmt"># Exibe e atualiza o top dos processos do cpu</span>
     # mpstat 1                           <span class="cmt"># Exibe estatísticas relacionadas ao processador</span>
     # vmstat 2                           <span class="cmt"># Exibe estatísticas da memória virtual</span>
     # iostat 2                           <span class="cmt"># Exibe estatísticas de I/O (intervalos de 2 s)</span>
-    # systat -vmstat 1                   <span class="cmt"># Resumo estatísticas de sistema BSD (intervalos de 1 segundo)</span>
+    # systat -vmstat 1                   <span class="cmt"># Resume estatísticas do sistema BSD (intervalos de 1 segundo)</span>
     # systat -tcp 1                      <span class="cmt"># Conexões TCP BSD (tente também -ip)</span>
-    # systat -netstat 1                  <span class="cmt"># Conexões de rede de ativa BSD</span>
+    # systat -netstat 1                  <span class="cmt"># Conexões de rede ativa BSD</span>
     # systat -ifstat 1                   <span class="cmt"># Tráfego de rede BSD pelas interfaces ativas</span>
     # systat -iostat 1                   <span class="cmt"># CPU BSD e rendimento de disco</span>
-    # ipcs -a                            <span class="cmt"># Informação de interprocessos no System</span>
-    # tail -n 500 /var/log/messages      <span class="cmt"># Ultimas 500 mensagens kernel/syslog</span>
+    # ipcs -a                            <span class="cmt"># Informações de interprocessos no System</span>
+    # tail -n 500 /var/log/messages      <span class="cmt"># Últimas 500 mensagens kernel/syslog</span>
     # tail /var/log/warn                 <span class="cmt"># Mensagens de aviso do sistema; veja syslog.conf</span>
     </pre>
     <h2 id="users">Usuários</h2>
@@ -143,7 +143,7 @@
     # adduser joe                        <span class="cmt"># FreeBSD adicionar usuário joe (interativo)</span>
     # rmuser joe                         <span class="cmt"># FreeBSD remove usuário joe (interativo)</span>
     # pw groupadd admin                  <span class="cmt"># Utilize pw no FreeBSD</span>
-    # pw groupmod admin -m newmember     <span class="cmt"># Adicione um novo menbro ao grupo</span>
+    # pw groupmod admin -m newmember     <span class="cmt"># Adicione um novo membro ao grupo</span>
     # pw useradd colin -c "Colin Barschel" -g admin -m -s /bin/tcsh 
     # pw userdel colin; pw groupdel admin
     </pre>
@@ -166,7 +166,7 @@
     O comando <code>ulimit</code> pode ser utilizado em um script para alterar os limites para o script somente.
 
     <h4>Por usuário/processo</h4>
-    Login, usuários e aplicações podem ser configurados em <code>/etc/security/limits.conf</code>. por exemplo:
+    Login, usuários e aplicações podem ser configurados em <code>/etc/security/limits.conf</code>. Por exemplo:
     <pre># cat /etc/security/limits.conf
     *   hard    nproc   250              <span class="cmt"># Limite de processos por usuário</span>
     asterisk hard nofile 409600          <span class="cmt"># Limite de arquivos abertos por aplicação</span>
@@ -177,7 +177,7 @@
     # sysctl -a                          <span class="cmt"># Visualiza todos os limites do sistema</span>
     # sysctl fs.file-max                 <span class="cmt"># Visualiza limite máximo de arquivos abertos</span>
     # sysctl fs.file-max=102400          <span class="cmt"># Altera o limite de máximo de arquivos abertos</span>
-    # echo "1024 50000" &gt; /proc/sys/net/ipv4/ip_local_port_range  <span class="cmt"># alcance de porta</span>
+    # echo "1024 50000" &gt; /proc/sys/net/ipv4/ip_local_port_range  <span class="cmt"># Alcance de porta</span>
     # cat /etc/sysctl.conf
     fs.file-max=102400                   <span class="cmt"># Entrada permanente em sysctl.conf</span>
     # cat /proc/sys/fs/file-nr           <span class="cmt"># Quantos descritores de arquivo estão em uso</span>
@@ -187,7 +187,7 @@
     <h4>Por shell/script</h4>
     Utilize o comando <code>limits</code> no csh ou no tcsh ou como no Linux, utilize <code>ulimit</code> em um sh ou bash shell.
     <h4>Por user/processo</h4>
-    Os limites padrões no login são configurados em <code>/etc/login.conf</code>. Um valor ilimitador é ainda assim limitado pelo valor máximo do sistema.
+    Os limites padrões no login são configurados em <code>/etc/login.conf</code>. Um valor ilimitado é ainda assim limitado pelo valor máximo do sistema.
     <h4>Sistema</h4>
     Limites do kernel também são configurados com o sysctl. Limites permanentes são configurados em <code>/etc/sysctl.conf</code> ou <code>/boot/loader.conf</code>. A syntax é a mesma como em Linux, mas as chaves são diferentes.
     <pre>
@@ -212,7 +212,7 @@
 
     <h2 id="runlevels">Runlevels (níveis de execução)</h2>
     <h3>Linux</h3>
-    Uma vez inicializado, o kernel inicia o <code>init</code> o qual então inicia <code>rc</code> o qual inicia todos os scripts pertencentes á um runlevel. Os scripts são armazenados em /etc/init.d e são linkados dentro de /etc/rc.d/rcN.d com N número do runlevel.<br />
+    Uma vez inicializado, o kernel inicia o <code>init</code> o qual então inicia <code>rc</code> o qual inicia todos os scripts pertencentes a um runlevel. Os scripts são armazenados em /etc/init.d e são linkados dentro de /etc/rc.d/rcN.d com N número do runlevel.<br />
     O runlevel padrão está configurado em /etc/inittab. É normalmente o 3 ou o 5:
     <pre># grep default: /etc/inittab
     id:3:initdefault:
@@ -237,7 +237,7 @@
     # chkconfig sshd --level 35 on       <span class="cmt"># Configura o e sshd para os nívies 3 e 5</span>
     # chkconfig sshd off                 <span class="cmt"># Desabilitar o sshd para todos os runlevels</span>
     </pre>
-    Debian e distribuições basadas em Debian como o Ubuntu ou o Knoppix utilizam o comando <code>update-rc.d</code> para gerenciar os scripts de runlevels. O padrão é iniciar em 2,3,4 e 5 e encerrar em 0,1 e 6.
+    Debian e distribuições baseadas em Debian como o Ubuntu ou o Knoppix utilizam o comando <code>update-rc.d</code> para gerenciar os scripts de runlevels. O padrão é iniciar em 2,3,4 e 5 e encerrar em 0,1 e 6.
     <pre>
     # update-rc.d sshd defaults          <span class="cmt"># Ativar o sshd com os runlevels padrões</span>
     # update-rc.d sshd start 20 2 3 4 5 . stop 20 0 1 6 .  <span class="cmt"># Com argumentos explícitos</span>
@@ -283,7 +283,7 @@
     # reboot
     </pre> 
     <h3>Método FreeBSD 1</h3>
-    No FreeBSD, inicialize em modo  single user, remonte / rw e utilize passwd. Você pode secionar o modo single user no menu de boot (opção 4) que é exibido por  10 segundos ao inicio. o modo single user lhe dará um shell root na partição /.
+    No FreeBSD, inicialize em modo  single user, remonte / rw e utilize passwd. Você pode selecionar o modo single user no menu de boot (opção 4) que é exibido por  10 segundos ao inicio. o modo single user lhe dará um shell root na partição /.
     <pre>
     # mount -u /; mount -a               <span class="cmt"># montará / rw</span>
     # passwd
@@ -407,12 +407,12 @@
     # nice -n 5 top                      <span class="cmt"># Prioridade mais fraca(/usr/bin/nice)</span>
     # nice +5 top                        <span class="cmt"># tcsh builtin nice (o mesmo que acima!)</span>
     </pre>
-    Enquanto nice altera o agendador do CPU (scheduler), um outro comando util <code>ionice</code> agendará o IO de disco. Isso é muto útil para aplicações intensivas de IO (entrada e saída)(exemplo: compilar). Você pode selecionar uma classe [inativo (idle) - melhor esforço (best effort) - tempo real (real time)], a página de manual (man page) é curta e bem explicada.
+    Enquanto nice altera o agendador do CPU (scheduler), um outro comando útil <code>ionice</code> agendará o IO de disco. Isso é muito útil para aplicações intensivas de IO (entrada e saída)(exemplo: compilar). Você pode selecionar uma classe [inativo (idle) - melhor esforço (best effort) - tempo real (real time)], a página de manual (man page) é curta e bem explicada.
     <pre># ionice c3 -p123                    <span class="cmt"># configura a classe inativa (idle class) para o pid 123 (somente em Linux)</span>
     # ionice -c2 -n0 firefox             <span class="cmt"># Roda o firefox com melhor empenho (best effort) e alta prioridade</span>
     # ionice -c3 -p$$                    <span class="cmt"># Configura a sheel atual para prioridade inativa</span>
     </pre>
-    O ultimo comando é muito útil para compilar (ou debugar) um grande projeto. Todo comando carregado a partir do shell terá uma prioridade lover. <code>$$</code> é o seu pid shell (tente echo $$).<br />
+    O último comando é muito útil para compilar (ou debugar) um grande projeto. Todo comando carregado a partir do shell terá uma prioridade lover. <code>$$</code> é o seu pid shell (tente echo $$).<br />
     Os FreeBSD utilizam <code>idprio/rtprio</code> (0 = max priority, 31 = most idle):
     <pre># idprio 31 make                     <span class="cmt"># compila em baixa prioridade</span>
     # idprio 31 -1234                    <span class="cmt"># configura o PID 1234 com baixa prioridade</span>
@@ -439,7 +439,7 @@
     </pre>
 
     <h2 id="top">Top</h2>
-    O programa <code>top</code> exibe informações de processos em execução. Veja também o programa <code>htop</code> a partir de htop.sourceforge.net (uma versão mais poderosa do top) que roda em Linux e em FreeBSD (<code>ports/sysutils/htop/</code>). Enquanto o top estiver rodando pressione a tecla h para uam visão global de ajuda (help). Teclas uteis são:
+    O programa <code>top</code> exibe informações de processos em execução. Veja também o programa <code>htop</code> a partir de htop.sourceforge.net (uma versão mais poderosa do top) que roda em Linux e em FreeBSD (<code>ports/sysutils/htop/</code>). Enquanto o top estiver rodando pressione a tecla h para uam visão global de ajuda (help). Teclas úteis são:
     <ul>
       <li><b>u [user name]</b> para exibir somente os processos pertinentes ao usuário. Utilize + ou em barco para ver todos os usuários</li>
       <li><b>k [pid]</b> Matar os processos com o pid.</li>
@@ -599,7 +599,7 @@
     <pre># mount -o remount,ro /              <span class="cmt"># Linux</span>
     # mount -o ro -u /                   <span class="cmt"># FreeBSD</span>
     </pre>
-    Copiar o arquivo  bruto a partir de um cdrom dentro de uma imagem ISO (tamanho de blocos padrão de 512  podem causar problemas):
+    Cópiar o arquivo  bruto a partir de um cdrom dentro de uma imagem ISO (tamanho de blocos padrão de 512  podem causar problemas):
     <pre># dd if=/dev/cd0c of=file.iso bs=2048</pre>
     <h3 id="virtualbox">Virtualbox</h3>
     Permite um compartilhamento no host:
@@ -674,13 +674,13 @@
     <h2 id="burniso">Criar e queimar uma imagem ISO</h2>
     Isso copiar o cd ou DVD setor por setor. Sem <code>conv=notrunc</code>, a imagem será pequena se há menos conteúdo no cd. Veja abaixo os <a class="xref" href="http://cb.vu/unixtoolbox.xhtml#dd">exemplos dd</a>.
     <pre># dd if=/dev/hdc of=/tmp/mycd.iso bs=2048 conv=notrunc</pre>
-    Utilize mkisofs para criar uma imagem de CD/DVD image a partir de um diretório. Para superar as restrições de nomes de arquivos: -r habilita as extensões comuns Rock Ridge para sistemas UNIX, -J abilita extenções  Joliet utilizada pelos sistemas Microsoft. -L permite nomes de arquivos ISO9660 iniciar com um período.
+    Utilize mkisofs para criar uma imagem de CD/DVD image a partir de um diretório. Para superar as restrições de nomes de arquivos: -r habilita as extensões comuns Rock Ridge para sistemas UNIX, -J habilita extenções  Joliet utilizada pelos sistemas Microsoft. -L permite nomes de arquivos ISO9660 iniciar com um período.
     <pre># mkisofs -J -L -r -V TITLE -o imagefile.iso /path/to/dir
     # hdiutil makehybrid -iso -joliet -o dir.iso dir/       <span class="cmt"># OS X</span></pre>
-    No FreeBSD, mkisofs é encontrato no ports em sysutils/cdrtools.
+    No FreeBSD, mkisofs é encontrado no ports em sysutils/cdrtools.
     <h3>Queimar uma imagem de CD/DVD ISO</h3>
     <h4>FreeBSD</h4>
-    FreeBSD não abilita a DMA nos drivers ATAPI por padrão. A DMA é habilitada com o comando sysctl e os argumentos abaixo, ou com /boot/loader.conf com as seguintes entradas:
+    FreeBSD não habilita a DMA nos drivers ATAPI por padrão. A DMA é habilitada com o comando sysctl e os argumentos abaixo, ou com /boot/loader.conf com as seguintes entradas:
     <pre>hw.ata.ata_dma="1"
     hw.ata.atapi_dma="1"
     </pre>
@@ -694,7 +694,7 @@
     <pre># cdrecord dev=ATAPI -scanbus</pre>
     e queime o CD/DVD como acima.
     <h4>dvd+rw-tools</h4>
-    O pacote <a href="http://fy.chalmers.se/~appro/linux/DVD+RW/">dvd+rw-tools</a> (FreeBSD: ports/sysutils/dvd+rw-tools) pode fazer tudo isso e inclui <code>growisofs</code> para queimar CDs ou DVDs. Os exemplos referem-se ao dispositivo de dvd como <code>/dev/dvd</code> que podia ser um symlink para <code>/dev/scd0</code> (scsi típico no Linux) ou <code>/dev/cd0</code> (FreeBSD típico) ou <code>/dev/rcd0c</code> (SCSI de carácter típico do NetBSD/OpenBSD) ou <code>/dev/rdsk/c0t1d0s2</code> (exemplo de uma dispositivo de caracter CD-ROM SCSI/ATAPI do Solaris). Há uma documentação boa com exemplos no <a href="http://www.freebsd.org/handbook/creating-dvds.html">FreeBSD handbook capítulo 18.7</a><span class="fn">http://www.freebsd.org/handbook/creating-dvds.html</span>.
+    O pacote <a href="http://fy.chalmers.se/~appro/linux/DVD+RW/">dvd+rw-tools</a> (FreeBSD: ports/sysutils/dvd+rw-tools) pode fazer tudo isso e inclui <code>growisofs</code> para queimar CDs ou DVDs. Os exemplos referem-se ao dispositivo de dvd como <code>/dev/dvd</code> que podia ser um symlink para <code>/dev/scd0</code> (scsi típico no Linux) ou <code>/dev/cd0</code> (FreeBSD típico) ou <code>/dev/rcd0c</code> (SCSI de caráter típico do NetBSD/OpenBSD) ou <code>/dev/rdsk/c0t1d0s2</code> (exemplo de uma dispositivo de carater CD-ROM SCSI/ATAPI do Solaris). Há uma documentação boa com exemplos no <a href="http://www.freebsd.org/handbook/creating-dvds.html">FreeBSD handbook capítulo 18.7</a><span class="fn">http://www.freebsd.org/handbook/creating-dvds.html</span>.
     <pre>                       <span class="cmt"># -dvd-compat closes the disk</span>
     # growisofs -dvd-compat -Z /dev/dvd=imagefile.iso     <span class="cmt"># Queima imagem ISO existente</span>
     # growisofs -dvd-compat -Z /dev/dvd -J -R /p/to/data  <span class="cmt"># Queima diretamente</span>
@@ -731,7 +731,7 @@
     # dd if=/dev/zero bs=1m count=300 &gt;&gt; /usr/vdisk.img
     # mdconfig -a -t vnode -f /usr/vdisk.img -u 0
     # growfs /dev/md0
-    # mount /dev/md0c /mnt                                <span class="cmt"># Partição do arqiuvo é agora 300 MB maior</span>
+    # mount /dev/md0c /mnt                                <span class="cmt"># Partição do arquivo é agora 300 MB maior</span>
     </pre>
 
     <h3>Linux</h3>
@@ -776,7 +776,7 @@
     <p class="xrefp"><a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#routing">Rotear</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#secondip">IP adicional</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#changemac">Alterar MAC</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#ports">Portas</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#firewall">Firewall</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#ipforward">IP Forward</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#nat">NAT</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#dns">DNS</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#dhcp">DHCP</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#traffic">Traffic</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#trafficctrl">QoS</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#nis">NIS</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#netcat">Netcat</a></p>
     <h2 id="netdebug">Debugging (Veja também <a class="xref" href="http://cb.vu/unixtoolbox.xhtml#traffic">Análise de tráfego)</a></h2>
     <h3>Linux</h3>
-    <pre># ethtool eth0              <span class="cmt"># Exibe o status da  ethernet (subsitui mii-diag)</span>
+    <pre># ethtool eth0              <span class="cmt"># Exibe o status da  ethernet (substitui mii-diag)</span>
     # ethtool -s eth0 speed 100 duplex full <span class="cmt"># Força o Full duplex de 100Mbit</span>
     # ethtool -s eth0 autoneg off <span class="cmt"># Desabilita negociação automática ( auto negotiation)</span>
     # ethtool -p eth1           <span class="cmt"># Pisca o led de ethernet - muito útil quando suportado</span>
@@ -878,8 +878,8 @@
     # socklist                 <span class="cmt"># Exibe lista de sockets abertos no Linux</span>
     # sockstat -4              <span class="cmt"># Lista aplicações no FreeBSD</span>
     # netstat -anp --udp --tcp | grep LISTEN        <span class="cmt"># Linux</span>
-    # netstat -tup             <span class="cmt"># Lista conexões activas para/a partir do sistema (Linux)</span>
-    # netstat -tupl            <span class="cmt"># Lista portas que estão sendo escutadas a artir do sistema (Linux)</span>
+    # netstat -tup             <span class="cmt"># Lista conexões ativas para/a partir do sistema (Linux)</span>
+    # netstat -tupl            <span class="cmt"># Lista portas que estão sendo escutadas a partir do sistema (Linux)</span>
     # netstat -ano             <span class="cmt"># Windows</span>
     </pre>
 
@@ -891,9 +891,9 @@
     # iptables -P INPUT       ACCEPT     <span class="cmt"># Abre tudo</span>
     # iptables -P FORWARD     ACCEPT
     # iptables -P OUTPUT      ACCEPT
-    # iptables -Z                        <span class="cmt"># Zera o pacote e os contadores de byte em todas as conrrentes</span>
-    # iptables -F                        <span class="cmt"># Nivelar todas as correntes</span>
-    # iptables -X                        <span class="cmt"># Exclui todas as correntes</span>
+    # iptables -Z                        <span class="cmt"># Zera o pacote e os contadores de byte em todas as CHAINS</span>
+    # iptables -F                        <span class="cmt"># Nivelar todas as CHAINS</span>
+    # iptables -X                        <span class="cmt"># Exclui todas as CHAINS</span>
     </pre>
     <h3>FreeBSD</h3>
     <pre># ipfw show                          <span class="cmt"># para status</span>
@@ -950,7 +950,7 @@
     same_ports yes
     use_sockets yes
     unregistered_only
-    # redirect_port tcp insideIP:2300-2399 3300-3399  <span class="cmt"># rangde de porta</span>
+    # redirect_port tcp insideIP:2300-2399 3300-3399  <span class="cmt"># range de porta</span>
     redirect_port udp 192.168.51.103:7777 7777
     </pre>
 
@@ -1002,7 +1002,7 @@
     <h3>/etc/hosts</h3>
     Hosts únicos pode ser configurados no arquivo /etc/hosts ao invés de rodar <code>named</code> localmente para resolver as consultas de hostname. o formato é simples, por exemplo:
     <pre>78.31.70.238   sleepyowl.net   sleepyowl</pre>
-    A prioridade entre hosts e uma consulta de dns, que é a ordem de resolução de nome, pode ser configurada em <code>/etc/nsswitch.conf</code> AND /etc/host.conf. O arquvo também existe no Windows, normalmente está em:
+    A prioridade entre hosts e uma consulta de dns, que é a ordem de resolução de nome, pode ser configurada em <code>/etc/nsswitch.conf</code> AND /etc/host.conf. O arquivo também existe no Windows, normalmente está em:
     <pre>C:\WINDOWS\SYSTEM32\DRIVERS\ETC</pre>
 
     <h2 id="dhcp">DHCP</h2>
@@ -1123,7 +1123,7 @@
     # ipfw queue 2 config pipe 1 weight 10
     # ipfw queue 3 config pipe 1 weight 1
     # ipfw add 10 queue 1 proto udp dst-port 10000-11024
-    # ipfw add 11 queue 1 proto udp dst-ip 123.23.0.1 <span class="cmt"># ou/e utiliza IP do seridor</span>
+    # ipfw add 11 queue 1 proto udp dst-ip 123.23.0.1 <span class="cmt"># ou/e utiliza IP do servidor</span>
     # ipfw add 20 queue 2 dsp-port ssh
     # ipfw add 30 queue 3 from me to any              <span class="cmt"># todo o resto</span>
     </pre>
@@ -1155,10 +1155,10 @@
     </pre>
 
     <h2 id="netcat">Netcat</h2>
-    <a rel="nofollow" href="http://netcat.sourceforge.net/">Netcat</a><span class="fn">http://netcat.sourceforge.net</span> (nc) é melhor conhecido como o "Canivete Suíço de Rede", ele pode manipular, criar ou ler/escrever conexões TCP/IP. Aqui alguns exemplos uteis, há muitos mais na net, por exemplo <a rel="nofollow" href="http://www.g-loaded.eu/2006/11/06/netcat-a-couple-of-useful-examples">g-loaded.eu[...]</a><span class="fn">http://www.g-loaded.eu/2006/11/06/netcat-a-couple-of-useful-examples</span> e <a rel="nofollow" href="http://www.terminally-incoherent.com/blog/2007/08/07/few-useful-netcat-tricks">aqui</a><span class="fn">http://www.terminally-incoherent.com/blog/2007/08/07/few-useful-netcat-tricks</span>.<br /> Você pode precisar usar o comando <code>netcat</code> ao inves do <code>nc</code>. Veja também o comando similar <a rel="nofollow" href="http://www.dest-unreach.org/socat">socat</a>.
+    <a rel="nofollow" href="http://netcat.sourceforge.net/">Netcat</a><span class="fn">http://netcat.sourceforge.net</span> (nc) é melhor conhecido como o "Canivete Suíço de Rede", ele pode manipular, criar ou ler/escrever conexões TCP/IP. Aqui alguns exemplos úteis, há muitos mais na net, por exemplo <a rel="nofollow" href="http://www.g-loaded.eu/2006/11/06/netcat-a-couple-of-useful-examples">g-loaded.eu[...]</a><span class="fn">http://www.g-loaded.eu/2006/11/06/netcat-a-couple-of-useful-examples</span> e <a rel="nofollow" href="http://www.terminally-incoherent.com/blog/2007/08/07/few-useful-netcat-tricks">aqui</a><span class="fn">http://www.terminally-incoherent.com/blog/2007/08/07/few-useful-netcat-tricks</span>.<br /> Você pode precisar usar o comando <code>netcat</code> ao inves do <code>nc</code>. Veja também o comando similar <a rel="nofollow" href="http://www.dest-unreach.org/socat">socat</a>.
 
     <h3>Transferência de arquivo</h3>
-    Copia um diretório grande através de uma conexão tcp bruta. A transferência é bem rápida (sem sobrecarga de protocolo) e você não precisa  bagunçar com NFS ou SMB ou FTP ou outros, simplesmente torne o arquivo disponível no servidor, e ser obtido a partir do cliente. Aqui 192.168.1.1 é o endereço de Ip do servidor.
+    Cópia um diretório grande através de uma conexão tcp bruta. A transferência é bem rápida (sem sobrecarga de protocolo) e você não precisa  bagunçar com NFS ou SMB ou FTP ou outros, simplesmente torne o arquivo disponível no servidor, e ser obtido a partir do cliente. Aqui 192.168.1.1 é o endereço de Ip do servidor.
     <pre><span class="cmt">server#</span> tar -cf - -C VIDEO_TS . | nc -l -p 4444         <span class="cmt"># Serve o arquivo tar na porta 4444</span>
     <span class="cmt">client#</span> nc 192.168.1.1 4444 | tar xpf - -C VIDEO_TS     <span class="cmt"># Puxa o arquivo na porta 4444</span>
     <span class="cmt">server#</span> cat largefile | nc -l 5678                      <span class="cmt"># Serve um único arquivo</span>
@@ -1189,7 +1189,7 @@
     <p class="xrefp"><a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#publickey">Chave pública</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#sshfingerprint">Fingerprint</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#scp">SCP</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#sshtunnel">Tunelamento</a></p>
     Veja outros truques <a href="http://blog.urfix.com/25-ssh-commands-tricks/">25 ssh cmd</a><span class="fn">http://blog.urfix.com/25-ssh-commands-tricks/</span>
     <h2 id="publickey">Autenticação de chave pública</h2>
-    Connecte com um host sem senha utilizando autenticação com chave pública. A ideia é anexar sua chave pública ao arquivo authorized_keys2 no host remoto. Para esse exemplo vamos <b>conectar o <i>host-client</i> ao <i>host-server</i></b>, a chave é gerada no cliente. Com o cygwin você pode ter que criar seu diretório home e o diretório .ssh com<code># mkdir -p /home/USER/.ssh</code>
+    Conecte com um host sem senha utilizando autenticação com chave pública. A ideia é anexar sua chave pública ao arquivo authorized_keys2 no host remoto. Para esse exemplo vamos <b>conectar o <i>host-client</i> ao <i>host-server</i></b>, a chave é gerada no cliente. Com o cygwin você pode ter que criar seu diretório home e o diretório .ssh com<code># mkdir -p /home/USER/.ssh</code>
     <ul>
       <li>Utilize o ssh-keygen para gerar um par de chaves. <code>~/.ssh/id_dsa</code> é a chave privada, <code>~/.ssh/id_dsa.pub</code> é a chave pública.</li>
       <li>Copie somente a chave pública ao servidor e anexe-a ao arquivo <code>~/.ssh/authorized_keys2</code> no home do seu servidor.</li>
@@ -1252,7 +1252,7 @@
     <pre>echo 'SSHD: ALL' &gt;&gt; /etc/hosts.allow
     /etc/init.d/sshd restart</pre>
     <h2 id="sshtunnel">Tunelamento</h2>
-    Tunelamento SSH lhe permite direcionar ou reverter a porta na conexão SSH, assim garantindo o tráfego e acessar portas que caso contrario estariam bloqueada. Isso só funciona com TCP. A nomenclatura geral para direcionamento e reverso é (veja também <a href="http://cb.vu/unixtoolbox.xhtml#sshnat">exemplo de ssh e NAT</a>):
+    Tunelamento SSH lhe permite direcionar ou reverter a porta na conexão SSH, assim garantindo o tráfego e acessar portas que caso contrario estariam bloqueadas. Isso só funciona com TCP. A nomenclatura geral para direcionamento e reverso é (veja também <a href="http://cb.vu/unixtoolbox.xhtml#sshnat">exemplo de ssh e NAT</a>):
     <pre># ssh -L localport:desthost:destport user@gate  <span class="cmt"># desthost como visto a partir do gate</span>
     # ssh -R destport:desthost:localport user@gate  <span class="cmt"># direciona a sua porta local para o destino</span>
         <span class="cmt"># desthost:localport como visto a partir do cliente iniciando o túnel</span>
@@ -1291,7 +1291,7 @@
     </ul>
 
     <h3 id="sshnat">Conecte dois clientes atrás do NAT</h3>
-    Suponhamos que dois clientes por trás de um gateway NAT e o cliente cliadmin tem que conectar ao cliente cliuser (o destino), ambos pode logar ao gate com o ssh e estão rodando linux com o sshd. Você não precisa acessar de qualquer lugar desde que as portas no gate estejam acima do 1024. Nós usamos 2022 no gate. Também desde que o gate seja utilizado localmente, a opção GatewayPorts não é necessaria.<br />
+    Suponhamos que dois clientes por trás de um gateway NAT e o cliente cliadmin tem que conectar ao cliente cliuser (o destino), ambos pode logar ao gate com o ssh e estão rodando linux com o sshd. Você não precisa acessar de qualquer lugar desde que as portas no gate estejam acima do 1024. Nós usamos 2022 no gate. Também desde que o gate seja utilizado localmente, a opção GatewayPorts não é necessária.<br />
     No cliente cliuser (a partir do destino para o gate):
     <pre># ssh -R 2022:localhost:22 user@gate            <span class="cmt"># direciona o cliente 22 para o gate:2022</span></pre>
     No cliente cliadmin (a partir do host para o gate):
@@ -1365,7 +1365,7 @@
     Os dois hosts estão agora conectados e podem transparentemente comunicar com qualquer protocolo de camada 3/4 utilizando o endereço de IP do túnel.
 
     <h2 id="sshg2g">Conectar duas redes</h2>
-    Em adição a configuração p2p acima, é mais útil conectar duas redes privadas com uma VPN SSH utilizando dois gates. Suponhamos por exemplo, netA seja 192.168.51.0/24 e netB 192.168.16.0/24. O procedimento é similar ao acima, precisamos somente adicionar o reteamento. O NAT deve ser ativado na interface privada somente se os gates não forem os mesmos que o gateway padrão de sua rede.<br />
+    Em adição a configuração p2p acima, é mais útil conectar duas redes privadas com uma VPN SSH utilizando dois gates. Suponhamos por exemplo, netA seja 192.168.51.0/24 e netB 192.168.16.0/24. O procedimento é similar ao acima, precisamos somente adicionar o roteamento. O NAT deve ser ativado na interface privada somente se os gates não forem os mesmos que o gateway padrão de sua rede.<br />
     192.168.51.0/24 (netA)|gateA &lt;-&gt; gateB|192.168.16.0/24 (netB)<br />
     <ul>
       <li>Conecte com o SSH utilizando a opção -w do túnel.</li>
@@ -1412,17 +1412,17 @@
 
     <div id="rsync"><h1><a>RSYNC</a></h1>
     Rsync pode quase substituir completamente o cp e o scp, além disso transferências interruptas são reiniciadas eficientemente. Uma barra invertida (e mesmo a ausência) tem sentidos diferentes, a man page é boa... aqui alguns exemplos:<br />
-    Copia os diretórios com conteúdo completot:
-    <pre># rsync -a /home/colin/ /backup/colin/                <span class="cmt"># "archive" mode. ex. mantem o mesmo</span>
+    Cópia os diretórios com conteúdo completo:
+    <pre># rsync -a /home/colin/ /backup/colin/                <span class="cmt"># "archive" mode. ex. mantém o mesmo</span>
     # rsync -a /var/ /var_bak/
     # rsync -aR --delete-during /home/user/ /backup/      <span class="cmt"># usa relativo (veja abaixo)</span>
     # /opt/local/bin/rsync -azv --iconv=UTF-8-MAC,UTF-8 ~/Music/flac/ me@server:/dst/
                                <span class="cmt"># converte nomes de arquivos (filenames) UTF8 do OSX para UTF8 do Windows</span>
     </pre>
-    O meso que o anterior, mas na rede e com compressão. Rsync utiliza SSH para o transporte por padrão e utilizará a chave ssh se elas forem definidas. Utilize ":" da mesma forma que no SCP. Uma copia remota típica:
-    <pre># rsync -axSRzv /home/user/ user@server:/backup/user/ <span class="cmt"># Copia para um lugar remoto</span>
+    O mesmo que o anterior, mas na rede e com compressão. Rsync utiliza SSH para o transporte por padrão e utilizará a chave ssh se elas forem definidas. Utilize ":" da mesma forma que no SCP. Uma copia remota típica:
+    <pre># rsync -axSRzv /home/user/ user@server:/backup/user/ <span class="cmt"># Cópia para um lugar remoto</span>
     # rsync -a 'user@server:My\ Documents' My\ Documents  <span class="cmt"># Quote AND escape spaces para o shell remoto</span></pre>
-    Exclui qualquer diretório tmp dentro de /home/user/ e mantem a hierarquia de pastas (diretórios) relativa, que é o diretório remoto terá a estrutura /backup/home/user/. Isso é tipicamente utilizado para backups.
+    Exclui qualquer diretório tmp dentro de /home/user/ e mantém a hierarquia de pastas (diretórios) relativa, que é o diretório remoto terá a estrutura /backup/home/user/. Isso é tipicamente utilizado para backups.
     <pre># rsync -azR --exclude=tmp/ /home/user/ user@server:/backup/</pre>
 
     Utilize a porta 20022 para a conexão ssh:
@@ -1446,7 +1446,7 @@
 
     <h2 id="winrsync">Rsync no Windows</h2>
     Rsync está disponível para Windows através do cygwin ou como um pacote stand-alone em <a href="http://sourceforge.net/projects/sereds/">cwrsync</a><span class="fn">http://sourceforge.net/projects/sereds</span>. Isso é muito conveniente para backups automatizados. Instale um deles (<i>não ambos</i>) e adicione o path (caminho) ao sistema de variáveis do Windows (Windows system variables): # Control Panel -&gt; System -&gt; tab Advanced, button Environment Variables. Edite o sistema de variável "Path" e adicione o caminho completo (full path) ao rsync instalado, ex. C:\Program Files\cwRsync\bin or C:\cygwin\bin. Dessa forma os comandos <code>rsync</code> e <code>ssh</code> ficam disponíveis em um shell de comandos do Windows.
-    <h3>Autenticaçaõ de chave pública</h3>
+    <h3>Autenticação de chave pública</h3>
     Rsync é automaticamente tunelado no SSH e assim utiliza a autenticação SSH no servidor. Backups automáticos tem que evitar a interação de um usuário, para isso a autenticação de chave pública do SSH podem ser usadas e o comando rsync rodará sem uma senha.<br />
     Todos os comandos a seguir são executados dentro de um console Windows. Em um console (Start -&gt; Run -&gt; cmd) crie e faça upload da chave como descrito em <a href="http://cb.vu/unixtoolbox.xhtml#ssh">SSH</a>, altere "user" e "server" como apropriado. Se o arquivo authorized_keys2 não exista ainda, simplesmente copie id_dsa.pub para authorized_keys2 e suba-a.
     <pre># ssh-keygen -t dsa -N ''                   <span class="cmt"># Crie uma chave pública e uma privada</span>
@@ -1557,9 +1557,9 @@
     <ul>
     <li>Sua chave pública é usada por <i>outros</i> para criptografar arquivos que somente você como o receptor pode descriptografar (não somente aquele que criptografou o arquivo que pode descriptografá-lo). A chave pública tem assim que distribuída.</li>
     <li>Sua chave privada é criptografada com a sua passphrase e é utilizada para descriptografar arquivos que foram criptografadas com a <i>your</i> chave pública. A chave privada deve ser guardada <b>segura</b>. Se a chave ou passphrase for perdida, todos os arquivos criptografados e chaves públicas também são.</li>
-    <li>Os arquvos chaves são chamados keyrings (chaveiros) já que eles podem conter mais que uma chave.</li>
+    <li>Os arquivos chaves são chamados keyrings (chaveiros) já que eles podem conter mais que uma chave.</li>
     </ul>
-    Primeiro gere o pare de chaves. As padrões são boas, no entanto você terá que inserir ao menos seu nome completo e e-mail e opcionalmente um comentário. O comentário é útil para criar mais do que uma chave com o mesmo e-mail. Você deve também utilizar uma "passphrase", não uma senha simples.
+    Primeiro gere o par de chaves. As padrões são boas, no entanto você terá que inserir ao menos seu nome completo e e-mail e opcionalmente um comentário. O comentário é útil para criar mais do que uma chave com o mesmo e-mail. Você deve também utilizar uma "passphrase", não uma senha simples.
     <pre># gpg --gen-key                      <span class="cmt"># Isso pode levar um tempo</span></pre>
     As chaves são armazenadas em ~/.gnupg/ no Unix, no Windows elas são tipicamente armazenadas em<br />
     C:/Documents and Settings/%USERNAME%/Application Data/gnupg/.
@@ -1582,7 +1582,7 @@
     </pre>
     <h3>Criptografar - Descriptografar com chaves</h3>
     Primeiro você precisa exportar sua chave pública para que mais alguém a utilize. E você precisa importar a pública, digamos a partir da Alice para criptografar um arquivo para ela. Você pode tanto manusear as chaves em simples arquivos ASCII ou utilizar um servidor de chave pública.<br />
-    Por exemplo, Alice exportou sua chave pública e você a importou, você oide criptografar um arquivo para ela. Isso é, somente Alice será capaz de descriptogrfá-lo.
+    Por exemplo, Alice exportou sua chave pública e você a importou, você pode criptografar um arquivo para ela. Isso é, somente Alice será capaz de descriptogrfá-lo.
     <pre># gpg -a -o alicekey.asc --export 'Alice'     <span class="cmt"># Alice exportou sua chave em arquivo ASCII.</span>
     # gpg --send-keys --keyserver subkeys.pgp.net KEYID   <span class="cmt"># Alice colocou sua chave em um servidor.</span>
     # gpg --import alicekey.asc                   <span class="cmt"># Você importa a chave da Alice para dentro do seu pubring.</span>
@@ -1607,9 +1607,9 @@
 
     <div id="cryptpart"><h1><a>Criptografar Partições</a></h1>
     <p class="xrefp"><a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#wluks">Linux com LUKS</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#woluks">Linux dm-crypt (somente)</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#bsdgeli">FreeBSD GELI</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#bsdpwd">FBSD pwd (somente)</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#osxcrypt">Imanegm OS X</a></p>
-    Há (muitos) outros métodos de alternativa para criptografar discos, eu mostro aqui somente os métodos que conheço e utilizo. Tenha em mente que segurança só é boa desde que o OS não foi s no been tempered with. Um intruso poderia facilmente gravar a senha a partir de eventos teclado. Além do mais o dado é livremente acessível quando a partição for <i>attached</i> e não evitará que um intruso tenha acesso á isso nesse estado.
+    Há (muitos) outros métodos de alternativa para criptografar discos, eu mostro aqui somente os métodos que conheço e utilizo. Tenha em mente que segurança só é boa desde que o OS não foi s no been tempered with. Um intruso poderia facilmente gravar a senha a partir de eventos teclado. Além do mais o dado é livremente acessível quando a partição for <i>attached</i> e não evitará que um intruso tenha acesso a isso neste estado.
     <h2 id="dm-crypt">Linux</h2>
-    Essas intrunções utilizam o Linux <code>dm-crypt</code> (device-mapper ou mapeador de dispositivo) facilidade disponível no kernel 2.6. Nesse exemplo, vamos criptografar a partição <code>/dev/sdc1</code>, poderia no entando ser qualquer outra partição ou disco, ou USB ou uma partição baseada em arquivo criada com <code>losetup</code>. Nesse caso poderias usar <code>/dev/loop0</code>. Veja <a href="http://cb.vu/unixtoolbox.xhtml#losetup">file image partition</a>. O mapeador de dispositivo utiliza etiquetas (labels) para identificar uma partição. Nós utilizamos <code>sdc1</code> nesse exemplo, mas poderia ser qualquer string.
+    Essas instruções utilizam o Linux <code>dm-crypt</code> (device-mapper ou mapeador de dispositivo) facilidade disponível no kernel 2.6. Nesse exemplo, vamos criptografar a partição <code>/dev/sdc1</code>, poderia no entanto ser qualquer outra partição ou disco, ou USB ou uma partição baseada em arquivo criada com <code>losetup</code>. Nesse caso poderias usar <code>/dev/loop0</code>. Veja <a href="http://cb.vu/unixtoolbox.xhtml#losetup">file image partition</a>. O mapeador de dispositivo utiliza etiquetas (labels) para identificar uma partição. Nós utilizamos <code>sdc1</code> nesse exemplo, mas poderia ser qualquer string.
     <h3 id="wluks">dm-crypt com o  LUKS</h3>
     LUKS com dm-crypt tem melhor criptografia e torna possível ter múltiplas passphrase para a mesma partição ou alterar a senha facilmente. para testar se o LUKS está disponível, simplesmente digite <code># cryptsetup --help</code>, se nada a respeito do LUKS for exibido, use as instruções abaixo <a href="http://cb.vu/unixtoolbox.xhtml#woluks">Without LUKS</a>. Primeiro crie uma partição se necessário: <code>fdisk /dev/sdc</code>.
     <h4>Criar partição criptografada</h4>
@@ -1643,7 +1643,7 @@
     # echo 'geom_eli_load="YES"' &gt;&gt; /boot/loader.conf   <span class="cmt"># ou faça: kldload geom_eli</span>
     </pre>
     <h3>Utilizar senha e chave</h3>
-    Eu utilizo essas configurações para uma criptografia de disco tipica, ela utiliza uma passphrase AND uma chave para criptografar a chave mestre (master). Isso é, você precisa tanto da senha e quando da chave gerada <code>/root/ad1.key</code> para anexar a partição. A chave mestre fica armazenada dentro da partição e não fica visivel. Veja abaixo para USB tipico ou imagem baseada em arquivo.
+    Eu utilizo essas configurações para uma criptografia de disco típica, ela utiliza uma passphrase AND uma chave para criptografar a chave mestre (master). Isso é, você precisa tanto da senha e quando da chave gerada <code>/root/ad1.key</code> para anexar a partição. A chave mestre fica armazenada dentro da partição e não fica visivel. Veja abaixo para USB típico ou imagem baseada em arquivo.
     <h4>Criar partição criptografada</h4>
     <pre>
     # dd if=/dev/random of=/root/ad1.key bs=64 count=1  <span class="cmt"># Essa chave criptografa a chave mestre</span>
@@ -1837,7 +1837,7 @@
     </pre>
 
     <h3 id="cvsroot">Variavel CVSROOT</h3>
-    Essa é uma varável de ambiente utilizada para especificar o local do repositório que estamos realizando as operações. Para uso local, Pode ser definido apenas para o diretório do repositório. Para uso na rede, o protocolo de transporte deve ser especificado. Defina a variável CVSROOT com o <code>setenv CVSROOT string</code> em um shell csh, tcsh shell, ou com o <code>export CVSROOT=string</code> em um shell sh, bash.
+    Essa é uma variável de ambiente utilizada para especificar o local do repositório que estamos realizando as operações. Para uso local, Pode ser definido apenas para o diretório do repositório. Para uso na rede, o protocolo de transporte deve ser especificado. Defina a variável CVSROOT com o <code>setenv CVSROOT string</code> em um shell csh, tcsh shell, ou com o <code>export CVSROOT=string</code> em um shell sh, bash.
     <pre># setenv CVSROOT :pserver:&lt;username&gt;@&lt;host&gt;:/cvsdirectory
     <i><span class="cmt">Por exemplo:</span></i>
     # setenv CVSROOT /usr/local/cvs                               <span class="cmt"># Utilizado localmente (somente)</span>
@@ -1962,17 +1962,17 @@
     * = r
     [groups]
     project1-developers = joe, jack, jane
-    <span class="cmt"># Da acesso de escrita aos desenvolvedore</span>
+    <span class="cmt"># Da acesso de escrita aos desenvolvedores</span>
     [project1:]
     @project1-developers = rw
     </pre>
 
     <h2 id="svnusage">Comandos SVN e uso</h2>
-    Veja também o <a rel="nofollow" href="http://www.cs.put.poznan.pl/csobaniec/Papers/svn-refcard.pdf">Subversion Quick Reference Card</a><span class="fn">http://www.cs.put.poznan.pl/csobaniec/Papers/svn-refcard.pdf</span>. <a href="http://tortoisesvn.tigris.org/">Tortoise SVN</a><span class="fn">http://tortoisesvn.tigris.org</span> é uma interface de janela agradavel.
+    Veja também o <a rel="nofollow" href="http://www.cs.put.poznan.pl/csobaniec/Papers/svn-refcard.pdf">Subversion Quick Reference Card</a><span class="fn">http://www.cs.put.poznan.pl/csobaniec/Papers/svn-refcard.pdf</span>. <a href="http://tortoisesvn.tigris.org/">Tortoise SVN</a><span class="fn">http://tortoisesvn.tigris.org</span> é uma interface de janela agradável.
     <h3 id="svnimport">Importar</h3>
     um novo projeto, que é um diretório com alguns arquivos, é importado para dentro do repositório com o comando <code>import</code>. Import também é utilizado para adicionar um diretório com seu conteúdo para um projeto existente.
     <pre># svn help import                               <span class="cmt"> # obtém ajuda para qualquer comando</span>
-    <span class="cmt">    # Adiciona um novo diretório (com conteudo) para dentro do diretório src no project1</span>
+    <span class="cmt">    # Adiciona um novo diretório (com conteúdo) para dentro do diretório src no project1</span>
     # svn import /project1/newdir http://host.url/svn/project1/trunk/src -m 'add newdir'
     </pre>
     <h3 id="svntypical">Typical SVN commands</h3>
@@ -2023,16 +2023,16 @@
     <ul style="list-style-type: none;">
       <li><strong>/string</strong>       Busca por string para frente</li>
       <li><strong>?string</strong>       Volta por string para tras</li>
-      <li><strong>n</strong>       Busca pela próxima instancia de string</li>
+      <li><strong>n</strong>       Busca pela próxima instância de string</li>
       <li><strong>N</strong>       Busca por instancia de string anterior</li>
-      <li><strong>{</strong>       Move um paragrafo para tras</li>
+      <li><strong>{</strong>       Move um paragrafo para trás</li>
       <li><strong>}</strong>       Move um paragrafo para frente</li>
       <li><strong>1G</strong>       Move para a primeira linha do arquivo</li>
       <li><strong>nG</strong>       Move para o n th de linha do arquivo</li>
       <li><strong>G</strong>       Move para a ultima ultima linha do arquivo</li>
-      <li><strong>:%s/OLD/NEW/g</strong>       Busca e substitui toda a ocorrencia</li>
+      <li><strong>:%s/OLD/NEW/g</strong>       Busca e substitui toda a ocorrência</li>
     </ul>
-    <h3>Excluir, copiare colar text</h3>
+    <h3>Excluir, copiar e colar text</h3>
     <ul style="list-style-type: none;">
       <li><strong>dd (dw)</strong>       Corta linha corrente (palavra)</li>
       <li><strong>D</strong>       Cut to the end of the line</li>
@@ -2071,7 +2071,7 @@
     # cd /usr; tar -xzf local.tgz   <span class="cmt"># é o mesmo que acima</span>
     </pre>
     <h3>Extrair</h3>
-    <pre># tar -tzf home.tgz             <span class="cmt"># Olha dentro do arquivo sem extraiir (lista)</span>
+    <pre># tar -tzf home.tgz             <span class="cmt"># Olha dentro do arquivo sem extrair (lista)</span>
     # tar -xf home.tar              <span class="cmt"># extrai o arquivo aqui (x para extrair)</span>
     # tar -xzf home.tgz             <span class="cmt"># o mesmo que da compressão zip (-xjf para a compressão bzip2)</span>
                                     <span class="cmt"># remove caminho guias gallery2 e extrai para dentro de gallery</span>
@@ -2082,8 +2082,8 @@
     <h3>Mais avançado</h3>
     <pre># tar c dir/ | gzip | ssh user@remote 'dd of=dir.tgz' <span class="cmt"># arquiva o dir/ e armazena remotamente.</span>
     # tar cvf - `find . -print` &gt; backup.tar              <span class="cmt"># arquiva o diretório atual.</span>
-    # tar -cf - -C /etc . | tar xpf - -C /backup/etc      <span class="cmt"># Copia diretórios</span>
-    # tar -cf - -C /etc . | ssh user@remote tar xpf - -C /backup/etc      <span class="cmt"># Copia remota.</span>
+    # tar -cf - -C /etc . | tar xpf - -C /backup/etc      <span class="cmt"># Cópia diretórios</span>
+    # tar -cf - -C /etc . | ssh user@remote tar xpf - -C /backup/etc      <span class="cmt"># Cópia remota.</span>
     # tar -czf home.tgz --exclude '*.o' --exclude 'tmp/' home/
     </pre>
     <h2 id="zip">zip/unzip</h2>
@@ -2108,7 +2108,7 @@
     </ul>
     O tamanho de byte padrão é de 512 (um bloco). O MBR, aonde a tabela de partição fica localizada, fica no primeiro bloco, os primeiros 63 blocos de um disco ficam vazios. Tamanhos maiores de byte são mais rápidos para copiar mas requer também mais memória.
     <h3>Backup e restaurção</h3>
-    <pre># dd if=/dev/hda of=/dev/hdc bs=16065b                <span class="cmt"># Copia de disco para disco (do mesmo tamanho)</span>
+    <pre># dd if=/dev/hda of=/dev/hdc bs=16065b                <span class="cmt"># Cópia de disco para disco (do mesmo tamanho)</span>
     # dd if=/dev/sda7 of=/home/root.img bs=4096 conv=notrunc,noerror <span class="cmt"># Realiza backup do /</span>
     # dd if=/home/root.img of=/dev/sda7 bs=4096 conv=notrunc,noerror <span class="cmt"># Restaura o /</span>
     # dd bs=1M if=/dev/ad4s3e | gzip -c &gt; ad4s3e.gz                  <span class="cmt"># Zipa o backup</span>
@@ -2118,7 +2118,7 @@
     # dd if=/dev/ad0 of=/dev/ad2 skip=1 seek=1 bs=4k conv=noerror    <span class="cmt"># Pula o MBR</span>
         <span class="cmt"># Isso é necessário se o destino (ad2) for menor.</span>
     # dd if=/vm/FreeBSD-8.2-RELEASE-amd64-memstick.img of=/dev/disk1 bs=10240 conv=sync
-        <span class="cmt"># Copia a imagem do FreeBSD para o pendrive (USB memory stick)</span>
+        <span class="cmt"># Cópia a imagem do FreeBSD para o pendrive (USB memory stick)</span>
     </pre>
 
     <h3>Recuperar</h3>
@@ -2129,7 +2129,7 @@
     root@fry 'dd of=hda1.gz bs=1k'
     # dd bs=1k if=/dev/hda1 conv=sync,noerror,notrunc of=hda1.img    <span class="cmt"># Armazena dentro de uma imagem</span>
     # mount -o loop /hda1.img /mnt                        <span class="cmt"># <a class="xref" href="http://cb.vu/unixtoolbox.xhtml#createimg">Monta a imagem</a></span>
-    # rsync -ax /mnt/ /newdisk/                           <span class="cmt"># Copia em um novo disco</span>
+    # rsync -ax /mnt/ /newdisk/                           <span class="cmt"># Cópia em um novo disco</span>
     # dd if=/dev/hda of=/dev/hda                          <span class="cmt"># Atualizar o estado magnético (apagará todo o disco)</span>
       <span class="cmt"># A opção acima é util para atualizar o disco. É perfeitamente seguro, mas deve ser desmontado.</span>
     </pre>
@@ -2157,7 +2157,7 @@
     <h3>Exemplo curto de exemplo</h3>
     Iniciar a tela com:
     <pre># screen</pre>
-    Dentro da seção da tela nós podemos inciar um programa bem duradouro (como o top).
+    Dentro da seção da tela nós podemos iniciar um programa bem duradouro (como o top).
     <pre># top</pre>
     Agora separe com o <strong>Ctrl-a Ctrl-d</strong>. Recoloque o terminal com:
     <pre># screen -R -D</pre>
@@ -2198,7 +2198,7 @@
       <li><code>-iname</code>       Como o -name mas é case sensitive</li>
       <li><code>-ls</code>       Exibe informações a respeito do arquivo (como ls -la)</li>
       <li><code>-size n</code>       n é +-n (k M G T P)</li>
-      <li><code>-cmin n</code>       Status de arquivo que foi alterado pela última vez em n de minutes atras.</li>
+      <li><code>-cmin n</code>       Status de arquivo que foi alterado pela última vez em n de minutes atrás.</li>
     </ul>
     <pre># find . -type f ! -perm -444        <span class="cmt"># Encontra arquivos não legíveis por todos</span>
     # find . -type d ! -perm -111        <span class="cmt"># Encontra diretórios não acessíveis por todos</span>
@@ -2218,7 +2218,7 @@
     # find flac/ -iname *.flac -print -size +500k -exec /Applications/Fluke.app/Contents/MacOS/Fluke {} \;
                                           <span class="cmt"># Eu utilizo a opção acima para adicionar arquivos flac (formato de audio) ao iTunes no OSX</span>
     </pre>
-    Seja cuidadoso com o xarg ou o exec já que pode ou não honrar quotings e pode retornar resultados errados quando os arquivos ou diretórios conterem espaçoes. Na dúvida, utilize "-print0 | xargs -0" instead of "| xargs". A opção -print0 deve ser a ultima no comando find. Veja esse bom <a href="http://www.hccfl.edu/pollock/Unix/FindCmd.htm">mini tutorial para o find (em inglês)</a><span class="fn">http://www.hccfl.edu/pollock/Unix/FindCmd.htm</span>.
+    Seja cuidadoso com o xarg ou o exec já que pode ou não honrar quotings e pode retornar resultados errados quando os arquivos ou diretórios conterem espaços. Na dúvida, utilize "-print0 | xargs -0" ao invés de "| xargs". A opção -print0 deve ser a ultima no comando find. Veja esse bom <a href="http://www.hccfl.edu/pollock/Unix/FindCmd.htm">mini tutorial para o find (em inglês)</a><span class="fn">http://www.hccfl.edu/pollock/Unix/FindCmd.htm</span>.
     <pre># find . -type f | xargs ls -l       <span class="cmt"># Não funcionará com espaços nos names</span>
     # find . -type f -print0 | xargs -0 ls -l  <span class="cmt"># Não funcionará com espaços nos nomes</span>
     # find . -type f -exec ls -l '{}' \; <span class="cmt"># Or use quotes '{}' with -exec</span>
@@ -2243,9 +2243,9 @@
     # rmdir /path/to/dir                 <span class="cmt"># Remove o diretório</span>
     # rm -rf /path/to/dir                <span class="cmt"># Remove e diretório e o seu conteúdo (f= força)</span>
     # rm -- -badchar.txt                 <span class="cmt"># Remove o arquivo que inicia com um traço (-)</span>
-    # cp -la /dir1 /dir2                 <span class="cmt"># Arquiva e gera arquivos hard link ao inves de copiá-los</span>
+    # cp -la /dir1 /dir2                 <span class="cmt"># Arquiva e gera arquivos hard link ao invés de copiá-los</span>
     # cp -lpR /dir1 /dir2                <span class="cmt"># O mesmo para o FreeBSD</span>
-    # cp unixtoolbox.xhtml{,.bak}        <span class="cmt"># Jeito curto de copiar o arquivo com uma nova extenção</span>
+    # cp unixtoolbox.xhtml{,.bak}        <span class="cmt"># Jeito curto de copiar o arquivo com uma nova extensão</span>
     # mv /dir1 /dir2                     <span class="cmt"># Renomeia um diretório</span>
     # ls -1                              <span class="cmt"># lista um arquivo por linha</span>
     # history | tail -50                 <span class="cmt"># Exibe us últimos 50 comandos utilizados</span>
@@ -2320,7 +2320,7 @@
     # pkgdb -F                           <span class="cmt"># Corrige a base de dados de registro do pacote</span>
     # portsclean -C -DD                  <span class="cmt"># Limpa o workdir e o distdir (parte do portupgrade)</span>
     </pre>
-    <h3 id="macports">OS X <a href="http://guide.macports.org/">MacPorts</a><span class="fn">http://guide.macports.org/</span> (utilize sudo para todos so comandos)</h3>
+    <h3 id="macports">OS X <a href="http://guide.macports.org/">MacPorts</a><span class="fn">http://guide.macports.org/</span> (utilize sudo para todos os comandos)</h3>
     <pre># port selfupdate                    <span class="cmt"># Atualiza o port tree (seguro)</span>
     # port installed                     <span class="cmt"># Lista os ports instalados</span>
     # port deps apache2                  <span class="cmt"># Lista as dependências para esse port</span>
@@ -2337,7 +2337,7 @@
     Devido as dependências complexas e o runtime linking, os programas são difíceis de copiar para outro sistema ou distribuição. No entanto, para programas pequenos com poucas dependências, as bibliotecas que faltam podem ser copiadas. As bibliotecas de tempo de execução (runtime libraries) (e as que faltam) são verificadas com o <code>ldd</code> e gerenciadas com o <code>ldconfig</code>.
     <pre># ldd /usr/bin/rsync                 <span class="cmt"># Lista todas as bibliotecas runtime necessárias</span>
     # otool -L /usr/bin/rsync            <span class="cmt"># Equivalente ao lss para o OS X</span>
-    # ldconfig -n /path/to/libs/         <span class="cmt"># Adiciona um path para od diretporios das bibliotecas compartilhadas</span>
+    # ldconfig -n /path/to/libs/         <span class="cmt"># Adiciona um path para od diretórios das bibliotecas compartilhadas</span>
     # ldconfig -m /path/to/libs/         <span class="cmt"># FreeBSD</span>
     # LD_LIBRARY_PATH                    <span class="cmt"># A variável que define a link library path</span>
     </pre>
@@ -2397,9 +2397,9 @@
     </pre>
     Veja <a href="http://sox.sourceforge.net/">sox</a> para processamento de som.
 
-    <h2>Copia um cd de áudio</h2>
-    o programa <a rel="nofollow" href="http://xiph.org/paranoia/"><code>cdparanoia</code></a><span class="fn">http://xiph.org/paranoia/</span> pode salvar as faixas de  audio (FreeBSD port em audio/cdparanoia/), <code>oggenc</code> pode codificar em formato Ogg Vorbis format, <code>lame</code> converte para mp3.
-    <pre># cdparanoia -B                      <span class="cmt"># Copia as faixas para arquivos wav no diretório atual</span>
+    <h2>Cópia um cd de áudio</h2>
+    o programa <a rel="nofollow" href="http://xiph.org/paranoia/"><code>cdparanoia</code></a><span class="fn">http://xiph.org/paranoia/</span> pode salvar as faixas de  áudio (FreeBSD port em audio/cdparanoia/), <code>oggenc</code> pode codificar em formato Ogg Vorbis format, <code>lame</code> converte para mp3.
+    <pre># cdparanoia -B                      <span class="cmt"># Cópia as faixas para arquivos wav no diretório atual</span>
     # lame -b 256 in.wav out.mp3         <span class="cmt"># Codifica em mp3 256 kb/s</span>
     # for i in *.wav; do lame -b 256 $i `basename $i .wav`.mp3; done
     # oggenc in.wav -b 256 out.ogg       <span class="cmt"># Codifica em Ogg Vorbis 256 kb/s</span>
@@ -2472,7 +2472,7 @@
     <h4>Método 2</h4>
     <pre># mysql -u root mysql
     <span class="cmt">mysql&gt;</span> UPDATE USER SET PASSWORD=PASSWORD("newpassword") where user='root';
-    <span class="cmt">mysql&gt;</span> FLUSH PRIVILEGES;                           <span class="cmt"># Utilize username ao inves do "root"</span>
+    <span class="cmt">mysql&gt;</span> FLUSH PRIVILEGES;                           <span class="cmt"># Utilize username ao invés do "root"</span>
     <span class="cmt">mysql&gt;</span> quit
     </pre>
     <h3>Cria usuário e base de dados (veja <a href="http://dev.mysql.com/doc/refman/5.1/en/adding-users.html">MySQL doc</a><span class="fn">http://dev.mysql.com/doc/refman/5.1/en/adding-users.html</span>)</h3>
@@ -2502,7 +2502,7 @@
     <pre># mysqldump -u root -psecret --add-drop-database --all-databases &gt; full.dump
     # mysql -u root -psecret &lt; full.dump
     </pre>
-    Aqui em "secret" é  a senha root do mysql, não há espaço depois do -p. Quando a opção -p é utilizada sosinha (w/o password), a seha é pergunatada no prompt de comando.
+    Aqui em "secret" é  a senha root do mysql, não há espaço depois do -p. Quando a opção -p é utilizada sosinha (w/o password), a seha é perguntada no prompt de comando.
 
     <h2 id="sqlite">SQLite</h2>
     <a href="http://www.sqlite.org/">SQLite</a><span class="fn">http://www.sqlite.org</span> é uma base de dados SQL pequena e poderosa independente, sem servidor (serverless), e sem configuração (zero-configuration).
@@ -2561,19 +2561,19 @@
        inodes in use: 1792, limits (soft = 0, hard = 0)
     </pre>
     <h3>Para muitos usuários</h3>
-    O comando <code>edquota -p</code> é usado para duplicar uma quota á outros usuários. Por exemplo, para duplicar uma quota de referencia a todos os usuários:
+    O comando <code>edquota -p</code> é usado para duplicar uma quota a outros usuários. Por exemplo, para duplicar uma quota de referencia a todos os usuários:
     <pre># edquota -p refuser `awk -F: '$3 &gt; 499 {print $1}' /etc/passwd`
     # edquota -p refuser user1 user2     <span class="cmt"># Duplicate to 2 users</span>
     </pre>
     <h3>Verificações</h3>
-    Usuários podem verificar suas quotas ao simplesmente digitar <code>quota</code> (o arquivo quota.user deve ser legivel). O root pode verificar todas as quotas.
-    <pre># quota -u colin                     <span class="cmt"># Verfifica quota para um usuário</span>
+    Usuários podem verificar suas quotas ao simplesmente digitar <code>quota</code> (o arquivo quota.user deve ser legível). O root pode verificar todas as quotas.
+    <pre># quota -u colin                     <span class="cmt"># Verifica quota para um usuário</span>
     # repquota /home                     <span class="cmt"># relatório total para a partição (para todos os usuários nesse caso)</span>
     </pre>
     </div>
 
     <div id="shells"><h1><a>Shells</a></h1>
-    Muitas distribuições Linux utilizam o shell bash enquanto os BSDs utilizam o tcsh, o bourne shell é utilizado somente para scripts. Filtros são muito uteis e pode ser canalizados:
+    Muitas distribuições Linux utilizam o shell bash enquanto os BSDs utilizam o tcsh, o bourne shell é utilizado somente para scripts. Filtros são muito úteis e pode ser canalizados:
     <ul style="list-style-type:none;">
       <li><code>grep</code>   Parametro de combinação</li>
       <li><code>sed</code>   Busca e substitui strings ou caracteres</li>
@@ -2599,7 +2599,7 @@
     </pre>
     Modificar sua configuração em ~/.bashrc (pode ser também ~/.bash_profile). As seguintes entradas são uteis, recarrega com ". .bashrc". Com o cygwin utilize ~/.bash_profile; com o rxvt cole com o shift + left-click.
     <pre style="page-break-inside:avoid;"># in .bashrc
-    bind '"\e[A"':history-search-backward <span class="cmt"># Utiliza cetas para cima e para baixo para busca</span>
+    bind '"\e[A"':history-search-backward <span class="cmt"># Utiliza setas para cima e para baixo para busca</span>
     bind '"\e[B"':history-search-forward  <span class="cmt"># O history. Inastimável!</span>
     set -o emacs                          <span class="cmt"># Define o modo emacs no (veja abaixo)</span>
     set bell-style visible                <span class="cmt"># Não bipa, inverte cores</span>
@@ -2645,7 +2645,7 @@
     setenv CLICOLOR 1                     <span class="cmt"># Utiliza cores (se possível)</span>
     setenv LSCOLORS ExGxFxdxCxDxDxBxBxExEx
     </pre>
-    O modo do emacs abilita para uso das chaves de atalhos do emacs para modificar o prompt de linha de comando. Isso é extremamente útil (não somente para usuários do emacs). O comandos mais utilizados são:
+    O modo do emacs habilita para uso das chaves de atalhos do emacs para modificar o prompt de linha de comando. Isso é extremamente útil (não somente para usuários do emacs). O comandos mais utilizados são:
     <ul style="list-style-type:none;">
       <li>C-a       Move o cursor para o inicio da linha</li>
       <li>C-e       Move o cursor para o final da linha</li>
@@ -2662,12 +2662,12 @@
     </div>
 
     <div id="scripting"><h1><a>Scripting</a></h1>
-    <p class="xrefp"><a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#bournebasics">Basicos</a> | <a class="xrefp" href="./Unix Toolbox_files/Unix Toolbox.xhtml">Script example</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#awk">awk</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#sed">sed</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#regex">Expressões Regulares</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#shcmd">comandos uteis</a></p>
+    <p class="xrefp"><a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#bournebasics">Básicos</a> | <a class="xrefp" href="./Unix Toolbox_files/Unix Toolbox.xhtml">Script example</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#awk">awk</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#sed">sed</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#regex">Expressões Regulares</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#shcmd">comandos úteis</a></p>
     O shell Bourne (/bin/sh) está presente em todas as instalações Unix e  scripts escritos nessa linguagem são (bastante) portáveis; <code>man 1 sh</code> é uma boa referencia.
 
-    <h2 id="bournebasics">Basicos</h2>
-    <h3>Variaveis e argumentos</h3>
-    Atribui com variável=valor e obtem o conteúdo com $variável
+    <h2 id="bournebasics">Básicos</h2>
+    <h3>Variáveis e argumentos</h3>
+    Atribui com variável=valor e obtém o conteúdo com $variável
     <pre>MESSAGE="Hello World"                        <span class="cmt"># Atribui uma string</span>
     PI=3.1415                                    <span class="cmt"># Atribui um número decimal</span>
     N=8
@@ -2691,12 +2691,12 @@
     <span class="pp">mypath</span>=`pwd`
     <span class="pp">mypath</span>=${<span class="pp">mypath</span>}/file.txt
     echo ${<span class="pp">mypath</span>##*/}                           <span class="cmt"># Exibe o filename somente</span>
-    echo ${<span class="pp">mypath</span>%%.*}                           <span class="cmt"># Caminho completo sem extenção</span>
+    echo ${<span class="pp">mypath</span>%%.*}                           <span class="cmt"># Caminho completo sem extensão</span>
     foo=/tmp/my.dir/filename.tar.gz
     path = ${foo%/*}                             <span class="cmt"># Caminho completo sem extensão</span>
     <span class="pp">var2</span>=${<span class="pp">var</span>:=string}                          <span class="cmt"># Utiliza var se definido, caso contrario utiliza string
                                                  # atribui string para var e depois para var2.</span>
-    size=$(stat -c%s "$file")                    <span class="cmt"># obtem tamanho do arquivo no script bourne</span>
+    size=$(stat -c%s "$file")                    <span class="cmt"># obtém tamanho do arquivo no script bourne</span>
     filesize=${size:=-1}
     </pre>
 
@@ -2776,7 +2776,7 @@
     </pre>
 
     <h2 id="regex">Expressões regulares</h2>
-    Algumas expressões regulares básicas uteis para o sed também. Veja <a href="http://www.regular-expressions.info/reference.html">Syntax Regex Básicas</a><span class="fn">http://www.regular-expressions.info/reference.html</span> para uma boa impressão.
+    Algumas expressões regulares básicas úteis para o sed também. Veja <a href="http://www.regular-expressions.info/reference.html">Syntax Regex Básicas</a><span class="fn">http://www.regular-expressions.info/reference.html</span> para uma boa impressão.
     <pre>[\^$.|?*+()                          <span class="cmt"># carácteres especiais, qualquer outros combinarão entre sim</span>
     \                                    <span class="cmt"># ignora caráteres especiais e trata-os como literais</span>
     *                                    <span class="cmt"># repete o item anterior zero ou mais vezes</span>
@@ -2790,7 +2790,7 @@
     </pre>
 
     <h2 id="shcmd">Alguns comandos uteis</h2>
-    O comandos a seguir são uteis para incluir em um script ou como um liners.
+    O comandos a seguir são úteis para incluir em um script ou como um liners.
     <pre>sort -t. -k1,1n -k2,2n -k3,3n -k4,4n         <span class="cmt"># Ordena endereço de ip IPv4</span>
     echo 'Test' | tr '[:lower:]' '[:upper:]'     <span class="cmt"># Conversão de Case conversion</span>
     echo foo.bar | cut -d . -f 1                 <span class="cmt"># Retorna foo</span>
@@ -2889,7 +2889,7 @@
     <span class="pp">#include</span> &lt;string&gt;
     <span class="keyword">using</span> <span class="keyword">namespace</span> std;
     <span class="keyword">int</span> main (<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[]) {
-        string ipstr;                                 <span class="cmt">// define variaveis
+        string ipstr;                                 <span class="cmt">// define variáveis
     </span>    <span class="keyword">unsigned</span> <span class="keyword">long</span> ipint = 1347861486;             <span class="cmt">// O IP em forma integer</span>
         GenericUtils::IPv4 iputils;                   <span class="cmt">// gera um objeto da classe
     </span>    ipstr = iputils.IPint_to_IPquad(ipint);       <span class="cmt">// chama a classe membro
@@ -2901,7 +2901,7 @@
 
     Compile e execute com:
     <pre style="page-break-before:avoid;"># g++ -c IPv4.cpp simplecpp.cpp                <span class="cmt"># Compile em objetos</span>
-    # g++ IPv4.o simplecpp.o -o simplecpp.exe      <span class="cmt"># Linka os objetos para o executavel final</span>
+    # g++ IPv4.o simplecpp.o -o simplecpp.exe      <span class="cmt"># Linka os objetos para o executável final</span>
     # ./simplecpp.exe 
     1347861486 = 80.86.187.238
     </pre>
@@ -2913,7 +2913,7 @@
     # nm version.o                                 <span class="cmt"># Exibe membros de função fornecidas pelo objeto</span>
     </pre>
     <h2 id="makefile">Simples Makefile</h2>
-    O Makefile mínimo para o programa multi-source é exibido abaixo. As linhas com instruções <i>devem iniciar com um tab</i>! A bara invertida (back slash) "\" pode ser utilizada para cortar linhas longas.
+    O Makefile mínimo para o programa multi-source é exibido abaixo. As linhas com instruções <i>devem iniciar com um tab</i>! A barra invertida (back slash) "\" pode ser utilizada para cortar linhas longas.
     <pre style="page-break-inside:avoid;"><span class="pp">CC</span> = g++
     <span class="pp">CFLAGS</span> = -O
     <span class="pp">OBJS</span> = IPv4.o simplecpp.o
@@ -2954,19 +2954,14 @@
 
     <div class="footerlast">
         <p>Essa documentação: "Unix Toolbox revisão 14.4" está licenciada sob a <a rel="nofollow" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Licence [Attribution - Share Alike]</a>. </p>
-        <p>Traduzido para o Português do Brasil por <strong>Gabriel da Silveira Costa</strong>. </p>
-        <p>
-            Revisado por: <a href="https://github.com/rumbler">Rumbler Soppa</a>, <a href="https://github.com/gabrielalmir10">Gabriel Almir (kewer)</a> e
-            agora temos dois novos integrantes na equipe, o <a href="https://github.com/gmasson">Gabriel Masson</a> e o <a href="https://github.com/cegohub/">Tiago Alvez</a>.
-            O Gabriel Masson criou um fork dessa documentação https://github.com/gmasson/caixaDeFerramentasDoUnix assim também como o
-            Tiago alves criou o seu https://github.com/cegohub/caixaDeFerramentasDoUnix.
+        <p>Traduzido para o Português do Brasil por <a href="https://www.youtube.com/c/tocadotux">Gabriel da Silveira Costa</a>. Revisado por: <a href="https://github.com/rumbler">Rumbler Soppa</a>, <a href="https://github.com/voidyo">Gabriel Almir (kewer)</a>, o <a href="https://github.com/gmasson">Gabriel Masson</a> e o <a href="https://github.com/cegohub/">Tiago Alves</a>. Recebemos também contribuição do <a href="https://github.com/ryuuzaki42"> João batista</a>, <a href="https://github.com/darleison"> Darleilson</a> e graças ao quadro <a href="https://www.youtube.com/watch?v=cRxjfnYoA1s">"Dica de Leitura"</a> recebemos a contribiução do <a href="https://github.com/Ziggoto">Fábio M. Theofilo</a> e <a href="https://github.com/KelvinVenancio"> Kelvin V. Soares</a>.
         </p>
         <p class="extras-copy">
-            Desta forma, todas as melhorias e correções serão emergidas nessa documentação,
-            formando assim, a versão atual (uma ótima ideia que o Gabriel Masson teve).
-            Cinco pessoas das quais sou muito grato pelo andamento do projeto.
+          O <a href="https://github.com/gmasson"> Gabriel Masson</a> criou um fork dessa documentação: <a href="https://github.com/gmasson/caixaDeFerramentasDoUnix">https://github.com/gmasson/caixaDeFerramentasDoUnix</a>. Assim também como o
+            <a href="https://github.com/cegohub/">Tiago Alves</a> criou o seu <a href="https://github.com/cegohub/caixaDeFerramentasDoUnix">https://github.com/cegohub/caixaDeFerramentasDoUnix</a>.  Desta forma, todas as melhorias e correções serão emergidas nessa documentação,
+            formando assim, a versão atual (uma ótima ideia que o <a href="https://github.com/gmasson">Gabriel Masson teve</a>).
+            Oito pessoas (incluindo Colin Barschel) das quais sou muito grato pelo andamento do projeto. Agora recebemos contribuição também do <a href="https://github.com/fredericolima">Fredereico Lima<a> do projeto Fedora.
         </p>
     </div>
-
   </body>
 </html>
