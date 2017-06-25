@@ -1607,7 +1607,7 @@
 
     <div id="cryptpart"><h1><a>Criptografar Partições</a></h1>
     <p class="xrefp"><a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#wluks">Linux com LUKS</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#woluks">Linux dm-crypt (somente)</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#bsdgeli">FreeBSD GELI</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#bsdpwd">FBSD pwd (somente)</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#osxcrypt">Imanegm OS X</a></p>
-    Há (muitos) outros métodos de alternativa para criptografar discos, eu mostro aqui somente os métodos que conheço e utilizo. Tenha em mente que segurança só é boa desde que o OS não foi s no been tempered with. Um intruso poderia facilmente gravar a senha a partir de eventos teclado. Além do mais o dado é livremente acessível quando a partição for <i>attached</i> e não evitará que um intruso tenha acesso a isso neste estado.
+    Há (muitos) outros métodos de alternativa para criptografar discos, eu mostro aqui somente os métodos que conheço e utilizo. Tenha em mente que segurança só é boa desde que o OS não tenha sido adulterado. Um intruso poderia facilmente gravar a senha a partir de eventos teclado. Além do mais o dado é livremente acessível quando a partição for <i>attached</i> e não evitará que um intruso tenha acesso a isso neste estado.
     <h2 id="dm-crypt">Linux</h2>
     Essas instruções utilizam o Linux <code>dm-crypt</code> (device-mapper ou mapeador de dispositivo) facilidade disponível no kernel 2.6. Nesse exemplo, vamos criptografar a partição <code>/dev/sdc1</code>, poderia no entanto ser qualquer outra partição ou disco, ou USB ou uma partição baseada em arquivo criada com <code>losetup</code>. Nesse caso poderias usar <code>/dev/loop0</code>. Veja <a href="http://cb.vu/unixtoolbox.xhtml#losetup">file image partition</a>. O mapeador de dispositivo utiliza etiquetas (labels) para identificar uma partição. Nós utilizamos <code>sdc1</code> nesse exemplo, mas poderia ser qualquer string.
     <h3 id="wluks">dm-crypt com o  LUKS</h3>
@@ -1780,7 +1780,7 @@
     <p class="xrefp"><a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#cvssetup">Configuração do servidor</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#cvstest">teste do CVS</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#cvsssh">tunelamento do SSH</a> | <a class="xrefp" href="http://cb.vu/unixtoolbox.xhtml#cvsusage">uso do CVS</a></p>
     <h2 id="cvssetup">Configuração do servidor</h2>
     <h3>Iniciar o CVS</h3>
-    Decida aonde o repositório principal will permanecer e gerar uma cvs root. Por exemplo /usr/local/cvs (como root):
+    Decida aonde o repositório principal vai permanecer e gerar uma cvs root. Por exemplo /usr/local/cvs (como root):
     <pre># mkdir -p /usr/local/cvs
     # setenv CVSROOT /usr/local/cvs      <span class="cmt"># Define o CVSROOT para o novo local (local)</span>
     # cvs init                           <span class="cmt"># Gera todos os arquivos internos de configuração do CVS</span>
@@ -2058,7 +2058,7 @@
     Essa é também uma forma simples de testar o servidor de e-mail.
 
     <h2 id="tar">tar</h2>
-    O comando <code>tar</code> (tape archive) gera e extrai arquivos e diretórios armazenados. O arquivo .tar descompactado, um arquivo compactado tem a extensão .tgz ou .tar.gz (zip) ou .tar.bz (bzip2). Não utilize caminho absoluto quando gerar um arquivo, você provavelmente quer desempacotá-lo em algum outro luar. Alguns comandos são:
+    O comando <code>tar</code> (tape archive) gera e extrai arquivos e diretórios armazenados. O arquivo .tar descompactado, um arquivo compactado tem a extensão .tgz ou .tar.gz (zip) ou .tar.bz (bzip2). Não utilize caminho absoluto quando gerar um arquivo, você provavelmente quer desempacotá-lo em algum outro lugar. Alguns comandos são:
     <h3>Gerar</h3>
     <pre># cd /
     # tar -cf home.tar home/        <span class="cmt"># arquiva o diretório /home completo (c para criar)</span>
@@ -2087,7 +2087,7 @@
     # tar -czf home.tgz --exclude '*.o' --exclude 'tmp/' home/
     </pre>
     <h2 id="zip">zip/unzip</h2>
-    Arquivos zip pode ser faceis de compartilhar com o Windows.
+    Arquivos zip podem ser faceis de compartilhar com o Windows.
     <pre># zip -r fileName.zip /path/to/dir                    <span class="cmt"># zipa o diretório para dentro do arquivo fileName.zip</span>
     # unzip fileName.zip                                  <span class="cmt"># descompacta o arquivo zip</span>
     # unzip -l fileName.zip                               <span class="cmt"># lista arquivos dentro do arquivo</span>
@@ -2346,9 +2346,7 @@
     <div id="convert"><h1><a>Converte Mídia</a></h1>
     Algumas vezes alguém precisa simplesmente converter um arquivo de vídeo, de áudio ou documenta para outro formato.
     <h2 id="encoding">Text encoding</h2>
-    Text encoding can get totally wrong, specially when the language requires
-    special characters like àäç. The command <code>iconv</code> can convert from
-    one encoding to an other.
+    A codificação de texto pode ficar totalmente errada, especialmente quando o idioma requer caracteres especiais como àäç. O comando <code>iconv</code> pode converter de uma codificação para outra.
     <pre># iconv -f &lt;from_encoding&gt; -t &lt;to_encoding&gt; &lt;input_file&gt;
     # iconv -f ISO8859-1 -t UTF-8 -o file.input &gt; file_utf8
     # iconv -l                           <span class="cmt"># Lista configurações de caracter de coded conhecido</span>
@@ -2524,7 +2522,7 @@
     # mount -o remount /home
     # mount                              <span class="cmt"># Verifica se o usrquota está ativo, caso contrario reboot</span>
     </pre>
-    Initialize the quota.user file with <code>quotacheck</code>.
+    Inicialize o arquivo quota.user com <code>quotacheck</code>.
     <pre># quotacheck -vum /home
     # chmod 644 /home/aquota.user        <span class="cmt"># Para deixar os usuários verificarem suas próprias quotas</span>
     </pre>
@@ -2848,7 +2846,7 @@
                                               <span class="cmt">// (*pobj).x e pobj-&gt;x são os mesmos</span>
     </pre>
     <h2>Exemplo de C++</h2>
-    Como um programa ligeira mete mais realístico em C++: uma classe em seu próprio header (IPv4.h) e implementação (IPv4.cpp) e um programa que utiliza a funcionalidade da classe. A classe converte um endereço de IP em formato integer para o formato quad conhecido.
+    Com um programa ligeiramete mais realístico em C++: uma classe em seu próprio header (IPv4.h) e a implementação (IPv4.cpp) e um programa que utiliza a funcionalidade da classe. A classe converte um endereço de IP em formato integer para o formato de cadeia conhecido.
     <h3>Classe IPv4</h3>
     <h4>IPv4.h:</h4>
     <pre style="page-break-inside:avoid;"><span class="pp">#ifndef</span> IPV4_H
